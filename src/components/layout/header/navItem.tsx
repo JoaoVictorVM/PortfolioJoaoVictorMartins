@@ -1,6 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { useRef } from "react";
-import { useClickOutside } from "../../../hooks/useClickOutside";
+import { useClickOutside } from "@/hooks/useClickOutside";
 import { Dropdown } from "./dropdown";
 import { DropdownItem } from "./dropdownItem";
 import { ChevronDown } from "lucide-react";
@@ -58,7 +60,6 @@ export function NavItem({ item, isOpen, onToggle, onClose }: Props) {
         />
       </button>
 
-      {/* 🔽 DROPDOWN AQUI */}
       {isOpen && (
         <Dropdown>
           {item.dropdown.map((sub) => (

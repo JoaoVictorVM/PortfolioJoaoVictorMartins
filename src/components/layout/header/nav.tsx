@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MENU } from "./menu.config";
+import { MENU } from "../../../lib/menu-data";
 import { NavItem } from "./navItem";
 
 export function Nav() {

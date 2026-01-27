@@ -1,5 +1,12 @@
+import Link from "next/link";
+
 export function HeaderContato() {
-    return (
-        <a href="" className="p-2 bg-[var(--cor-escuro-1)] rounded-full border border-[var(--cor-cinza-1)] text-[var(--cor-branco)] text-xs hover:bg-[var(--cor-cinza-2)]">Contate-me</a>
-    )
+  return (
+    <Link
+      href="/contato"
+      className="px-4 py-2 text-xs font-medium rounded-full border border-[var(--cor-escuro-4)] hover:bg-white/5 transition"
+    >
+      Contate-me
+    </Link>
+  );
 }

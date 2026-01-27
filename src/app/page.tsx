@@ -6,14 +6,16 @@ import { ServicesSection } from "@/components/pages/home/services-section/servic
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Header />
-      <section className="h-screen flex flex-col items-center justify-center">
-        <HeroSection />
-      </section>
-      <AboutSection />
-      <ProjectsSection />
-      <ServicesSection />
-    </main>
+      <main>
+        <section className="h-screen flex flex-col items-center justify-center">
+          <HeroSection />
+        </section>
+        <AboutSection />
+        <ProjectsSection />
+        <ServicesSection />
+      </main>
+    </>
   );
 }
