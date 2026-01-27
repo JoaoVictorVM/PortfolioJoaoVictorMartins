@@ -8,6 +8,7 @@
     --cor-escuro-1: #1A1F23;
     --cor-escuro-2: #1F2A33;
     --cor-escuro-3: #2D3339; 
-    --cor-escuro-4: #555D63; 
+    --cor-escuro-4: #555D63;
+    --cor-escuro-5: #121619;
     --degrade-primario: linear-gradient(90deg, #B08035 0%, #EDB355 100%);
 }
