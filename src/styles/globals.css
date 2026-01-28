@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import "./variables.css";
+@import "./backgroundGradient.css";
+@import "./backgroundBreath.css";
 
 body {
   background: var(--cor-escuro-1);

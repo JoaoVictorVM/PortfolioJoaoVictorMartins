@@ -1,0 +1,35 @@
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.gradient {
+  --size: 450px;
+  --speed: 30s;
+  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+
+  width: var(--size);
+  height: var(--size);
+
+  background-image: linear-gradient(
+    hsl(210 10% 34%),
+    hsl(215 14% 44%)
+  );
+
+  animation: rotate var(--speed) var(--easing) alternate infinite;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+
+  filter: blur(calc(var(--size) / 4));
+  opacity: 0.65;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .gradient {
+    --size: 300px;
+  }
+}
