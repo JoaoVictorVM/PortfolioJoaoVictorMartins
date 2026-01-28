@@ -3,7 +3,7 @@ import { Award, ChevronRight } from "lucide-react";
 
 export function CertificationsCard() {
   return (
-    <div className="h-full flex flex-col p-8 md:p-10 relative overflow-hidden">
+    <div className="h-full flex flex-col p-8 md:p-10 justify-center">
       {/* Decorative dots
       <div className="absolute right-6 top-1/4 flex flex-col gap-8">
         <div className="w-2 h-2 rounded-full bg-white/20" />

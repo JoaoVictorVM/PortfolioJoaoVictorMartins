@@ -15,6 +15,7 @@ export const TECHNOLOGIES: Technology[] = [
   { name: "Node.js", icon: "/icons/nodejs.svg" },
   { name: "Tailwind", icon: "/icons/tailwind.svg" },
   { name: "SQLite", icon: "/icons/sqlite.svg" },
+  { name: "Supabase", icon: "/icons/supabase.svg" },
   { name: "Figma", icon: "/icons/figma.svg" },
   { name: "Vercel", icon: "/icons/vercel.svg" },
   { name: "Photoshop", icon: "/icons/photoshop.svg" },
