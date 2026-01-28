@@ -1,3 +1,4 @@
+import { Footer } from "@/components/layout/footer/footer";
 import { Header } from "@/components/layout/header/header";
 import { AboutSection } from "@/components/pages/home/about-section/aboutSection";
 import { CertificationsSection } from "@/components/pages/home/certifications-section/certificationsSection";
@@ -19,6 +20,7 @@ export default function Home() {
         <ServicesSection />
         <CertificationsSection />
         <CtaSection />
+        <Footer />
       </main>
     </>
   );

@@ -1,17 +1,19 @@
+// Logo com span
+import Link from "next/link";
+
 export function HeaderLogo() {
     return (
-        <img src="/logo/logo.svg" alt="" className="w-20 h-7" />
-    )
+        <Link href="/" className="text-lg font-semibold">
+            <span className="text-[var(--cor-primaria-1)]">&lt;</span>
+            <span className="text-[var(--cor-primaria-1)]">J</span>
+            <span className="text-[var(--cor-primaria-1)]">/&gt;</span>
+        </Link>
+    );
 }
 
-// import Link from "next/link";
-
+// Logo com SVG
 // export function HeaderLogo() {
-//   return (
-//     <Link href="/" className="text-lg font-semibold">
-//       <span className="text-[var(--cor-cinza-1)]">&lt;</span>
-//       <span className="text-[var(--cor-amarelo)]">J</span>
-//       <span className="text-[var(--cor-cinza-1)]">/&gt;</span>
-//     </Link>
-//   );
+//     return (
+//         <img src="/logo/logo.svg" alt="" className="w-20 h-7" />
+//     )
 // }
