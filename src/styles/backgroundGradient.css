@@ -27,7 +27,6 @@
   opacity: 0.65;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
   .gradient {
     --size: 300px;

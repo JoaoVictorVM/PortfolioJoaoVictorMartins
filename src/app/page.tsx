@@ -1,5 +1,6 @@
 import { Header } from "@/components/layout/header/header";
 import { AboutSection } from "@/components/pages/home/about-section/aboutSection";
+import { CertificationsSection } from "@/components/pages/home/certifications-section/certificationsSection";
 import { HeroSection } from "@/components/pages/home/hero-section/heroSection";
 import { ProjectsSection } from "@/components/pages/home/projects-section/projectsSection";
 import { ServicesSection } from "@/components/pages/home/services-section/servicesSection";
@@ -15,6 +16,7 @@ export default function Home() {
         <AboutSection />
         <ProjectsSection />
         <ServicesSection />
+        <CertificationsSection />
       </main>
     </>
   );

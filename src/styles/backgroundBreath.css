@@ -9,16 +9,16 @@
   }
 }
 
+
 .breath-gradient {
-  width: 700px;
-  height: 700px;
+  width: 300px;
+  height: 300px;
   border-radius: 9999px;
 
   background: radial-gradient(
     circle,
-    rgba(18, 22, 25, 0.35) 0%,
-    rgba(237, 179, 85, 0.15) 40%,
-    rgba(237, 218, 164, 0.05) 60%,
+    hsl(210 10% 34%) 0%,
+    hsl(215 14% 44%) 40%,
     transparent 70%
   );
 
@@ -26,6 +26,6 @@
     rgba(99, 102, 241, 0.15) 40%,
     rgba(99, 102, 241, 0.05) 60%, */
 
-  animation: breath 4s ease-in-out infinite;
+  animation: breath 6s ease-in-out infinite;
   filter: blur(40px);
 }
