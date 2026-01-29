@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import type { ProfileData } from "@/types/about"
 import { ArrowUpRightIcon } from "@/components/pages/home/services-section/serviceIcons"
+import { Download } from 'lucide-react'
 
 interface AboutProfileProps {
   profile: ProfileData
@@ -49,11 +50,20 @@ export function AboutProfile({ profile }: AboutProfileProps) {
 
         <Link
           href={profile.aboutUrl}
-          className="flex flex-1 items-center justify-center rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-700"
+          className="flex flex-1 items-center justify-center gap-2 rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-700"
         >
           Saiba mais
           <ArrowUpRightIcon className="h-4 w-4" />
         </Link>
+
+        <a 
+          href=""
+          download
+          className="flex flex-1 items-center justify-center gap-2 rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-700"
+        >
+          Curriculo
+          <Download className="h-4 w-4" />
+        </a>
       </div>
     </div>
   )

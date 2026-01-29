@@ -78,7 +78,7 @@ export function ProjectsSection() {
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-3 md:mb-0">
             Projetos em <span className="bg-gradient-to-r from-[var(--cor-primaria-1)] to-[var(--cor-primaria-3)] bg-clip-text text-transparent">destaque</span>
           </h2>
-          <a href="#" className="inline-flex flex items-center gap-1 text-[var(--cor-branco)] bg-[var(--cor-escuro-3)] border-[1px] border-[var(--cor-escuro-4)] hover:bg-[var(--cor-escuro-4)] p-2 md:p-3 rounded-full hover:scale-105 hover:shadow-2xl transition">Ver todos <ArrowUpRight className="w-4 h-4" /></a>
+          <a href="/projetos" className="inline-flex flex items-center gap-1 text-[var(--cor-branco)] bg-[var(--cor-escuro-3)] border-[1px] border-[var(--cor-escuro-4)] hover:bg-[var(--cor-escuro-4)] p-2 md:p-3 rounded-full hover:scale-105 hover:shadow-2xl transition">Ver todos <ArrowUpRight className="w-4 h-4" /></a>
         </div>
 
         <div className="hidden md:grid grid-cols-3 gap-4 auto-rows-[280px]">

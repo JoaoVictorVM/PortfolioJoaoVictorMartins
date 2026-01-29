@@ -1,5 +1,3 @@
-import { Footer } from "@/components/layout/footer/footer";
-import { Header } from "@/components/layout/header/header";
 import { AboutSection } from "@/components/pages/home/about-section/aboutSection";
 import { CertificationsSection } from "@/components/pages/home/certifications-section/certificationsSection";
 import { CtaSection } from "@/components/pages/home/cta-section/ctaSection";
@@ -11,9 +9,9 @@ import { SectionDivider } from "@/components/ui/sectionDivider";
 export default function Home() {
   return (
     <>
-      <Header />
+      
       <main>
-        <section className="h-screen flex flex-col items-center">
+        <section className="h-screen flex flex-col">
           <div className="flex-1 flex items-center justify-center">
             <HeroSection />
           </div>
@@ -22,10 +20,10 @@ export default function Home() {
         <AboutSection />
         <SectionDivider text="PROJETOS" />
         <ProjectsSection />
-        <ServicesSection />
         <CertificationsSection />
+        <ServicesSection />
         <CtaSection />
-        <Footer />
+        
       </main>
     </>
   );

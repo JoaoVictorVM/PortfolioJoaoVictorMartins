@@ -6,7 +6,7 @@ import { MobileMenu } from "./mobileMenu";
 export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4">
-      <div className="max-w-7xl mx-auto bg-[var(--cor-escuro-5)] rounded-b-3xl border-b border-[var(--cor-escuro-4)] p-4">
+      <div className="max-w-7xl mx-auto bg-gradient-to-r from-[var(--cor-escuro-2)] via-[var(--cor-escuro-5)] to-[var(--cor-escuro-2)] rounded-b-3xl border-b border-[var(--cor-escuro-4)] p-4">
         {/* Desktop */}
         <div className="hidden md:grid grid-cols-3 items-center">
           <div className="flex justify-start">

@@ -21,7 +21,7 @@ const secoes = [
 export function Footer() {
   return (
     <footer className="px-4">
-      <div className="max-w-7xl mx-auto bg-[var(--cor-escuro-5)] rounded-t-3xl border-t border-[var(--cor-escuro-4)] p-4">
+      <div className="max-w-7xl mx-auto bg-gradient-to-r from-[var(--cor-escuro-2)] via-[var(--cor-escuro-5)] to-[var(--cor-escuro-2)] rounded-t-3xl border-t border-[var(--cor-escuro-4)] p-4">
         {/* Conteúdo Principal */}
         <div className="max-w-7xl mx-auto px-4 py-10 md:py-12">
           {/* Grid Desktop: 5 colunas | Mobile: 1 coluna */}

@@ -4,7 +4,7 @@ import type { ProfileData, JourneyData } from "@/types/about"
 
 const profileData: ProfileData = {
   name: "Joao Victor Ventura Martins",
-  title: "Fullstack Developer",
+  title: "FullStack Developer Specializing in Frontend",
   imageUrl: "/images/profile/profile.jpg",
   linksUrl: "#links",
   aboutUrl: "#about",
