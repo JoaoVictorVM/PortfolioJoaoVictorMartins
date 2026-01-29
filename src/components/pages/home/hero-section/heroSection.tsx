@@ -1,3 +1,4 @@
+import { HeroSectionButtons } from './heroSectionButtons';
 import { HeroSectionSubtitle } from './heroSectionSubtitle';
 import { HeroSectionTitle } from './heroSectionTitle';
 import { BackgroundGradient } from '@/components/layout/background/backgroundGradient';
@@ -9,6 +10,7 @@ export function HeroSection () {
             <div className="max-w-7xl mx-auto">
                 <HeroSectionTitle />
                 <HeroSectionSubtitle />
+                <HeroSectionButtons />
             </div>
         </section>
     );
