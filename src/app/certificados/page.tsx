@@ -1,4 +1,4 @@
-import { HeroCertifications } from "@/components/pages/certificados/hero/heroCertifications";
+import { HeroCertifications } from "@/components/pages/certificados/heroCertifications";
 
 export default function Certificados() {
     return (
