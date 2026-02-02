@@ -26,7 +26,7 @@ export function AboutProfile({ profile }: AboutProfileProps) {
         </div>
 
         {/* Floating info card */}
-        <div className="pointer-events-none absolute left-4 right-4 bottom-4 rounded-3xl border border-zinc-800 bg-zinc-900/90 p-4 backdrop-blur-sm">
+        <div className="pointer-events-none absolute left-4 right-4 bottom-4 rounded-3xl border border-[var(--cor-escuro-7)] bg-[var(--cor-escuro-1)]/90 p-4 backdrop-blur-sm">
           <h3 className="text-lg font-semibold text-white">
             {profile.name}
           </h3>
@@ -42,7 +42,7 @@ export function AboutProfile({ profile }: AboutProfileProps) {
           href={profile.linksUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-1 items-center justify-center gap-2 rounded-full border border-zinc-700 bg-zinc-800 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-700"
+          className="flex flex-1 items-center justify-center gap-2 rounded-full border-1 border-[var(--cor-branca)] hover:border-[var(--cor-primaria-1)] bg-[var(--cor-escuro-6)]/80 px-4 py-2.5 text-sm font-medium text-[var(--cor-branca)] transition-colors transition-all duration-300"
         >
           Meus Links
           <ArrowUpRightIcon className="h-4 w-4" />
@@ -50,7 +50,7 @@ export function AboutProfile({ profile }: AboutProfileProps) {
 
         <Link
           href={profile.aboutUrl}
-          className="flex flex-1 items-center justify-center gap-2 rounded-full border border-zinc-700 bg-zinc-800 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-700"
+          className="flex flex-1 items-center justify-center gap-2 rounded-full border-1 border-[var(--cor-branca)] hover:border-[var(--cor-primaria-1)] bg-[var(--cor-escuro-6)]/80 px-4 py-2.5 text-sm font-medium text-[var(--cor-branca)] transition-colors transition-all duration-300"
         >
           Saiba mais
           <ArrowUpRightIcon className="h-4 w-4" />
@@ -59,7 +59,7 @@ export function AboutProfile({ profile }: AboutProfileProps) {
         <a 
           href=""
           download
-          className="flex flex-1 items-center justify-center gap-2 rounded-full border border-zinc-700 bg-zinc-800 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-700"
+          className="flex flex-1 items-center justify-center gap-2 rounded-full border-1 border-[var(--cor-branca)] hover:border-[var(--cor-primaria-1)] bg-[var(--cor-escuro-6)]/80 px-4 py-2.5 text-sm font-medium text-[var(--cor-branca)] transition-colors transition-all duration-300"
         >
           Curriculo
           <Download className="h-4 w-4" />

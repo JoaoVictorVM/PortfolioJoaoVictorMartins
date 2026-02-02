@@ -43,8 +43,8 @@ export function InfiniteMarquee({
       `}</style>
       <div className="relative overflow-hidden py-4">
         {/* Gradient overlays for smooth fade effect */}
-        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10 rounded-l-3xl border-l border-[var(--cor-escuro-4)]" />
-        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10 rounded-r-3xl border-r border-[var(--cor-escuro-4)]" />
+        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[var(--cor-escuro-6)] to-transparent z-10 rounded-l-3xl border-l border-[var(--cor-escuro-7)]" />
+        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[var(--cor-escuro-6)] to-transparent z-10 rounded-r-3xl border-r border-[var(--cor-escuro-7)]" />
 
         <div className="marquee-track flex gap-4 w-max">
           {/* Triple the items for seamless loop */}

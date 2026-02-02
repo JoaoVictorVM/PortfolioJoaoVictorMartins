@@ -26,7 +26,7 @@ export function ProjectCardInfo({
       <h3 className="text-lg md:text-xl font-bold text-white mb-1">
         {name}
       </h3>
-      <p className="text-sm text-[var(--cor-branco)] mb-3 line-clamp-2">
+      <p className="text-sm text-[var(--cor-branca)] mb-3 line-clamp-2">
         {description}
       </p>
       <div className="flex flex-wrap gap-2 mb-0 group-hover:mb-3 transition-all duration-300">

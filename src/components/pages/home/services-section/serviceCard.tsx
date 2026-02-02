@@ -22,7 +22,7 @@ const bulletVariants = {
 
 export function ServiceCard({ service }: ServiceCardProps) {
   return (
-    <div className="group relative overflow-hidden rounded-2xl border border-[var(--cor-escuro-3)] bg-[var(--cor-escuro-5)] p-6 transition-all sm:p-8">
+    <div className="group relative overflow-hidden rounded-2xl border border-[var(--cor-escuro-7)] bg-[var(--cor-escuro-5)] p-6 transition-all sm:p-8">
       {/* Gradient Blur Background */}
       <div
         className={cn(
@@ -68,7 +68,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
           ))}
         </ul>
 
-        {/* Link */}
+        {/*
         <Link
           href={service.href}
           className="mt-6 inline-flex items-center gap-1 text-sm font-medium p-2 text-white transition-colors hover:text-zinc-300"
@@ -76,6 +76,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
           Saiba mais
           <ArrowUpRightIcon className="h-4 w-4" />
         </Link>
+        */}
       </div>
     </div>
   )

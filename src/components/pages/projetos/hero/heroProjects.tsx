@@ -1,7 +1,7 @@
 export function HeroProjects() {
     return (
         <section
-            className="min-h-[50vh] flex flex-col items-center justify-center px-4 bg-[var(--cor-escuro-1)]"
+            className="min-h-[50vh] flex flex-col items-center justify-center px-4"
             aria-label="Título da página de projetos"
         >
             <div className="max-w-7xl mx-auto text-center">

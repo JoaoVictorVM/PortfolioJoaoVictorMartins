@@ -17,7 +17,7 @@ export function TechBadge({ name, icon, size = "md" }: TechBadgeProps) {
 
   return (
     <div
-      className={`flex items-center gap-2 bg-neutral-900/80 backdrop-blur-sm rounded-full border border-neutral-700 ${sizes[size]}`}
+      className={`flex items-center gap-2 bg-[var(--cor-escuro-6)] backdrop-blur-sm rounded-full border border-[var(--cor-escuro-7)] ${sizes[size]}`}
     >
       <img
         src={icon}

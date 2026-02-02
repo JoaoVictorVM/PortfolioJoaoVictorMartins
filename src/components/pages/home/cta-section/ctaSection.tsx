@@ -12,7 +12,6 @@ interface CTASectionProps {
 export function CtaSection({
   email = "contato@teste.com",
   location = "Brasil (Remoto)",
-  timezone = "GMT-3",
 }: CTASectionProps) {
   return (
     <section id="contato" className="py-16 md:py-24 px-4">
@@ -23,22 +22,22 @@ export function CtaSection({
         </div>
 
         {/* Card Principal */}
-        <div className="relative rounded-2xl border border-gray-800 bg-gradient-to-br from-gray-900 to-gray-950 p-8 md:p-12 overflow-hidden">
+        <div className="relative rounded-2xl border border-[var(--cor-escuro-7)] bg-gradient-to-br from-gray-900 to-gray-950 p-8 md:p-12 overflow-hidden">
           {/* Efeito de gradiente sutil */}
-          <div className="absolute inset-0 bg-gradient-to-r from-violet-500/5 via-transparent to-cyan-500/5 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[var(--cor-primaria-1)]/20 via-[var(--cor-primaria-3)]/10 to-[var(--cor-escuro-5)] pointer-events-none" />
 
           <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
             {/* Coluna Esquerda */}
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--cor-branca)] leading-tight">
                 Vamos criar algo{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400">
+                <span className="text-transparent bg-clip-text bg-gradient-to-br from-[var(--cor-primaria-1)] via-[var(--cor-primaria-1)] to-[var(--cor-primaria-4)]">
                   incrível
                 </span>{" "}
                 juntos?
               </h2>
 
-              <p className="text-gray-400 text-base leading-relaxed max-w-md">
+              <p className="text-[var(--cor-cinza-2)] text-base leading-relaxed max-w-md">
                 Tem um projeto em mente? Estou sempre aberto para discutir
                 novas oportunidades de trabalho, seja freelance ou posições
                 remotas.
@@ -67,12 +66,8 @@ export function CtaSection({
               {/* Localização */}
               <div className="flex items-center gap-4 text-sm text-gray-500">
                 <span className="flex items-center gap-1.5">
-                  <span className="w-1 h-1 rounded-full bg-gray-500" />
-                  {location}
-                </span>
-                <span className="flex items-center gap-1.5">
                   <span className="w-1 h-1 rounded-full bg-emerald-500" />
-                  {timezone}
+                  {location}
                 </span>
               </div>
             </div>

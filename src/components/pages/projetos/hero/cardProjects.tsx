@@ -4,11 +4,11 @@ import { projects } from "@/lib/projects-data";
 
 export function CardProjects() {
   return (
-    <section className="py-16 md:py-24 px-4 bg-[var(--cor-escuro-1)]">
+    <section className="py-16 md:py-24 px-4">
         <div className="max-w-7xl mx-auto space-y-6">
             {projects.map((project) => (
                 <div 
-                  className="p-4 bg-[#121619] rounded-lg"
+                  className="p-4 bg-[var(--cor-escuro-4)] border border-[var(--cor-escuro-7)] rounded-lg"
                   key={project.name}
                 >
                   <img 

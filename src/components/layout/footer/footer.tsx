@@ -5,23 +5,23 @@ import { FooterCopyright } from "./footerCopyright";
 
 const linksUteis = [
   { label: "Projetos", href: "/projetos" },
-  { label: "Certificados", href: "/termos" },
-  { label: "Links", href: "/privacidade" },
-  { label: "Saiba Mais", href: "/privacidade" },
+  { label: "Certificados", href: "/certificados" },
+  { label: "Links", href: "/" },
+  { label: "Saiba Mais", href: "/" },
 ];
 
 const secoes = [
-  { label: "Inicio", href: "/ferramentas/gerador-senhas" },
-  { label: "Secao Sobre Mim", href: "/ferramentas/gerador-senhas" },
-  { label: "Secao Projetos", href: "/ferramentas/gerador-senhas" },
-  { label: "Secao Servicos", href: "/ferramentas/gerador-senhas" },
-  { label: "Secao Certificados", href: "/ferramentas/gerador-senhas" },
+  { label: "Inicio", href: "/#inicio" },
+  { label: "Secao Sobre Mim", href: "/#sobre-mim" },
+  { label: "Secao Projetos", href: "/#projetos" },
+  { label: "Secao Servicos", href: "/#servicos" },
+  { label: "Secao Certificados", href: "/#certificados" },
 ];
 
 export function Footer() {
   return (
     <footer className="px-4">
-      <div className="max-w-7xl mx-auto bg-gradient-to-r from-[var(--cor-escuro-2)] via-[var(--cor-escuro-5)] to-[var(--cor-escuro-2)] rounded-t-3xl border-t border-[var(--cor-escuro-4)] p-4">
+      <div className="max-w-7xl mx-auto bg-gradient-to-r from-[var(--cor-escuro-6)] via-[var(--cor-escuro-1)] to-[var(--cor-escuro-6)] rounded-t-3xl border-t border-[var(--cor-escuro-7)] p-4">
         {/* Conteúdo Principal */}
         <div className="max-w-7xl mx-auto px-4 py-10 md:py-12">
           {/* Grid Desktop: 5 colunas | Mobile: 1 coluna */}

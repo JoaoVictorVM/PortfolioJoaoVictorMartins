@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 
 interface CTAButtonsProps {
   primaryText?: string;
@@ -9,23 +8,22 @@ interface CTAButtonsProps {
 }
 
 export function CTAButtons({
-  primaryText = "Vamos conversar",
-  primaryHref = "/contato",
-  secondaryText = "Ver Projetos",
+  primaryText = "Contratar agora",
+  primaryHref = "/",
+  secondaryText = "Veja meus projetos",
   secondaryHref = "/projetos",
 }: CTAButtonsProps) {
   return (
     <div className="flex items-center gap-3">
       <Link
         href={primaryHref}
-        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-violet-600 hover:bg-violet-700 text-white font-medium text-sm transition-colors duration-200"
+        className="inline-flex items-center gap-2 py-4 px-7 font-bold bg-[var(--cor-branca)] text-[var(--cor-escuro-1)] hover:bg-[var(--cor-cinza-2)] transition-all duration-300 text-center rounded-full"
       >
         {primaryText}
-        <ArrowUpRight size={16} />
       </Link>
       <Link
         href={secondaryHref}
-        className="inline-flex items-center px-5 py-2.5 rounded-lg bg-gray-800 hover:bg-gray-700 text-white font-medium text-sm border border-gray-700 transition-colors duration-200"
+        className="inline-flex items-center py-4 px-7 font-bold border-2 border-[var(--cor-primaria-1)] hover:border-[var(--cor-branca)] text-white hover:bg-[var(--cor-primaria-3)]/20 transition-all duration-300 text-center rounded-full"
       >
         {secondaryText}
       </Link>

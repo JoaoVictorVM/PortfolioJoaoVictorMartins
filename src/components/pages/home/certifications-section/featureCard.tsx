@@ -51,7 +51,7 @@ export function FeatureCard({ icon, title, color = "blue" }: FeatureCardProps) {
   const styles = colorStyles[color];
 
   return (
-    <div className={`relative flex items-center gap-4 p-4 rounded-2xl bg-neutral-900/60 border border-neutral-800 hover:${styles.border} transition-all overflow-hidden group`}>
+    <div className={`relative flex items-center gap-4 p-4 rounded-2xl bg-[var(--cor-escuro-6)] border border-[var(--cor-escuro-7)] hover:${styles.border} transition-all overflow-hidden group`}>
       {/* Gradient background effect */}
       <div className={`absolute inset-0 ${styles.gradient}`} />
       

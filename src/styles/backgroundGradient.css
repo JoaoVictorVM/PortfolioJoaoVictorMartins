@@ -16,8 +16,8 @@
   height: var(--size);
 
   background-image: linear-gradient(
-    hsl(210 10% 34%),
-    hsl(215 14% 44%)
+    hsl(0, 100%, 25%),
+    hsl(0, 100%, 10%)
   );
 
   animation: rotate var(--speed) var(--easing) alternate infinite;
