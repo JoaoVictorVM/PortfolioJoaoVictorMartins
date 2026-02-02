@@ -13,7 +13,7 @@ export function AboutProfile({ profile }: AboutProfileProps) {
     <div className="flex h-full flex-col gap-4">
 
       {/* Image + floating card */}
-      <div className="relative flex flex-1 flex-col overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/80">
+      <div className="relative flex flex-1 flex-col overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900/80">
 
         {/* Profile Image (fills available space) */}
         <div className="relative flex-1">
@@ -26,7 +26,7 @@ export function AboutProfile({ profile }: AboutProfileProps) {
         </div>
 
         {/* Floating info card */}
-        <div className="pointer-events-none absolute left-4 right-4 bottom-4 rounded-xl border border-zinc-800 bg-zinc-900/90 p-4 backdrop-blur-sm">
+        <div className="pointer-events-none absolute left-4 right-4 bottom-4 rounded-3xl border border-zinc-800 bg-zinc-900/90 p-4 backdrop-blur-sm">
           <h3 className="text-lg font-semibold text-white">
             {profile.name}
           </h3>
@@ -42,7 +42,7 @@ export function AboutProfile({ profile }: AboutProfileProps) {
           href={profile.linksUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-[var(--cor-primaria-1)] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[var(--cor-primaria-2)]"
+          className="flex flex-1 items-center justify-center gap-2 rounded-full border border-zinc-700 bg-zinc-800 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-700"
         >
           Meus Links
           <ArrowUpRightIcon className="h-4 w-4" />
@@ -50,7 +50,7 @@ export function AboutProfile({ profile }: AboutProfileProps) {
 
         <Link
           href={profile.aboutUrl}
-          className="flex flex-1 items-center justify-center gap-2 rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-700"
+          className="flex flex-1 items-center justify-center gap-2 rounded-full border border-zinc-700 bg-zinc-800 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-700"
         >
           Saiba mais
           <ArrowUpRightIcon className="h-4 w-4" />
@@ -59,7 +59,7 @@ export function AboutProfile({ profile }: AboutProfileProps) {
         <a 
           href=""
           download
-          className="flex flex-1 items-center justify-center gap-2 rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-700"
+          className="flex flex-1 items-center justify-center gap-2 rounded-full border border-zinc-700 bg-zinc-800 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-700"
         >
           Curriculo
           <Download className="h-4 w-4" />

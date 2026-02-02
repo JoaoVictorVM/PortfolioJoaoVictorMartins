@@ -15,7 +15,7 @@ export function CtaSection({
   timezone = "GMT-3",
 }: CTASectionProps) {
   return (
-    <section className="py-16 md:py-24 px-4">
+    <section id="contato" className="py-16 md:py-24 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Badge de Disponibilidade */}
         <div className="flex mb-5 ml-2">

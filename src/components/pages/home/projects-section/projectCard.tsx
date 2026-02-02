@@ -19,7 +19,7 @@ interface ProjectCardProps {
 export function ProjectCard({ project, className = "" }: ProjectCardProps) {
   return (
     <div
-      className={`group relative overflow-hidden rounded-2xl cursor-pointer border-2 border-transparent hover:border-white/30 transition-all duration-300 ${className}`}
+      className={`group relative overflow-hidden rounded-3xl cursor-pointer border-2 border-transparent hover:border-white/30 transition-all duration-300 ${className}`}
     >
 
       <div className="absolute inset-0">

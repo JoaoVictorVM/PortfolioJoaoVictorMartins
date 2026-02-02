@@ -11,6 +11,13 @@ export function useClickOutside(
       if (!ref.current || ref.current.contains(event.target as Node)) {
         return;
       }
+      
+      // Não fecha se o clique foi em um link (tag <a> ou dentro de um Link do Next.js)
+      const target = event.target as HTMLElement;
+      if (target.tagName === 'A' || target.closest('a')) {
+        return;
+      }
+      
       handler();
     }
 

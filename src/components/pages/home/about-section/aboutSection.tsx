@@ -12,7 +12,7 @@ const profileData: ProfileData = {
 
 export function AboutSection() {
   return (
-    <section className="py-16 md:py-24 px-4">
+    <section id="sobre-mim" className="py-16 md:py-24 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-12 flex flex-col items-center">

@@ -44,7 +44,7 @@ const services: ServiceItem[] = [
 
 export function ServicesSection() {
   return (
-    <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+    <section id="servicos" className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <header className="text-center">

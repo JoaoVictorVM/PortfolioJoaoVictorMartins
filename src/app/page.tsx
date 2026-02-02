@@ -11,7 +11,7 @@ export default function Home() {
     <>
       
       <main>
-        <section className="h-screen flex flex-col">
+        <section id="inicio" className="h-screen flex flex-col">
           <div className="flex-1 flex items-center justify-center">
             <HeroSection />
           </div>

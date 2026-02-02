@@ -2,7 +2,7 @@ import { AboutIcon } from "./aboutIcon"
 
 export function JourneyCard() {
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6 sm:p-8">
+    <div className="relative overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900/50 p-6 sm:p-8">
       {/* Gradient Blur Background */}
       <div
         className="pointer-events-none absolute -top-20 -left-20 h-60 w-60 rounded-full bg-gradient-to-br from-[var(--cor-primaria-1)]/20 to-[var(--cor-primaria-1)]/20 opacity-60 blur-3xl"
