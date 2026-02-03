@@ -6,29 +6,29 @@ export const MENU = [
   {
     label: "Projetos",
     dropdown: [
-      { label: "Secao de Projetos", href: "/#projetos" },
+      { label: "Seção de Projetos", href: "/#projetos" },
       { label: "Todos os Projetos", href: "/projetos" },
     ],
   },
   {
     label: "Certificados",
     dropdown: [
-      { label: "Secao Ceritifcado", href: "/#certificados" },
+      { label: "Seção Ceritifcado", href: "/#certificados" },
       { label: "Todos os Certificados", href: "/certificados" },
     ],
   },
   {
     label: "Pessoal",
     dropdown: [
-      { label: "Secao sobre mim", href: "/#sobre-mim" },
+      { label: "Seção Sobre mim", href: "/#sobre-mim" },
       { label: "Meus Links", href: "/#links" },
-      { label: "Saiba mais", href: "/#sobre-mim" },
+      { label: "Saiba Mais", href: "/#sobre-mim" },
     ],
   },
   {
-    label: "Servicos",
+    label: "Serviços",
     dropdown: [
-      { label: "Secao servicos", href: "/#servicos" },
+      { label: "Seção Serviços", href: "/#servicos" },
       { label: "Front-end", href: "/#servicos" },
       { label: "Sistema", href: "/#servicos" },
       { label: "UX/UI", href: "/#servicos" },

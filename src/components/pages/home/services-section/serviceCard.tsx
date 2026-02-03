@@ -1,24 +1,24 @@
-import Link from "next/link"
-import type { ServiceItem } from "@/types/services"
-import { ServiceIcon } from "./serviceIcon"
-import { ArrowUpRightIcon } from "./serviceIcons"
-import { cn } from "@/lib/utils"
+import Link from "next/link";
+import type { ServiceItem } from "@/types/services";
+import { ServiceIcon } from "./serviceIcon";
+import { ArrowUpRightIcon } from "./serviceIcons";
+import { cn } from "@/lib/utils";
 
 interface ServiceCardProps {
-  service: ServiceItem
+  service: ServiceItem;
 }
 
 const gradientVariants = {
   blue: "from-cyan-500/30 to-blue-600/30",
   orange: "from-orange-500/30 to-red-600/30",
   pink: "from-pink-500/30 to-purple-600/30",
-}
+};
 
 const bulletVariants = {
   blue: "bg-cyan-500",
   orange: "bg-orange-500",
   pink: "bg-pink-500",
-}
+};
 
 export function ServiceCard({ service }: ServiceCardProps) {
   return (
@@ -27,7 +27,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
       <div
         className={cn(
           "pointer-events-none absolute -top-20 -left-20 h-60 w-60 rounded-full bg-gradient-to-br opacity-50 blur-3xl transition-opacity",
-          gradientVariants[service.iconVariant]
+          gradientVariants[service.iconVariant],
         )}
         aria-hidden="true"
       />
@@ -61,23 +61,30 @@ export function ServiceCard({ service }: ServiceCardProps) {
         {/* Features List */}
         <ul className="mt-6 space-y-2">
           {service.features.map((feature) => (
-            <li key={feature} className="flex items-center gap-2 text-sm text-zinc-400">
-              <span className={cn("h-1.5 w-1.5 rounded-full", bulletVariants[service.iconVariant])} aria-hidden="true" />
+            <li
+              key={feature}
+              className="flex items-center gap-2 text-sm text-zinc-400"
+            >
+              <span
+                className={cn(
+                  "h-1.5 w-1.5 rounded-full",
+                  bulletVariants[service.iconVariant],
+                )}
+                aria-hidden="true"
+              />
               {feature}
             </li>
           ))}
         </ul>
 
-        {/*
         <Link
           href={service.href}
           className="mt-6 inline-flex items-center gap-1 text-sm font-medium p-2 text-white transition-colors hover:text-zinc-300"
         >
-          Saiba mais
+          Contrate esse servico
           <ArrowUpRightIcon className="h-4 w-4" />
         </Link>
-        */}
       </div>
     </div>
-  )
+  );
 }

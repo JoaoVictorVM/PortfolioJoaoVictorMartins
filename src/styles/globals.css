@@ -4,9 +4,9 @@
 @import "./backgroundBreath.css";
 
 body {
-  background: var(--cor-escuro-4);
+    background: var(--cor-escuro-4);
 }
 
 h1 {
-  color: var(--cor-branca);
+    color: var(--cor-branca);
 }

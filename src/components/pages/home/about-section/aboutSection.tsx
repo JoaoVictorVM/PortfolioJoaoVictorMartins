@@ -1,14 +1,14 @@
-import { JourneyCard } from "./aboutJourney"
-import { AboutProfile } from "./aboutProfile"
-import type { ProfileData, JourneyData } from "@/types/about"
+import { JourneyCard } from "./aboutJourney";
+import { AboutProfile } from "./aboutProfile";
+import type { ProfileData, JourneyData } from "@/types/about";
 
 const profileData: ProfileData = {
-  name: "Joao Victor Ventura Martins",
+  name: "João Victor Ventura Martins",
   title: "FullStack Developer Specializing in Frontend",
   imageUrl: "/images/profile/profile.jpg",
   linksUrl: "#links",
   aboutUrl: "#about",
-}
+};
 
 export function AboutSection() {
   return (
@@ -20,9 +20,9 @@ export function AboutSection() {
             Sobre Mim
           </span> */}
           <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
-            Me{" "}
+            Um pouco{" "}
             <span className="bg-gradient-to-br from-[var(--cor-primaria-1)] via-[var(--cor-primaria-1)] to-[var(--cor-primaria-4)] bg-clip-text text-transparent">
-              Conheca
+              sobre mim
             </span>
           </h2>
         </div>
@@ -40,5 +40,5 @@ export function AboutSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

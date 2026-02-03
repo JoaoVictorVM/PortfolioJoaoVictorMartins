@@ -11,11 +11,11 @@ const linksUteis = [
 ];
 
 const secoes = [
-  { label: "Inicio", href: "/#inicio" },
-  { label: "Secao Sobre Mim", href: "/#sobre-mim" },
-  { label: "Secao Projetos", href: "/#projetos" },
-  { label: "Secao Servicos", href: "/#servicos" },
-  { label: "Secao Certificados", href: "/#certificados" },
+  { label: "Início ", href: "/#inicio" },
+  { label: "Seção Sobre Mim", href: "/#sobre-mim" },
+  { label: "Seção Projetos", href: "/#projetos" },
+  { label: "Seção Serviços", href: "/#servicos" },
+  { label: "Seção Certificados", href: "/#certificados" },
 ];
 
 export function Footer() {
@@ -38,7 +38,7 @@ export function Footer() {
 
             {/* Ferramentas */}
             <div>
-              <FooterLinks title="Secoes" links={secoes} />
+              <FooterLinks title="Seções" links={secoes} />
             </div>
 
             {/* Redes Sociais */}

@@ -1,4 +1,4 @@
-import { AboutIcon } from "./aboutIcon"
+import { AboutIcon } from "./aboutIcon";
 
 export function JourneyCard() {
   return (
@@ -17,30 +17,56 @@ export function JourneyCard() {
         </div>
 
         {/* Title */}
-        <h3 className="mb-4 text-2xl font-bold text-white">
-          A Jornada
-        </h3>
+        <h3 className="mb-4 text-2xl font-bold text-white">A Jornada</h3>
 
         {/* Description */}
         <p className="text-base leading-relaxed text-zinc-400">
-          <span className="font-semibold text-white">
-            Olá! Meu nome é João Victor Ventura Martins
+          Olá! Me chamo{" "}
+          <span className="text-[var(--cor-branca)]">
+            João Victor Ventura Martins
           </span>{" "}
-          e atuo na área de tecnologia há mais de 3 anos. Ao longo desse tempo,
-          venho construindo minha trajetória com foco em desenvolvimento web,
-          aprendizado contínuo e evolução profissional.
-          <br /><br />
-          Sou graduando em Ciência da Computação e desenvolvedor fullstack, com
-          foco em React e Next.js no frontend e Node.js no backend. Desenvolvo
-          aplicações web modernas, responsivas e acessíveis, utilizando
-          TailwindCSS e boas práticas para garantir código organizado,
-          escalável e de fácil manutenção.
-          <br /><br />
-          Tenho forte atenção à estruturação de código e acessibilidade,
-          desenvolvendo projetos próprios e acadêmicos, sempre buscando
-          evolução técnica e um portfólio sólido.
+          e atuo na área de tecnologia há{" "}
+          <span className="text-[var(--cor-branca)]">mais de 3 anos</span>.
+          <br />
+          <br />
+          Sou{" "}
+          <span className="text-[var(--cor-branca)]">
+            graduando em Ciência da Computação
+          </span>{" "}
+          e{" "}
+          <span className="text-[var(--cor-branca)]">
+            desenvolvedor fullstack
+          </span>
+          , trabalhando principalmente com{" "}
+          <span className="text-[var(--cor-branca)]">React e Next.js</span> no
+          frontend e <span className="text-[var(--cor-branca)]">Node.js</span>{" "}
+          no backend. Desenvolvo{" "}
+          <span className="text-[var(--cor-branca)]">
+            aplicações web modernas, responsivas e acessíveis
+          </span>
+          , utilizando{" "}
+          <span className="text-[var(--cor-branca)]">TailwindCSS</span> e{" "}
+          <span className="text-[var(--cor-branca)]">
+            boas práticas de desenvolvimento
+          </span>
+          .
+          <br />
+          <br />
+          Tenho forte atenção à{" "}
+          <span className="text-[var(--cor-branca)]">
+            estrutura de código, acessibilidade e escalabilidade
+          </span>
+          , atuando tanto em{" "}
+          <span className="text-[var(--cor-branca)]">
+            projetos próprios quanto acadêmicos
+          </span>
+          , sempre buscando{" "}
+          <span className="text-[var(--cor-branca)]">
+            evolução técnica e profissional
+          </span>
+          .
         </p>
       </div>
     </div>
-  )
+  );
 }

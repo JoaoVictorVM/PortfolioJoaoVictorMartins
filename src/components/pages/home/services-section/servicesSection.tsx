@@ -1,7 +1,12 @@
-import Link from "next/link"
-import type { ServiceItem } from "@/types/services"
-import { ServiceCard } from "./serviceCard"
-import { ArrowUpRightIcon, GridIcon, PenToolIcon, RocketIcon } from "./serviceIcons"
+import Link from "next/link";
+import type { ServiceItem } from "@/types/services";
+import { ServiceCard } from "./serviceCard";
+import {
+  ArrowUpRightIcon,
+  GridIcon,
+  PenToolIcon,
+  RocketIcon,
+} from "./serviceIcons";
 
 const services: ServiceItem[] = [
   {
@@ -11,7 +16,12 @@ const services: ServiceItem[] = [
     title: "Landing Pages",
     description:
       "Páginas otimizadas para converter visitantes em clientes. Design persuasivo com foco em resultados mensuráveis.",
-    features: ["Otimização SEO", "Performance A+", "Design Responsivo", "CTA Estratégicos"],
+    features: [
+      "Otimização SEO",
+      "Performance A+",
+      "Design Responsivo",
+      "CTA Estratégicos",
+    ],
     href: "#landing-pages",
     iconVariant: "blue",
     number: "01",
@@ -23,7 +33,12 @@ const services: ServiceItem[] = [
     title: "Aplicações Web",
     description:
       "Sistemas complexos com interfaces intuitivas. Da autenticação aos relatórios, tudo com UX impecável.",
-    features: ["React Ecosystem", "APIs RESTful", "Real-time Data", "Scalable Code"],
+    features: [
+      "React Ecosystem",
+      "APIs RESTful",
+      "Real-time Data",
+      "Scalable Code",
+    ],
     href: "#web-apps",
     iconVariant: "orange",
     number: "02",
@@ -35,12 +50,17 @@ const services: ServiceItem[] = [
     title: "UI/UX Design",
     description:
       "Do conceito ao pixel final. Pesquisa de usuário, wireframes, protótipos interativos e design systems.",
-    features: ["Design Systems", "User Research", "Protótipos Hi-Fi", "Handoff Perfeito"],
+    features: [
+      "Design Systems",
+      "User Research",
+      "Protótipos Hi-Fi",
+      "Handoff Perfeito",
+    ],
     href: "#ui-ux-design",
     iconVariant: "pink",
     number: "03",
   },
-]
+];
 
 export function ServicesSection() {
   return (
@@ -50,12 +70,13 @@ export function ServicesSection() {
         <header className="text-center">
           <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
             Meus{" "}
-            <span className="bg-gradient-to-r from-[var(--cor-primaria-1)] to-[var(--cor-primaria-3)] bg-clip-text text-transparent">
-              servicos
+            <span className="bg-gradient-to-br from-[var(--cor-primaria-1)] via-[var(--cor-primaria-1)] to-[var(--cor-primaria-4)] bg-clip-text text-transparent">
+              Serviços
             </span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-zinc-400 sm:text-lg">
-            Soluções sob medida para transformar sua presença digital em resultados concretos.
+            Soluções sob medida para transformar sua presença digital em
+            resultados concretos.
           </p>
         </header>
 
@@ -79,5 +100,5 @@ export function ServicesSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -9,7 +9,11 @@ export function CertificationsSection() {
       <div className="max-w-7xl mx-auto">
         <div className="mb-6 md:mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-3 md:mb-0">
-            Dominio das <span className="bg-gradient-to-r from-[var(--cor-primaria-1)] to-[var(--cor-primaria-3)] bg-clip-text text-transparent">principais</span> tecnologias do mercado 
+            Domínio das{" "}
+            <span className="bg-gradient-to-br from-[var(--cor-primaria-1)] via-[var(--cor-primaria-1)] to-[var(--cor-primaria-4)] bg-clip-text text-transparent">
+              principais
+            </span>{" "}
+            tecnologias do mercado
           </h2>
         </div>
         {/* Infinite Tech Carousel */}
