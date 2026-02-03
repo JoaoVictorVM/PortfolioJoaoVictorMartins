@@ -22,7 +22,7 @@ const services: ServiceItem[] = [
       "Design Responsivo",
       "CTA Estratégicos",
     ],
-    href: "#landing-pages",
+    href: "https://wa.me/5535998095841?text=Olá,%20João.%20Queria%20saber%20mais%20sobre%20as%20suas%20páginas%20e%20aplicações%20web!",
     iconVariant: "blue",
     number: "01",
   },
@@ -39,7 +39,7 @@ const services: ServiceItem[] = [
       "Real-time Data",
       "Scalable Code",
     ],
-    href: "#web-apps",
+    href: "https://wa.me/5535998095841?text=Olá,%20João.%20Queria%20saber%20mais%20sobre%20os%20seus%20sistemas%20e%20aplicações%20complexas!",
     iconVariant: "orange",
     number: "02",
   },
@@ -56,7 +56,7 @@ const services: ServiceItem[] = [
       "Protótipos Hi-Fi",
       "Handoff Perfeito",
     ],
-    href: "#ui-ux-design",
+    href: "https://wa.me/5535998095841?text=Olá,%20João.%20Queria%20saber%20mais%20sobre%20os%20seus%20trabalhos%20como%20designer!",
     iconVariant: "pink",
     number: "03",
   },
@@ -91,7 +91,8 @@ export function ServicesSection() {
         <div className="mt-12 text-center sm:mt-16">
           <p className="text-zinc-500">Tem um projeto diferente em mente?</p>
           <Link
-            href="#contato"
+            href="https://wa.me/5535998095841?text=Olá,%20João.%20Queria%20saber%20mais%20sobre%20os%20seus%20trabalhos%20como%20desenvolvedor!"
+            target="_blank"
             className="mt-2 inline-flex items-center gap-1 text-base font-medium text-[var(--cor-primaria-1)] transition-colors hover:text-[var(--cor-primaria-2)]"
           >
             Vamos conversar

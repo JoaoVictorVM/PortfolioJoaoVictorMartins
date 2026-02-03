@@ -79,6 +79,8 @@ export function ServiceCard({ service }: ServiceCardProps) {
 
         <Link
           href={service.href}
+          target="_blank"
+          rel="noopener noreferrer"
           className="mt-6 inline-flex items-center gap-1 text-sm font-medium p-2 text-white transition-colors hover:text-zinc-300"
         >
           Contrate esse servico

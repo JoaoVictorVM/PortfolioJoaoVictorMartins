@@ -10,7 +10,7 @@ interface CTASectionProps {
 }
 
 export function CtaSection({
-  email = "contato@teste.com",
+  email = "jvmartinscv@gmail.com",
   location = "Brasil (Remoto)",
 }: CTASectionProps) {
   return (
@@ -38,9 +38,8 @@ export function CtaSection({
               </h2>
 
               <p className="text-[var(--cor-cinza-2)] text-base leading-relaxed max-w-md">
-                Tem um projeto em mente? Estou sempre aberto para discutir
-                novas oportunidades de trabalho, seja freelance ou posições
-                remotas.
+                Tem um projeto em mente? Estou sempre aberto para discutir novas
+                oportunidades de trabalho, seja freelance ou posições remotas.
               </p>
 
               <CTAButtons />
@@ -50,13 +49,14 @@ export function CtaSection({
             <div className="flex flex-col items-start md:items-end gap-6">
               {/* Email */}
               <a
-                href={`mailto:${email}`}
-                className="group inline-flex items-center gap-2 text-white hover:text-violet-400 transition-colors duration-200"
+                href={`mailto:${email}?subject=Contato%20com%20desenvolvedor%20João&body=Olá%20João`}
+                target="_blank"
+                className="group inline-flex items-center gap-2 text-white hover:text-[var(--cor-primaria-3)] transition-colors duration-200"
               >
                 <span className="text-lg font-medium">{email}</span>
-                <ArrowUpRight 
-                  size={18} 
-                  className="transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" 
+                <ArrowUpRight
+                  size={18}
+                  className="transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200"
                 />
               </a>
 

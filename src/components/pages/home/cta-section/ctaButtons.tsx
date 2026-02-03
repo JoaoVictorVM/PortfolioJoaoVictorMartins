@@ -9,7 +9,7 @@ interface CTAButtonsProps {
 
 export function CTAButtons({
   primaryText = "Contratar agora",
-  primaryHref = "/",
+  primaryHref = "https://wa.me/5535998095841?text=Olá,%20João.%20Queria%20saber%20mais%20sobre%20os%20seus%20trabalhos%20como%20desenvolvedor!",
   secondaryText = "Veja meus projetos",
   secondaryHref = "/projetos",
 }: CTAButtonsProps) {
@@ -17,6 +17,7 @@ export function CTAButtons({
     <div className="flex items-center gap-3">
       <Link
         href={primaryHref}
+        target="_blank"
         className="inline-flex items-center gap-2 py-4 px-7 font-bold bg-[var(--cor-branca)] text-[var(--cor-escuro-1)] hover:bg-[var(--cor-cinza-2)] transition-all duration-300 text-center rounded-full"
       >
         {primaryText}

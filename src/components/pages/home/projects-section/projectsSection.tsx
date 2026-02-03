@@ -4,9 +4,8 @@ import { ArrowUpRight } from "lucide-react";
 const projects: Project[] = [
   {
     id: 1,
-    name: "Bikcraft E-commerce",
-    description:
-      "Plataforma completa de e-commerce com carrinho, pagamentos e painel admin.",
+    name: "Bikcraft",
+    description: "E-commerce de bicicletas elétricas.",
     image: "/images/projects/previewBikcraft.png",
     technologies: [
       { name: "HTML", icon: "/icons/html.svg" },
@@ -20,8 +19,7 @@ const projects: Project[] = [
   {
     id: 2,
     name: "Pagina profissional Preparador Físico",
-    description:
-      "Plataforma completa de e-commerce com carrinho, pagamentos e painel admin.",
+    description: "Portfolio representando o trabalho de um preparador físico.",
     image: "/images/projects/previewPreparadorFisico.png",
     technologies: [
       { name: "HTML", icon: "/icons/html.svg" },
@@ -34,8 +32,7 @@ const projects: Project[] = [
   {
     id: 3,
     name: "Landing Page Clair Obscur",
-    description:
-      "Plataforma completa de e-commerce com carrinho, pagamentos e painel admin.",
+    description: "Página de apresentação ao Clair Obscur",
     image: "/images/projects/previewClair.png",
     technologies: [
       { name: "HTML", icon: "/icons/html.svg" },
@@ -48,10 +45,10 @@ const projects: Project[] = [
   {
     id: 4,
     name: "Linktree",
-    description:
-      "Plataforma completa de e-commerce com carrinho, pagamentos e painel admin.",
+    description: "Linktree para compartilhar todos os links.",
     image: "/images/projects/previewLinktree.png",
     technologies: [
+      { name: "React", icon: "/icons/react.svg" },
       { name: "Next.js", icon: "/icons/nextjs.svg" },
       { name: "TypeScript", icon: "/icons/typescript.svg" },
       { name: "Tailwind", icon: "/icons/tailwind.svg" },
@@ -61,11 +58,11 @@ const projects: Project[] = [
   },
   {
     id: 5,
-    name: "Exibicao de album musical",
-    description:
-      "Plataforma completa de e-commerce com carrinho, pagamentos e painel admin.",
+    name: "Exibição de álbum musical",
+    description: "Página de exibição do álbum musical SWAG.",
     image: "/images/projects/previewSwag.png",
     technologies: [
+      { name: "React", icon: "/icons/react.svg" },
       { name: "Next.js", icon: "/icons/nextjs.svg" },
       { name: "TypeScript", icon: "/icons/typescript.svg" },
       { name: "Tailwind", icon: "/icons/tailwind.svg" },
