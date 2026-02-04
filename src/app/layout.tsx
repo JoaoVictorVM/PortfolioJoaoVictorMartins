@@ -5,8 +5,8 @@ import { Header } from "@/components/layout/header/header";
 import { Footer } from "@/components/layout/footer/footer";
 
 const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '600', '700'],
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -21,9 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.className}>
-      <body
-        className={`antialiased`}
-      >
+      <body className={`antialiased`}>
         <Header />
         {children}
         <Footer />

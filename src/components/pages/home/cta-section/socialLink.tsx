@@ -1,4 +1,4 @@
-import { Linkedin, Github, Mail } from "lucide-react";
+import { Linkedin, Github, Mail, Instagram } from "lucide-react";
 import Link from "next/link";
 
 interface SocialLink {
@@ -12,9 +12,26 @@ interface SocialLinksProps {
 }
 
 const defaultLinks: SocialLink[] = [
-  { href: "https://linkedin.com", icon: <Linkedin size={18} />, label: "LinkedIn" },
-  { href: "https://github.com", icon: <Github size={18} />, label: "GitHub" },
-  { href: "mailto:contato@email.com", icon: <Mail size={18} />, label: "Email" },
+  {
+    href: "mailto:jvmartinscv@gmail.com?subject=Contato%20com%20desenvolvedor%20João&body=Olá%20João",
+    icon: <Mail size={18} />,
+    label: "Email",
+  },
+  {
+    href: "https://www.linkedin.com/in/jvvmartins/",
+    icon: <Linkedin size={18} />,
+    label: "LinkedIn",
+  },
+  {
+    href: "https://github.com/JoaoVictorVM",
+    icon: <Github size={18} />,
+    label: "GitHub",
+  },
+  {
+    href: "https://www.instagram.com/jvvmartins.s/",
+    icon: <Instagram size={18} />,
+    label: "Instagram",
+  },
 ];
 
 export function SocialLinks({ links = defaultLinks }: SocialLinksProps) {

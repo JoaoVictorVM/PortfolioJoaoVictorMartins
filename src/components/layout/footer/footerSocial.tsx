@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Instagram, Youtube, Linkedin } from "lucide-react";
+import { Instagram, Github, Linkedin } from "lucide-react";
 
 interface SocialLink {
   label: string;
@@ -13,19 +13,19 @@ interface FooterSocialProps {
 
 const defaultLinks: SocialLink[] = [
   {
-    label: "Nosso Instagram",
-    href: "https://instagram.com",
-    icon: <Instagram size={16} />,
-  },
-  {
-    label: "Canal no Youtube",
-    href: "https://youtube.com",
-    icon: <Youtube size={16} />,
-  },
-  {
     label: "Linkedin",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/jvvmartins/",
     icon: <Linkedin size={16} />,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/JoaoVictorVM",
+    icon: <Github size={16} />,
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/jvvmartins.s/",
+    icon: <Instagram size={16} />,
   },
 ];
 

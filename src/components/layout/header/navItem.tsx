@@ -73,28 +73,21 @@ export function NavItem({ item, isOpen, onToggle, onClose }: Props) {
         className={cn(
           "flex items-center gap-1 text-xs font-medium transition-colors",
           isOpen ? "text-[var(--cor-branco)]" : "text-zinc-300",
-          "hover:text-[var(--cor-branco)] hover:cursor-pointer"
+          "hover:text-[var(--cor-branco)] hover:cursor-pointer",
         )}
       >
         {item.label}
 
         <ChevronDown
           size={16}
-          className={cn(
-            "transition-transform",
-            isOpen && "rotate-180"
-          )}
+          className={cn("transition-transform", isOpen && "rotate-180")}
         />
       </button>
 
       {isOpen && (
         <Dropdown>
           {item.dropdown.map((sub) => (
-            <DropdownItem
-              key={sub.label}
-              item={sub}
-              onClick={onClose}
-            />
+            <DropdownItem key={sub.label} item={sub} onClick={onClose} />
           ))}
         </Dropdown>
       )}

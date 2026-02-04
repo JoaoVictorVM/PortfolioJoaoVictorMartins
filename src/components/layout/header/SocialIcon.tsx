@@ -83,19 +83,19 @@ export function SocialIcons({
 }) {
   const links: { href: string; icon: IconName; label: string }[] = [
     {
-      href: "https://www.instagram.com/yourprofile",
-      icon: "instagram",
-      label: "Instagram",
+      href: "https://www.linkedin.com/in/jvvmartins/",
+      icon: "linkedin",
+      label: "LinkedIn",
     },
     {
-      href: "https://www.github.com/yourprofile",
+      href: "https://github.com/JoaoVictorVM",
       icon: "github",
       label: "GitHub",
     },
     {
-      href: "https://www.linkedin.com/in/yourprofile",
-      icon: "linkedin",
-      label: "LinkedIn",
+      href: "https://www.instagram.com/jvvmartins.s/",
+      icon: "instagram",
+      label: "Instagram",
     },
   ];
 

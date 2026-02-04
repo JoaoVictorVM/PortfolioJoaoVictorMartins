@@ -6,8 +6,8 @@ import { FooterCopyright } from "./footerCopyright";
 const linksUteis = [
   { label: "Projetos", href: "/projetos" },
   { label: "Certificados", href: "/certificados" },
-  { label: "Links", href: "/" },
-  { label: "Saiba Mais", href: "/" },
+  { label: "Links", href: "https://linksjoaovictormartins.vercel.app/" },
+  { label: "Saiba Mais", href: "https://sobrejoaovictormartins.vercel.app/" },
 ];
 
 const secoes = [
