@@ -18,8 +18,6 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, className = "" }: ProjectCardProps) {
-  // Detect whether the device supports hover (desktop-like). This allows us to
-  // make the entire card tappable on touch devices while preserving hover on desktop.
   const [isHoverable, setIsHoverable] = useState<boolean>(true);
   const [forceShowLinks, setForceShowLinks] = useState<boolean>(false);
 
@@ -40,8 +38,6 @@ export function ProjectCard({ project, className = "" }: ProjectCardProps) {
     if (typeof mq.addEventListener === "function") {
       mq.addEventListener("change", handler);
     } else {
-      // fallback for older browsers
-      // @ts-ignore
       mq.addListener(handler);
     }
 
@@ -49,13 +45,11 @@ export function ProjectCard({ project, className = "" }: ProjectCardProps) {
       if (typeof mq.removeEventListener === "function") {
         mq.removeEventListener("change", handler);
       } else {
-        // @ts-ignore
         mq.removeListener(handler);
       }
     };
   }, []);
 
-  // When the device is hoverable again (e.g. docking), clear the mobile toggle state.
   useEffect(() => {
     if (isHoverable && forceShowLinks) {
       setForceShowLinks(false);
@@ -80,9 +74,6 @@ export function ProjectCard({ project, className = "" }: ProjectCardProps) {
         />
       </div>
 
-      {/* Full-card overlay to make the entire card tappable on touch devices.
-          Overlay sits behind the info panel (info panel has z-10) so links remain clickable.
-      */}
       {!isHoverable && (
         <button
           aria-pressed={forceShowLinks}
@@ -93,7 +84,6 @@ export function ProjectCard({ project, className = "" }: ProjectCardProps) {
           }
           onClick={onOverlayClick}
           className="absolute inset-0 z-0 bg-transparent border-0 p-0 m-0"
-          // ensure this overlay receives pointer events
           style={{ pointerEvents: "auto" }}
         />
       )}

@@ -3,23 +3,18 @@ import { AboutIcon } from "./aboutIcon";
 export function JourneyCard() {
   return (
     <div className="relative overflow-hidden rounded-3xl border border-[var(--cor-escuro-7)] bg-[var(--cor-escuro-6)]/80 p-6 sm:p-8">
-      {/* Gradient Blur Background */}
       <div
         className="pointer-events-none absolute -top-20 -left-20 h-60 w-60 rounded-full bg-gradient-to-br from-[var(--cor-primaria-1)]/20 to-[var(--cor-primaria-1)]/20 opacity-60 blur-3xl"
         aria-hidden="true"
       />
 
-      {/* Content */}
       <div className="relative z-10">
-        {/* Icon */}
         <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--cor-primaria-1)]/20 to-[var(--cor-primaria-1)]/20 backdrop-blur-sm">
           <AboutIcon className="h-7 w-7 text-[var(--cor-primaria-1)]" />
         </div>
 
-        {/* Title */}
-        <h3 className="mb-4 text-2xl font-bold text-white">A Jornada</h3>
+        <h3 className="mb-4 text-2xl font-bold text-white">Minha abordagem</h3>
 
-        {/* Description */}
         <p className="text-base leading-relaxed text-zinc-400">
           Olá! Me chamo{" "}
           <span className="text-[var(--cor-branca)]">

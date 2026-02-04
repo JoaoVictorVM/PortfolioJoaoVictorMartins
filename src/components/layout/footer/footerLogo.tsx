@@ -9,7 +9,6 @@ export function FooterLogo({
 }: FooterLogoProps) {
   return (
     <div className="space-y-4">
-      {/* Logo - substitua pelo seu componente de logo */}
       <div className="flex items-center">
         <span className="text-2xl font-bold">
           <span className="text-[var(--cor-primaria-1)]">&lt;</span>

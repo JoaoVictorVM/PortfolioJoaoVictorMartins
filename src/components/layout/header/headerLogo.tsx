@@ -2,13 +2,13 @@
 import Link from "next/link";
 
 export function HeaderLogo() {
-    return (
-        <Link href="/" className="text-lg font-semibold">
-            <span className="text-[var(--cor-primaria-1)]">&lt;</span>
-            <span className="text-[var(--cor-primaria-1)]">J</span>
-            <span className="text-[var(--cor-primaria-1)]">/&gt;</span>
-        </Link>
-    );
+  return (
+    <Link href="/" className="text-lg font-semibold">
+      <span className="text-[var(--cor-primaria-1)]">&lt;</span>
+      <span className="text-[var(--cor-primaria-1)]">J</span>
+      <span className="text-[var(--cor-primaria-1)]">/&gt;</span>
+    </Link>
+  );
 }
 
 // Logo com SVG

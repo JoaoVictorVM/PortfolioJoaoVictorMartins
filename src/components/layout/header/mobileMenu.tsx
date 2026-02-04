@@ -45,11 +45,10 @@ export function MobileMenu() {
             <div key={item.label} className="mb-4 last:mb-0">
               {item.dropdown ? (
                 <>
-                  {/* Título da seção em destaque */}
                   <h3 className="text-xs font-bold uppercase tracking-wider text-[var(--cor-primaria-1)] mb-2 px-2">
                     {item.label}
                   </h3>
-                  {/* Sub-itens abaixo do título */}
+
                   <div className="space-y-1">
                     {item.dropdown.map((sub) => (
                       <Link
@@ -70,7 +69,6 @@ export function MobileMenu() {
                 </>
               ) : (
                 <>
-                  {/* Item sem dropdown - também como seção */}
                   <h3 className="text-xs font-bold uppercase tracking-wider text-[var(--cor-primaria-1)] mb-2 px-2">
                     Menu
                   </h3>
@@ -90,8 +88,6 @@ export function MobileMenu() {
               )}
             </div>
           ))}
-
-
         </div>
       )}
     </div>

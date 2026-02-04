@@ -23,7 +23,6 @@ const bulletVariants = {
 export function ServiceCard({ service }: ServiceCardProps) {
   return (
     <div className="group relative overflow-hidden rounded-2xl border border-[var(--cor-escuro-7)] bg-[var(--cor-escuro-5)] p-6 transition-all sm:p-8">
-      {/* Gradient Blur Background */}
       <div
         className={cn(
           "pointer-events-none absolute -top-20 -left-20 h-60 w-60 rounded-full bg-gradient-to-br opacity-50 blur-3xl transition-opacity",
@@ -40,12 +39,9 @@ export function ServiceCard({ service }: ServiceCardProps) {
         {service.number}
       </span> */}
 
-      {/* Content */}
       <div className="relative z-10">
-        {/* Icon */}
         <ServiceIcon variant={service.iconVariant}>{service.icon}</ServiceIcon>
 
-        {/* Category & Title */}
         <div className="mt-6">
           <span className="text-sm text-zinc-500">{service.category}</span>
           <h3 className="mt-1 text-xl font-semibold text-white sm:text-2xl">
@@ -53,12 +49,10 @@ export function ServiceCard({ service }: ServiceCardProps) {
           </h3>
         </div>
 
-        {/* Description */}
         <p className="mt-4 text-sm leading-relaxed text-zinc-400 sm:text-base">
           {service.description}
         </p>
 
-        {/* Features List */}
         <ul className="mt-6 space-y-2">
           {service.features.map((feature) => (
             <li
@@ -83,7 +77,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
           rel="noopener noreferrer"
           className="mt-6 inline-flex items-center gap-1 text-sm font-medium p-2 text-white transition-colors hover:text-zinc-300"
         >
-          Contrate esse servico
+          Contrate este serviço
           <ArrowUpRightIcon className="h-4 w-4" />
         </Link>
       </div>

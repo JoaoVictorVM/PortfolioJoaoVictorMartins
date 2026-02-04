@@ -12,30 +12,11 @@ interface ProjectCardInfoProps {
   technologies: Technology[];
   siteUrl: string;
   repoUrl: string;
-  /**
-   * When true, the host device supports hover/pointer (desktop-like).
-   * If omitted the component will still render using hover styles only.
-   */
   isHoverable?: boolean;
-  /**
-   * Controlled prop from parent to force-show the action links (used on touch devices).
-   */
   forceShowLinks?: boolean;
-  /**
-   * Optional additional classes for the info panel wrapper.
-   */
   className?: string;
 }
 
-/**
- * Presentational component for the project card bottom info panel.
- *
- * Notes:
- * - This component is purely presentational and does NOT handle mobile toggle logic.
- *   The parent `ProjectCard` should detect touch vs hover devices and control `forceShowLinks`.
- * - On hover-capable devices the existing `group-hover` Tailwind classes are used.
- * - On touch devices pass `isHoverable={false}` and control `forceShowLinks` to reveal links.
- */
 export function ProjectCardInfo({
   name,
   description,
@@ -46,14 +27,12 @@ export function ProjectCardInfo({
   forceShowLinks = false,
   className = "",
 }: ProjectCardInfoProps) {
-  // If parent forces visibility (mobile tap), apply classes to reveal the links.
   const forcedVisibleClasses =
     !isHoverable && forceShowLinks ? "max-h-20 opacity-100 mb-3" : "";
 
   return (
     <div
       className={`absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-black/90 via-black/70 to-transparent ${className}`}
-      // Keep pointer events normally enabled for the info panel (links should be interactive).
     >
       <h3 className="text-lg md:text-xl font-bold text-white mb-1">{name}</h3>
       <p className="text-sm text-[var(--cor-branca)] mb-3 line-clamp-2">

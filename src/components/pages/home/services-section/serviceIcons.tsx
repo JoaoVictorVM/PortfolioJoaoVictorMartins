@@ -1,5 +1,5 @@
 interface IconProps {
-  className?: string
+  className?: string;
 }
 
 export function RocketIcon({ className }: IconProps) {
@@ -21,7 +21,7 @@ export function RocketIcon({ className }: IconProps) {
       <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
       <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
     </svg>
-  )
+  );
 }
 
 export function GridIcon({ className }: IconProps) {
@@ -43,7 +43,7 @@ export function GridIcon({ className }: IconProps) {
       <rect width="7" height="7" x="14" y="14" rx="1" />
       <rect width="7" height="7" x="3" y="14" rx="1" />
     </svg>
-  )
+  );
 }
 
 export function PenToolIcon({ className }: IconProps) {
@@ -65,7 +65,7 @@ export function PenToolIcon({ className }: IconProps) {
       <path d="m2.3 2.3 7.286 7.286" />
       <circle cx="11" cy="11" r="2" />
     </svg>
-  )
+  );
 }
 
 export function ArrowUpRightIcon({ className }: IconProps) {
@@ -85,5 +85,5 @@ export function ArrowUpRightIcon({ className }: IconProps) {
       <path d="M7 7h10v10" />
       <path d="M7 17 17 7" />
     </svg>
-  )
+  );
 }

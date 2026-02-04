@@ -31,22 +31,22 @@ export function NavItem({ item, isOpen, onToggle, onClose }: Props) {
     const isAnchor = href.startsWith("#");
     const className =
       "text-xs text-[var(--cor-cinza-1)] hover:text-[var(--cor-branco)] transition";
-    
+
     if (isAnchor) {
       const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
         const targetId = href.substring(1); // Remove o #
         const targetElement = document.getElementById(targetId);
-        
+
         if (targetElement) {
-          // Calcula o offset do header fixo (aproximadamente 100px)
           const headerOffset = 100;
           const elementPosition = targetElement.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          const offsetPosition =
+            elementPosition + window.pageYOffset - headerOffset;
 
           window.scrollTo({
             top: offsetPosition,
-            behavior: 'smooth'
+            behavior: "smooth",
           });
         }
       };

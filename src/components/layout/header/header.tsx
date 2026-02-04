@@ -7,7 +7,6 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4">
       <div className="max-w-7xl mx-auto bg-gradient-to-r from-[var(--cor-escuro-6)] via-[var(--cor-escuro-1)] to-[var(--cor-escuro-6)] rounded-b-3xl border-b border-[var(--cor-escuro-7)] p-4">
-        {/* Desktop */}
         <div className="hidden md:grid grid-cols-3 items-center">
           <div className="flex justify-start">
             <Nav />
@@ -20,11 +19,8 @@ export function Header() {
           </div>
         </div>
 
-        {/* Mobile */}
         <div className="flex md:hidden items-center justify-between">
-          <div className="w-10">
-            {/* Espaço vazio para balancear o layout */}
-          </div>
+          <div className="w-10"></div>
           <div className="flex-1 flex justify-center">
             <HeaderLogo />
           </div>

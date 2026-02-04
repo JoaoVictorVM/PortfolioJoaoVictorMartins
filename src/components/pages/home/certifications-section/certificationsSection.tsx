@@ -16,18 +16,14 @@ export function CertificationsSection() {
             tecnologias do mercado
           </h2>
         </div>
-        {/* Infinite Tech Carousel */}
         <div className="mb-12">
           <InfiniteMarquee technologies={TECHNOLOGIES} speed="normal" />
         </div>
 
-        {/* Features and Certifications Grid */}
         <div className="">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-50">
-            {/* Features List */}
             <FeaturesList />
 
-            {/* Certifications Card */}
             <CertificationsCard />
           </div>
         </div>

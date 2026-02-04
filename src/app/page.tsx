@@ -9,7 +9,6 @@ import { SectionDivider } from "@/components/ui/sectionDivider";
 export default function Home() {
   return (
     <>
-      
       <main>
         <section id="inicio" className="h-screen flex flex-col">
           <div className="flex-1 flex items-center justify-center">
@@ -18,12 +17,10 @@ export default function Home() {
           <SectionDivider text="SCROLL" />
         </section>
         <AboutSection />
-        <SectionDivider text="PROJETOS" />
         <ProjectsSection />
         <CertificationsSection />
         <ServicesSection />
         <CtaSection />
-        
       </main>
     </>
   );

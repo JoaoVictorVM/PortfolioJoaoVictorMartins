@@ -35,9 +35,9 @@ export const MENU = [
     label: "Serviços",
     dropdown: [
       { label: "Seção Serviços", href: "/#servicos" },
-      { label: "Front-end", href: "/#servicos" },
-      { label: "Sistema", href: "/#servicos" },
-      { label: "UX/UI", href: "/#servicos" },
+      { label: "Aplicações", href: "/#servicos" },
+      { label: "Sistemas", href: "/#servicos" },
+      { label: "Design", href: "/#servicos" },
     ],
   },
 ];

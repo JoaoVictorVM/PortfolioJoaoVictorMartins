@@ -6,7 +6,7 @@ interface SectionDividerProps {
 
 export function SectionDivider({ text = "SCROLL" }: SectionDividerProps) {
   return (
-    <div 
+    <div
       className="flex flex-col items-center justify-center gap-2 animate-bounce"
       style={{ animationDuration: "5s" }}
     >

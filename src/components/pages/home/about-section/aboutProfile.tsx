@@ -11,9 +11,7 @@ interface AboutProfileProps {
 export function AboutProfile({ profile }: AboutProfileProps) {
   return (
     <div className="flex h-full flex-col gap-4">
-      {/* Image + floating card */}
       <div className="relative flex flex-1 flex-col overflow-hidden rounded-3xl border border-[var(--cor-escuro-7)]">
-        {/* Profile Image (fills available space) */}
         <div className="relative flex-1">
           <Image
             src={profile.imageUrl || "/placeholder.svg"}
@@ -23,19 +21,15 @@ export function AboutProfile({ profile }: AboutProfileProps) {
           />
         </div>
 
-        {/* Floating info card */}
         <div className="pointer-events-none absolute left-4 right-4 bottom-4 rounded-3xl border border-[var(--cor-escuro-7)] bg-[var(--cor-escuro-6)]/80 p-4 backdrop-blur-sm">
           <h3 className="text-lg font-semibold text-white">{profile.name}</h3>
           <p className="text-sm text-zinc-400">{profile.title}</p>
         </div>
       </div>
 
-      {/* Buttons always aligned with bottom of Journey */}
       <div className="mt-auto flex gap-2">
         <Link
           href={profile.linksUrl}
-          target="_blank"
-          rel="noopener noreferrer"
           className="flex flex-1 items-center justify-center gap-2 rounded-full border-1 border-[var(--cor-escuro-7)] hover:border-[var(--cor-primaria-1)] bg-[var(--cor-escuro-6)]/80 px-4 py-2.5 text-sm font-medium text-[var(--cor-branca)] transition-colors transition-all duration-300"
         >
           Meus Links

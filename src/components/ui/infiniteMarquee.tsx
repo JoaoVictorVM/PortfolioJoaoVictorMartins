@@ -47,13 +47,12 @@ export function InfiniteMarquee({
         <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[var(--cor-escuro-6)] to-transparent z-10 rounded-r-3xl border-r border-[var(--cor-escuro-7)]" />
 
         <div className="marquee-track flex gap-4 w-max">
-          {/* Triple the items for seamless loop */}
           {[...Array(3)].map((_, setIndex) =>
             technologies.map((tech, index) => (
               <div key={`set-${setIndex}-${index}`} className="flex-shrink-0">
                 <TechBadge name={tech.name} icon={tech.icon} size="md" />
               </div>
-            ))
+            )),
           )}
         </div>
       </div>

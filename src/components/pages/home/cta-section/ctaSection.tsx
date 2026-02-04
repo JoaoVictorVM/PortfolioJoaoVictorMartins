@@ -16,18 +16,14 @@ export function CtaSection({
   return (
     <section id="contato" className="py-16 md:py-24 px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Badge de Disponibilidade */}
         <div className="flex mb-5 ml-2">
           <AvailabilityBadge />
         </div>
 
-        {/* Card Principal */}
         <div className="relative rounded-2xl border border-[var(--cor-escuro-7)] bg-gradient-to-br from-gray-900 to-gray-950 p-8 md:p-12 overflow-hidden">
-          {/* Efeito de gradiente sutil */}
           <div className="absolute inset-0 bg-gradient-to-br from-[var(--cor-primaria-1)]/20 via-[var(--cor-primaria-3)]/10 to-[var(--cor-escuro-5)] pointer-events-none" />
 
           <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
-            {/* Coluna Esquerda */}
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-[var(--cor-branca)] leading-tight">
                 Vamos criar algo{" "}
@@ -45,9 +41,7 @@ export function CtaSection({
               <CTAButtons />
             </div>
 
-            {/* Coluna Direita */}
             <div className="flex flex-col items-start md:items-end gap-6">
-              {/* Email */}
               <a
                 href={`mailto:${email}?subject=Contato%20com%20desenvolvedor%20João&body=Olá%20João`}
                 target="_blank"
@@ -60,10 +54,7 @@ export function CtaSection({
                 />
               </a>
 
-              {/* Social Links */}
               <SocialLinks />
-
-              {/* Localização */}
               <div className="flex items-center gap-4 text-sm text-gray-500">
                 <span className="flex items-center gap-1.5">
                   <span className="w-1 h-1 rounded-full bg-emerald-500" />

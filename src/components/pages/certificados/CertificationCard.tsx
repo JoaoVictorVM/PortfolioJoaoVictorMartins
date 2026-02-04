@@ -8,7 +8,6 @@ interface Props {
 export function CertificationCard({ company }: Props) {
   return (
     <article className="rounded-lg border border-white/6 bg-[var(--cor-escuro-1)] h-full flex flex-col">
-      {/* colored top stripe */}
       <div
         className="h-1 rounded-t-md"
         style={{ backgroundColor: company.accentColor ?? "#444" }}

@@ -6,19 +6,15 @@ const profileData: ProfileData = {
   name: "João Victor Ventura Martins",
   title: "FullStack Developer Specializing in Frontend",
   imageUrl: "/images/profile/profile.jpg",
-  linksUrl: "#links",
-  aboutUrl: "#about",
+  linksUrl: "https://linksjoaovictormartins.vercel.app/",
+  aboutUrl: "https://sobrejoaovictormartins.vercel.app/",
 };
 
 export function AboutSection() {
   return (
     <section id="sobre-mim" className="py-16 md:py-24 px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="mb-12 flex flex-col items-center">
-          {/* <span className="mb-3 block text-sm font-medium uppercase tracking-wider text-violet-500">
-            Sobre Mim
-          </span> */}
           <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
             Um pouco{" "}
             <span className="bg-gradient-to-br from-[var(--cor-primaria-1)] via-[var(--cor-primaria-1)] to-[var(--cor-primaria-4)] bg-clip-text text-transparent">
@@ -27,13 +23,11 @@ export function AboutSection() {
           </h2>
         </div>
 
-        {/* Content Grid */}
         <div className="grid gap-6 lg:grid-cols-5 items-stretch">
           <div className="lg:col-span-3 h-full">
             <JourneyCard />
           </div>
 
-          {/* Profile Card */}
           <div className="lg:col-span-2 h-full">
             <AboutProfile profile={profileData} />
           </div>
