@@ -18,9 +18,12 @@ export function CardProjects() {
                 className="w-full h-44 md:h-40 lg:h-48 mb-4 rounded object-cover"
               />
               <div className="flex-1 flex flex-col">
-                <h3 className="text-lg md:text-xl font-bold text-white mb-2">
+                <h3 className="text-lg md:text-xl font-bold text-white mb-1">
                   {project.name}
                 </h3>
+                <p className="text-xs text-[var(--cor-cinza-3)] mb-3">
+                  {project.stack}
+                </p>
                 <div className="mb-4">
                   <p className="text-sm text-white/80 mb-3 min-h-[3.25rem]">
                     {project.description}

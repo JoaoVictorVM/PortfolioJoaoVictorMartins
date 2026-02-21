@@ -5,6 +5,7 @@ export interface Technology {
 
 export interface Project {
   name: string;
+  stack: string;
   description: string;
   image: string;
   siteUrl: string;
@@ -15,6 +16,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     name: "BikCraft",
+    stack: "Front-end",
     description: "E-commerce de bicicletas elétricas.",
     image: "/images/projects/previewBikcraft.png",
     siteUrl: "https://example.com/project1",
@@ -28,6 +30,7 @@ export const projects: Project[] = [
   },
   {
     name: "Pagina profissional Preparador Físico",
+    stack: "Front-end",
     description: "Portfolio representando o trabalho de um preparador físico.",
     image: "/images/projects/previewPreparadorFisico.png",
     siteUrl: "https://joaovictorvm.github.io/PreparadorFisico/",
@@ -40,6 +43,7 @@ export const projects: Project[] = [
   },
   {
     name: "Landing Page Clair Obscur",
+    stack: "Front-end",
     description: "Página de apresentação ao Clair Obscur.",
     image: "/images/projects/previewClair.png",
     siteUrl: "https://joaovictorvm.github.io/LP-Expedition33/",
@@ -52,6 +56,7 @@ export const projects: Project[] = [
   },
   {
     name: "Exibição de álbum musical",
+    stack: "Front-end",
     description: "Página de exibição do álbum musical SWAG.",
     image: "/images/projects/previewSwag.png",
     siteUrl: "https://swag-smoky.vercel.app/",
@@ -64,7 +69,50 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: "Linktree",
+    name: "WildBeast",
+    stack: "Front-end",
+    description: "Linktree para compartilhar todos os links.",
+    image: "/images/projects/previewLinktree.png",
+    siteUrl: "https://linksjoaovictormartins.vercel.app/",
+    repoUrl: "https://github.com/JoaoVictorVM/LinksJoaoVictorMartins",
+    technologies: [
+      { name: "React", icon: "/icons/react.svg" },
+      { name: "Next.js", icon: "/icons/nextjs.svg" },
+      { name: "TypeScript", icon: "/icons/typescript.svg" },
+      { name: "Tailwind", icon: "/icons/tailwind.svg" },
+    ],
+  },
+  {
+    name: "FlexStore",
+    stack: "Front-end",
+    description: "Linktree para compartilhar todos os links.",
+    image: "/images/projects/previewLinktree.png",
+    siteUrl: "https://linksjoaovictormartins.vercel.app/",
+    repoUrl: "https://github.com/JoaoVictorVM/LinksJoaoVictorMartins",
+    technologies: [
+      { name: "React", icon: "/icons/react.svg" },
+      { name: "Next.js", icon: "/icons/nextjs.svg" },
+      { name: "TypeScript", icon: "/icons/typescript.svg" },
+      { name: "Tailwind", icon: "/icons/tailwind.svg" },
+    ],
+  },
+  {
+    name: "API de agendamento",
+    stack: "Back-end",
+    description: "Linktree para compartilhar todos os links.",
+    image: "/images/projects/previewLinktree.png",
+    siteUrl: "https://linksjoaovictormartins.vercel.app/",
+    repoUrl: "https://github.com/JoaoVictorVM/LinksJoaoVictorMartins",
+    technologies: [
+      { name: "React", icon: "/icons/react.svg" },
+      { name: "Next.js", icon: "/icons/nextjs.svg" },
+      { name: "TypeScript", icon: "/icons/typescript.svg" },
+      { name: "Tailwind", icon: "/icons/tailwind.svg" },
+    ],
+  },
+  {
+    name: "AimingGame",
+    stack: "Front-end",
     description: "Linktree para compartilhar todos os links.",
     image: "/images/projects/previewLinktree.png",
     siteUrl: "https://linksjoaovictormartins.vercel.app/",
