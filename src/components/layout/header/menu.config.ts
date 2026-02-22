@@ -23,11 +23,7 @@ export const MENU = [
       { label: "Seção Sobre mim", href: "/#sobre-mim" },
       {
         label: "Meus Links",
-        href: "https://linksjoaovictormartins.vercel.app/",
-      },
-      {
-        label: "Saiba Mais",
-        href: "https://sobrejoaovictormartins.vercel.app/",
+        href: "/links",
       },
     ],
   },
