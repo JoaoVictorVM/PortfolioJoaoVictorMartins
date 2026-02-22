@@ -36,14 +36,6 @@ export function AboutProfile({ profile }: AboutProfileProps) {
           <ArrowUpRightIcon className="h-4 w-4" />
         </Link>
 
-        <Link
-          href={profile.aboutUrl}
-          className="flex flex-1 items-center justify-center gap-2 rounded-full border-1 border-[var(--cor-escuro-7)] hover:border-[var(--cor-primaria-1)] bg-[var(--cor-escuro-6)]/80 px-4 py-2.5 text-sm font-medium text-[var(--cor-branca)] transition-colors transition-all duration-300"
-        >
-          Saiba mais
-          <ArrowUpRightIcon className="h-4 w-4" />
-        </Link>
-
         <a
           href="/pdf/CV-JoaoVictorVenturaMartins.pdf"
           download

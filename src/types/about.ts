@@ -3,7 +3,6 @@ export interface ProfileData {
   title: string;
   imageUrl: string;
   linksUrl: string;
-  aboutUrl: string;
 }
 
 export interface JourneyData {
