@@ -33,7 +33,7 @@ const projects: Project[] = [
     id: 3,
     name: "WildBeast",
     description: "Website fictício de um blog sobre animais.",
-    image: "/images/projects/",
+    image: "/images/projects/previewWildbeast.png",
     technologies: [
       { name: "HTML", icon: "/icons/html.svg" },
       { name: "CSS", icon: "/icons/css.svg" },
@@ -45,7 +45,7 @@ const projects: Project[] = [
     id: 4,
     name: "FlexStore",
     description: "Website fictício de e-commerce.",
-    image: "/images/projects/",
+    image: "/images/projects/previewFlexstore.png",
     technologies: [
       { name: "HTML", icon: "/icons/html.svg" },
       { name: "CSS", icon: "/icons/css.svg" },
