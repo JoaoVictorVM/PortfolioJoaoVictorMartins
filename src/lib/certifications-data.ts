@@ -20,7 +20,12 @@ export const companies: CompanyCertifications[] = [
     name: "Origamid",
     logo: "/instituicao/origamid.svg",
     accentColor: "#7B3CEE",
-    items: [{ title: "HTML e CSS para Iniciantes" }],
+    items: [
+      { title: "Front End & UX/UI Design" },
+      { title: "CSS Grid Layout" },
+      { title: "CSS Flexbox" },
+      { title: "HTML e CSS" },
+    ],
   },
   {
     name: "DevClub",
