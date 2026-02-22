@@ -34,7 +34,7 @@ export const projects: Project[] = [
     stack: "Front-end",
     description:
       "Website fictício de um blog sobre animais. O projeto foi idealizado para ser construído exclusivamente com os conceitos de CSS Grid Layout",
-    image: "/images/projects/previewWildBeast.png",
+    image: "/images/projects/previewWildbeast.png",
     siteUrl: "https://joaovictorvm.github.io/WildBeast/",
     repoUrl: "https://github.com/JoaoVictorVM/WildBeast",
     technologies: [
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     stack: "Front-end",
     description:
       "Website fictício de e-commerce. O projeto foi idealizado para ser construído utilizando exclusivamente os conceitos de Flexbox",
-    image: "/images/projects/previewFlexStore.png",
+    image: "/images/projects/previewFlexstore.png",
     siteUrl: "https://joaovictorvm.github.io/FlexStore/",
     repoUrl: "https://github.com/JoaoVictorVM/FlexStore",
     technologies: [
@@ -88,7 +88,7 @@ export const projects: Project[] = [
     stack: "Front-end",
     description:
       "Projeto de gamificação voltado ao desenvolvimento de um jogo de mira, construído com foco em arquitetura escalável e organização de código.",
-    image: "/images/projects/previewAimingGame.png",
+    image: "/images/projects/previewAiminggame.png",
     siteUrl: "https://github.com/JoaoVictorVM/AimingGame",
     repoUrl: "https://github.com/JoaoVictorVM/AimingGame",
     technologies: [
@@ -117,7 +117,7 @@ export const projects: Project[] = [
     stack: "Back-end",
     description:
       "Projeto focado na construção de uma API REST para gerenciamento de agendamentos, aplicando conceitos de arquitetura modular, organização de camadas e integração com banco de dados relacional.",
-    image: "/images/projects/previewAPIAgendamento.png",
+    image: "/images/projects/previewApiagendamento.png",
     siteUrl: "https://github.com/JoaoVictorVM/Scheduling-API",
     repoUrl: "https://github.com/JoaoVictorVM/Scheduling-API",
     technologies: [
