@@ -6,8 +6,7 @@ const profileData: ProfileData = {
   name: "João Victor Ventura Martins",
   title: "FullStack Developer Specializing in Frontend",
   imageUrl: "/images/profile/profile.jpg",
-  linksUrl: "https://linksjoaovictormartins.vercel.app/",
-  aboutUrl: "https://sobrejoaovictormartins.vercel.app/",
+  linksUrl: "/links",
 };
 
 export function AboutSection() {

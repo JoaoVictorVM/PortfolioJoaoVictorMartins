@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
-import { Header } from "@/components/layout/header/header";
-import { Footer } from "@/components/layout/footer/footer";
+import ConditionalShell from "@/components/layout/conditionalShell";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,9 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body className={`antialiased`}>
-        <Header />
-        {children}
-        <Footer />
+        <ConditionalShell>{children}</ConditionalShell>
       </body>
     </html>
   );
