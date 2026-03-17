@@ -4,18 +4,11 @@
 @import "./backgroundBreath.css";
 
 body {
-  background: var(--bg-color-dark);
-  color: var(--cor-branca);
-  transition:
-    background 0.25s ease,
-    color 0.25s ease;
-}
-
-[data-theme="light"] body {
-  background: #f8fafc;
-  color: #0c0c19;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
 h1 {
-  color: var(--cor-branca);
+  color: var(--text-color);
 }

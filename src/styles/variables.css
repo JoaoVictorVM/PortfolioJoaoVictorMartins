@@ -4,6 +4,32 @@
   --text-color-dark: #e5e5e5;
   --detail-color-dark: #8d8d8d;
   --line-color-dark: #2e2e2e;
+
+  /* Cores Modo Light*/
+  --bg-color-light: #eceff4;
+  --text-color-light: #3b4252;
+  --detail-color-light: #3a3a3a;
+  --line-color-light: #cccccc;
+
+  /* Distribuição padrão */
+  --bg-color: var(--bg-color-dark);
+  --text-color: var(--text-color-dark);
+  --detail-color: var(--detail-color-dark);
+  --line-color: var(--line-color-dark);
+}
+
+:root[data-theme="light"] {
+  --bg-color: var(--bg-color-light);
+  --text-color: var(--text-color-light);
+  --detail-color: var(--detail-color-light);
+  --line-color: var(--line-color-light);
+}
+
+:root[data-theme="dark"] {
+  --bg-color: var(--bg-color-dark);
+  --text-color: var(--text-color-dark);
+  --detail-color: var(--detail-color-dark);
+  --line-color: var(--line-color-dark);
 }
 
 /* #0D0D1A

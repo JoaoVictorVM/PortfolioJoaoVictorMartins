@@ -24,8 +24,8 @@ function LanguageSwitcher() {
           className={cn(
             "rounded-full px-3 py-1 transition-colors duration-200",
             language === option.value
-              ? "bg-[var(--cor-branca)] text-[var(--cor-escuro-1)]"
-              : "text-white/70 hover:text-white",
+              ? "bg-[var(--text-color)] text-[var(--bg-color)]"
+              : "text-[var(--text-color)]/70 hover:text-[var(--text-color)]",
           )}
         >
           {option.label}
@@ -44,7 +44,7 @@ function ThemeSwitcher() {
       type="button"
       aria-label={isDark ? "Ativar modo claro" : "Ativar modo escuro"}
       onClick={toggleTheme}
-      className="flex items-center justify-center rounded-full border border-white/20 p-2 text-white/90 transition hover:border-white/60"
+      className="flex items-center justify-center rounded-full border border-[var(--line-color)] p-2 text-[var(--text-color)] transition hover:border-[var(--text-color)]"
     >
       {isDark ? <Sun size={16} /> : <Moon size={16} />}
     </button>
@@ -53,8 +53,8 @@ function ThemeSwitcher() {
 
 export function Header() {
   return (
-    <header className="border-b border-[var(--line-color-dark)] bg-[var(--bg-color-dark)]">
-      <div className="mx-auto flex max-w-2xl items-center justify-between gap-4 py-3 text-xs text-white">
+    <header className="border-b border-[var(--line-color)] bg-[var(--bg-color)]">
+      <div className="mx-auto flex max-w-2xl items-center justify-between gap-4 py-3 text-xs text-[var(--text-color)]">
         <LanguageSwitcher />
         <HeaderLogo />
         <ThemeSwitcher />

@@ -19,14 +19,15 @@
 2. Continue implementing the home content within that grid and typography reference frame.
 3. Only after the home is aligned, revisit other routes (projects, links, etc.) and the footer.
 
-## Contexts and providers implemented
+- ## Contexts and providers implemented
 - PreferenceProvider - centralizes language and theme, reads localStorage and prefers-color-scheme, keeps dataset attributes on documentElement, and exposes a usePreference hook for the toggles.
 - Header minimalista - consumes the provider, displays the toggles in a single row (language left, logo center, theme right), and keeps the oldheader for reference until the full redesign is complete.
 
-## Visual patterns enforced so far
+- ## Visual patterns enforced so far
 - Narrow containers: main sections use max-w-2xl (or max-w-6xl when needed) with mx-auto and consistent px-4 to avoid a broken layout feel.
 - Minimal typography: small headings (text-lg / text-3xl), generous vertical rhythm (space-y-4, py-32), simple lists, and muted text colors from the theme variables.
-- Theme variables: variables.css defines --bg-color-dark, --text-color-dark, --detail-color-dark, and --line-color-dark; globals.css watches data-theme to switch backgrounds while keeping smooth transitions.
+- Theme variables: variables.css now exposes common tokens (--bg-color, --text-color, --detail-color, --line-color) that update via the PreferenceProvider's data-theme attributes, so header/intro/footer/highlights automatically respect dark/light mode.
+- Highlights section: dual columns (certificates + projects) with the final row linking to the respective pages, following the same narrow grid and muted textual rhythm.
 
 ## Footer pattern
 - Simple centered footer with `max-w-2xl` to match the rest of the page.
