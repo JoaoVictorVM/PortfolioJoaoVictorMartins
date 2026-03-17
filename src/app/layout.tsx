@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
 import ConditionalShell from "@/components/layout/conditionalShell";
+import { PreferenceProvider } from "@/context/preferences/PreferenceProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,7 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body className={`antialiased`}>
-        <ConditionalShell>{children}</ConditionalShell>
+        <PreferenceProvider>
+          <ConditionalShell>{children}</ConditionalShell>
+        </PreferenceProvider>
       </body>
     </html>
   );

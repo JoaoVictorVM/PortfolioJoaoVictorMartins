@@ -1,33 +1,63 @@
-import { HeaderContato } from "./headerContato";
+"use client";
+
+import { Moon, Sun } from "lucide-react";
+import { usePreference } from "@/context/preferences/PreferenceProvider";
+import { cn } from "@/lib/utils";
 import { HeaderLogo } from "./headerLogo";
-import { Nav } from "./nav";
-import { MobileMenu } from "./mobileMenu";
+
+const languageOptions = [
+  { label: "PT", value: "pt" },
+  { label: "EN", value: "en" },
+] as const;
+
+function LanguageSwitcher() {
+  const { language, setLanguage } = usePreference();
+
+  return (
+    <div className="flex items-center gap-2 text-[0.55rem] font-semibold uppercase tracking-[0.4em]">
+      {languageOptions.map((option) => (
+        <button
+          key={option.value}
+          type="button"
+          aria-pressed={language === option.value}
+          onClick={() => setLanguage(option.value)}
+          className={cn(
+            "rounded-full px-3 py-1 transition-colors duration-200",
+            language === option.value
+              ? "bg-[var(--cor-branca)] text-[var(--cor-escuro-1)]"
+              : "text-white/70 hover:text-white",
+          )}
+        >
+          {option.label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function ThemeSwitcher() {
+  const { theme, toggleTheme } = usePreference();
+  const isDark = theme === "dark";
+
+  return (
+    <button
+      type="button"
+      aria-label={isDark ? "Ativar modo claro" : "Ativar modo escuro"}
+      onClick={toggleTheme}
+      className="flex items-center justify-center rounded-full border border-white/20 p-2 text-white/90 transition hover:border-white/60"
+    >
+      {isDark ? <Sun size={16} /> : <Moon size={16} />}
+    </button>
+  );
+}
 
 export function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-4">
-      <div className="max-w-7xl mx-auto bg-gradient-to-r from-[var(--cor-escuro-6)] via-[var(--cor-escuro-1)] to-[var(--cor-escuro-6)] rounded-b-3xl border-b border-[var(--cor-escuro-7)] p-4">
-        <div className="hidden md:grid grid-cols-3 items-center">
-          <div className="flex justify-start">
-            <Nav />
-          </div>
-          <div className="flex justify-center">
-            <HeaderLogo />
-          </div>
-          <div className="flex justify-end">
-            <HeaderContato />
-          </div>
-        </div>
-
-        <div className="flex md:hidden items-center justify-between">
-          <div className="w-10"></div>
-          <div className="flex-1 flex justify-center">
-            <HeaderLogo />
-          </div>
-          <div className="w-10 flex justify-end">
-            <MobileMenu />
-          </div>
-        </div>
+    <header className="border-b border-[var(--line-color-dark)] bg-[var(--bg-color-dark)]">
+      <div className="mx-auto flex max-w-2xl items-center justify-between gap-4 py-3 text-xs text-white">
+        <LanguageSwitcher />
+        <HeaderLogo />
+        <ThemeSwitcher />
       </div>
     </header>
   );

@@ -1,51 +1,11 @@
-import { FooterLogo } from "./footerLogo";
-import { FooterLinks } from "./footerLinks";
-import { FooterSocial } from "./footerSocial";
-import { FooterCopyright } from "./footerCopyright";
-
-const linksUteis = [
-  { label: "Projetos", href: "/projetos" },
-  { label: "Certificados", href: "/certificados" },
-  { label: "Links", href: "/links" },
-];
-
-const secoes = [
-  { label: "Início ", href: "/#inicio" },
-  { label: "Seção Sobre Mim", href: "/#sobre-mim" },
-  { label: "Seção Projetos", href: "/#projetos" },
-  { label: "Seção Serviços", href: "/#servicos" },
-  { label: "Seção Certificados", href: "/#certificados" },
-];
-
 export function Footer() {
+  const year = new Date().getFullYear();
+
   return (
-    <footer className="px-4">
-      <div className="max-w-7xl mx-auto bg-gradient-to-r from-[var(--cor-escuro-6)] via-[var(--cor-escuro-1)] to-[var(--cor-escuro-6)] rounded-t-3xl border-t border-[var(--cor-escuro-7)] p-4">
-        <div className="max-w-7xl mx-auto px-4 py-10 md:py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-6">
-            <div className="md:col-span-1">
-              <FooterLogo />
-            </div>
-
-            <div>
-              <FooterLinks title="Links úteis" links={linksUteis} />
-            </div>
-
-            <div>
-              <FooterLinks title="Seções" links={secoes} />
-            </div>
-
-            <div>
-              <FooterSocial />
-            </div>
-          </div>
-        </div>
-
-        <div className="border-t border-gray-800/50" />
-
-        <div className="max-w-7xl mx-auto px-4 py-6">
-          <FooterCopyright />
-        </div>
+    <footer className="border-t border-[var(--line-color-dark)] bg-[var(--bg-color-dark)]">
+      <div className="mx-auto flex max-w-2xl items-center justify-between py-3 font-normal text-sm text-[var(--detail-color-dark)]">
+        <span>Cabo Verde - MG 37880-000</span>
+        <span>{year}</span>
       </div>
     </footer>
   );
