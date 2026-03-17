@@ -1,7 +1,7 @@
 export function IntroSection() {
   return (
-    <section id="inicio" className="px-4 pt-32">
-      <div className="mx-auto max-w-2xl space-y-8 text-[var(--text-color)]">
+    <section id="inicio" className="pt-32">
+      <div className="mx-auto max-w-2xl px-4 space-y-8 text-[var(--text-color)]">
         <div className="space-y-12">
           <div className="space-y-2">
             <h1 className="text-lg">João Victor Ventura Martins</h1>

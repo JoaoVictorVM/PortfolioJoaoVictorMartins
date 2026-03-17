@@ -101,7 +101,7 @@ function HighlightsColumn({
 export function HighlightsSection() {
   return (
     <section className="pt-16">
-      <div className="mx-auto max-w-2xl grid gap-12 md:grid-cols-2">
+      <div className="mx-auto max-w-2xl px-4 grid gap-12 md:grid-cols-2">
         <HighlightsColumn
           title="Certificados"
           items={highlightSets.certificates}

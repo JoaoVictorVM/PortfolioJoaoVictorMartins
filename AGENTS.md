@@ -28,6 +28,9 @@
 - Minimal typography: small headings (text-lg / text-3xl), generous vertical rhythm (space-y-4, py-32), simple lists, and muted text colors from the theme variables.
 - Theme variables: variables.css now exposes common tokens (--bg-color, --text-color, --detail-color, --line-color) that update via the PreferenceProvider's data-theme attributes, so header/intro/footer/highlights automatically respect dark/light mode.
 - Highlights section: dual columns (certificates + projects) with the final row linking to the respective pages, following the same narrow grid and muted textual rhythm.
+- Projects page: title + accordion list where cada projeto abre um detail embaixo e mantém a linha única com o ícone de chevron para indicar que é clicável.
+- Projects page: conteúdos e lista dos projetos vivem na mesma grid (coluna do conteúdo) alinhada com o header, enquanto o link “← Home” ocupa a coluna estreita à esquerda com deslocamento horizontal; o accordion continua com botão, linha e `ChevronDown` que exibem os detalhes no clique sem bordas divisórias.
+- Pattern for future secondary pages (certificados e semelhantes): mantemos o `max-w-2xl px-4` alinhado ao header para o conteúdo principal e deixamos componentes extras (como botões de navegação lateral) “vazando” do layout com deslocamento horizontal (usando `position: absolute` e `translate-x`) que retorna ao fluxo em telas pequenas.
 
 ## Footer pattern
 - Simple centered footer with `max-w-2xl` to match the rest of the page.

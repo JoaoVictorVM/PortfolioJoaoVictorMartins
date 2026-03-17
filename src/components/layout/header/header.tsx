@@ -54,7 +54,7 @@ function ThemeSwitcher() {
 export function Header() {
   return (
     <header className="border-b border-[var(--line-color)] bg-[var(--bg-color)]">
-      <div className="mx-auto flex max-w-2xl items-center justify-between gap-4 py-3 text-xs text-[var(--text-color)]">
+      <div className="mx-auto flex max-w-2xl items-center justify-between gap-4 px-4 py-3 text-xs text-[var(--text-color)]">
         <LanguageSwitcher />
         <HeaderLogo />
         <ThemeSwitcher />
