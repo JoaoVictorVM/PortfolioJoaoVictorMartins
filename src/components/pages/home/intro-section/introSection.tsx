@@ -5,7 +5,7 @@ export function IntroSection() {
         <div className="space-y-12">
           <div className="space-y-2">
             <h1 className="text-lg">João Victor Ventura Martins</h1>
-            <ul className="list-disc pl-5 text-[var(--detail-color)] text-sm font-normal">
+            <ul className="list-disc pl-5 text-[var(--detail-color)] text-sm font-normal italic">
               <li>Software Engineer</li>
               <li>FullStack Developer</li>
             </ul>

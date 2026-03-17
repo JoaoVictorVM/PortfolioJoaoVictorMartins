@@ -26,7 +26,7 @@ export default function Projetos() {
             <div className="space-y-10">
               <div>
                 <h1 className="text-lg text-[var(--text-color)]">Projetos</h1>
-                <p className="text-[var(--detail-color)]">
+                <p className="text-sm text-[var(--detail-color)]">
                   Abaixo alguns projetos selecionados
                 </p>
               </div>
