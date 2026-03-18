@@ -31,7 +31,7 @@ export default function Projetos() {
                 </p>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-2">
                 {PROJECT_DETAILS.map((project, index) => {
                   const isOpen = openProject === project.id;
                   const delay = index * 0.25;
@@ -41,7 +41,7 @@ export default function Projetos() {
                       <button
                         type="button"
                         onClick={() => toggleProject(project.id)}
-                        className="group flex w-full items-center gap-3 text-left text-[var(--text-color)] transition hover:text-[var(--text-color)]/80 hover:bg-[var(--line-color)]/30 cursor-pointer rounded-lg p-3"
+                        className="group flex w-full items-center gap-3 text-left text-[var(--text-color)] transition hover:text-[var(--text-color)]/80 hover:bg-[var(--line-color)]/30 cursor-pointer rounded-lg py-2"
                       >
                         <span
                           className="project-title"
@@ -62,27 +62,58 @@ export default function Projetos() {
                           aria-hidden="true"
                         />
                       </button>
-                      {isOpen && (
-                        <div className="text-sm text-[var(--detail-color)] px-2 space-y-2">
-                          <p>{project.details}</p>
-                          {project.links && project.links.length > 0 && (
-                            <div className="flex gap-1 text-[var(--detail-color)]">
-                              {project.links.map((link) => (
-                                <a
-                                  key={link.url}
-                                  href={link.url}
-                                  className="flex items-center gap-2 underline decoration-[var(--detail-color)]"
-                                  target="_blank"
-                                  rel="noreferrer"
-                                >
-                                  {link.label}
-                                  <ArrowUpRight size={12} />
-                                </a>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      )}
+                      <div
+                        className="project-details mt-2 px-2 text-sm text-[var(--detail-color)]"
+                        aria-hidden={!isOpen}
+                        style={{
+                          maxHeight: isOpen ? "500px" : "0px",
+                          opacity: isOpen ? 1 : 0,
+                          overflow: "hidden",
+                          transition: "max-height 0.5s ease, opacity 0.4s ease",
+                        }}
+                      >
+                        <p
+                          className="project-details-text"
+                          style={{
+                            opacity: isOpen ? 1 : 0,
+                            transform: isOpen
+                              ? "translateY(0)"
+                              : "translateY(-6px)",
+                            transition:
+                              "opacity 0.35s ease, transform 0.35s ease",
+                            transitionDelay: isOpen ? "0.1s" : "0s",
+                          }}
+                        >
+                          {project.details}
+                        </p>
+                        {project.links && project.links.length > 0 && (
+                          <div
+                            className="project-details-links flex gap-2"
+                            style={{
+                              opacity: isOpen ? 1 : 0,
+                              transform: isOpen
+                                ? "translateY(0)"
+                                : "translateY(-6px)",
+                              transition:
+                                "opacity 0.35s ease, transform 0.35s ease",
+                              transitionDelay: isOpen ? "0.25s" : "0s",
+                            }}
+                          >
+                            {project.links.map((link) => (
+                              <a
+                                key={link.url}
+                                href={link.url}
+                                className="flex items-center underline decoration-[var(--detail-color)]/50 hover:decoration-[var(--detail-color)] transition p-3"
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                {link.label}
+                                <ArrowUpRight size={12} />
+                              </a>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     </div>
                   );
                 })}
