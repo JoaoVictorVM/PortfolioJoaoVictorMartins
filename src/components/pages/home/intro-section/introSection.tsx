@@ -10,19 +10,26 @@ export function IntroSection() {
               <li>FullStack Developer</li>
             </ul>
           </div>
-          <h1 className="text-lg">Apenas uma introdução</h1>
         </div>
 
-        <div className="space-y-4 text-lg leading-relaxed text-[var(--detail-color)]">
-          <p className="italic text-[var(--text-color)]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at
-            tellus vitae massa hendrerit varius. Aenean pharetra, orci vitae
-            placerat porttitor, metus nulla volutpat lectus, quis fermentum enim
-            dolor ut odio.
+        <div className="space-y-4 text-base font-normal text-[var(--detail-color)]">
+          <p className="text-[var(--text-color)]">
+            Software Engineer com foco em Frontend Engineering, desenvolvendo
+            aplicações com ênfase em arquitetura, performance, escalabilidade,
+            manutenibilidade e organização de código.
           </p>
           <p className="text-[var(--text-color)]">
-            In the past I’ve developed the Vercel design system, website, and
-            dashboard.
+            Sinta-se à vontade para conhecer mais sobre minha trajetória, o que
+            venho estudando e os projetos em que estou trabalhando. Caso queira,
+            você também pode acessar meu{" "}
+            <a
+              href="/pdf/CV-JoaoVictorVenturaMartins.pdf"
+              download
+              className="underline underline-offset-4 decoration-[var(--text-color)]/30 hover:decoration-[var(--text-color)] transition"
+            >
+              currículo
+            </a>
+            .
           </p>
         </div>
       </div>

@@ -41,7 +41,7 @@ export default function Projetos() {
                       <button
                         type="button"
                         onClick={() => toggleProject(project.id)}
-                        className="group flex w-full items-center gap-3 text-left text-[var(--text-color)] transition hover:text-[var(--text-color)]/80 hover:bg-[var(--line-color)]/10 cursor-pointer rounded-lg py-3"
+                        className="group flex w-full items-center gap-3 text-left text-[var(--text-color)] transition hover:text-[var(--text-color)]/80 hover:bg-[var(--line-color)]/30 cursor-pointer rounded-lg p-3"
                       >
                         <span
                           className="project-title"

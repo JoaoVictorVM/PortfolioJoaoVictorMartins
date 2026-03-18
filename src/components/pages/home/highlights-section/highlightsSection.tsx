@@ -11,19 +11,25 @@ const highlightSets = {
   certificates: [
     {
       title: "Front End & UX/UI Design",
-      description: "Origamid program centered on CSS, layout and polish.",
+      description:
+        "Certificação concluída pela Origamid em 06/02/2026, validando conhecimentos na área.",
+    },
+    {
+      title: "NLW Operator - FullStack",
+      description:
+        "Certificação concluída pela Rocketseat em 17/03/2026, validando conhecimentos na área.",
     },
   ],
   projects: [
     {
       title: "BikCraft",
       description: "E-commerce de bicicletas elétricas com foco em UI.",
-      url: "https://github.com/JoaoVictorVM/BikCraft",
+      url: "https://bikcraft-one.vercel.app/",
     },
     {
-      title: "SWAG Album",
-      description: "Showcase Next.js + Tailwind com foco em storytelling.",
-      url: "https://github.com/JoaoVictorVM/SWAG",
+      title: "Forest Imóveis",
+      description: "Site institucional de imobiliária com foco em Tailwind.",
+      url: "https://joaovictorvm.github.io/ForestImoveis/",
     },
     {
       title: "Scheduling API",
@@ -57,7 +63,7 @@ function HighlightsColumn({
 }) {
   return (
     <div className="flex flex-col gap-6">
-      <p className="text-sm text-[var(--text-color)]/40">{title}</p>
+      <p className="text-sm text-[var(--detail-color)]">{title}</p>
 
       <div className="space-y-6">
         {items.map((item) => (
@@ -72,7 +78,7 @@ function HighlightsColumn({
                 <span>{item.title}</span>
                 <ArrowUpRight
                   size={14}
-                  className="text-[var(--text-color)]/30"
+                  className="text-[var(--detail-color)]"
                 />
               </Link>
             ) : (
@@ -92,7 +98,7 @@ function HighlightsColumn({
         className="inline-flex items-center gap-2 font-normal text-[var(--text-color)] underline-offset-4 decoration-[var(--text-color)]/30 hover:decoration-[var(--text-color)] transition underline"
       >
         <span>{cta.label}</span>
-        <ArrowUpRight size={14} className="text-[var(--text-color)]/30" />
+        <ArrowUpRight size={14} className="text-[var(--detail-color)]" />
       </Link>
     </div>
   );
