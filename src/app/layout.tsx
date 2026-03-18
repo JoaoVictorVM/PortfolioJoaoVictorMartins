@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "João Victor Martins | Portfólio",
+  title: "João Victor Ventura Martins",
   description:
     "Desenvolvedor FullStack com foco em Frontend. Crio aplicações web modernas, responsivas e performáticas utilizando React, Next.js, Node.js e boas práticas de desenvolvimento.",
 };
