@@ -14,7 +14,7 @@ function LanguageSwitcher() {
   const { language, setLanguage } = usePreference();
 
   return (
-    <div className="flex items-center gap-2 text-[0.55rem] font-semibold uppercase tracking-[0.4em]">
+    <div className="flex items-center gap-1 text-[0.55rem]">
       {languageOptions.map((option) => (
         <button
           key={option.value}
@@ -22,7 +22,7 @@ function LanguageSwitcher() {
           aria-pressed={language === option.value}
           onClick={() => setLanguage(option.value)}
           className={cn(
-            "rounded-full px-3 py-1 transition-colors duration-200",
+            "rounded-full px-3 py-1 transition-colors duration-200 cursor-pointer",
             language === option.value
               ? "bg-[var(--text-color)] text-[var(--bg-color)]"
               : "text-[var(--text-color)]/70 hover:text-[var(--text-color)]",
@@ -44,7 +44,7 @@ function ThemeSwitcher() {
       type="button"
       aria-label={isDark ? "Ativar modo claro" : "Ativar modo escuro"}
       onClick={toggleTheme}
-      className="flex items-center justify-center rounded-full border border-[var(--line-color)] p-2 text-[var(--text-color)] transition hover:border-[var(--text-color)]"
+      className="flex items-center justify-center rounded-full border border-[var(--line-color)] p-2 text-[var(--text-color)] transition hover:border-[var(--text-color)] cursor-pointer"
     >
       {isDark ? <Sun size={16} /> : <Moon size={16} />}
     </button>

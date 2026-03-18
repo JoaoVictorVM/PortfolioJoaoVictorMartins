@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { usePreference } from "@/context/preferences/PreferenceProvider";
 
 type HighlightItem = {
   title: string;
@@ -7,48 +9,86 @@ type HighlightItem = {
   url?: string;
 };
 
-const highlightSets = {
-  certificates: [
-    {
-      title: "Front End & UX/UI Design",
-      description:
-        "Certificação concluída pela Origamid em 06/02/2026, validando conhecimentos na área.",
-    },
-    {
-      title: "NLW Operator - FullStack",
-      description:
-        "Certificação concluída pela Rocketseat em 17/03/2026, validando conhecimentos na área.",
-    },
-  ],
-  projects: [
-    {
-      title: "BikCraft",
-      description: "E-commerce de bicicletas elétricas com foco em UI.",
-      url: "https://bikcraft-one.vercel.app/",
-    },
-    {
-      title: "Forest Imóveis",
-      description: "Site institucional de imobiliária com foco em Tailwind.",
-      url: "https://joaovictorvm.github.io/ForestImoveis/",
-    },
-    {
-      title: "Scheduling API",
-      description: "API Node.js/Nest.js organizada para agendamentos.",
-      url: "https://github.com/JoaoVictorVM/Scheduling-API",
-    },
-  ],
+type HighlightCopy = {
+  certificates: HighlightItem[];
+  projects: HighlightItem[];
 };
 
-const columnCtas = [
-  {
-    label: "Todos os Certificados",
-    href: "/certificados",
+const highlightCopy: Record<string, HighlightCopy> = {
+  pt: {
+    certificates: [
+      {
+        title: "Front End & UX/UI Design",
+        description:
+          "Certificação concluída pela Origamid em 06/02/2026, validando conhecimentos na área.",
+      },
+      {
+        title: "NLW Operator - FullStack",
+        description:
+          "Certificação concluída pela Rocketseat em 17/03/2026, validando conhecimentos na área.",
+      },
+    ],
+    projects: [
+      {
+        title: "BikCraft",
+        description: "E-commerce de bicicletas elétricas com foco em UI.",
+        url: "https://bikcraft-one.vercel.app/",
+      },
+      {
+        title: "Forest Imóveis",
+        description: "Site institucional de imobiliária com foco em Tailwind.",
+        url: "https://joaovictorvm.github.io/ForestImoveis/",
+      },
+      {
+        title: "Scheduling API",
+        description: "API Node.js/Nest.js organizada para agendamentos.",
+        url: "https://github.com/JoaoVictorVM/Scheduling-API",
+      },
+    ],
   },
-  {
-    label: "Todos os Projetos",
-    href: "/projetos",
+  en: {
+    certificates: [
+      {
+        title: "Front End & UX/UI Design",
+        description:
+          "Origamid certification completed on 02/06/2026, confirming practical knowledge.",
+      },
+      {
+        title: "NLW Operator - FullStack",
+        description:
+          "Rocketseat certification completed on 03/17/2026, confirming practical knowledge.",
+      },
+    ],
+    projects: [
+      {
+        title: "BikCraft",
+        description: "Electric bike e-commerce with a UI-first approach.",
+        url: "https://bikcraft-one.vercel.app/",
+      },
+      {
+        title: "Forest",
+        description: "Real-estate corporate site built with Tailwind.",
+        url: "https://joaovictorvm.github.io/ForestImoveis/",
+      },
+      {
+        title: "Scheduling API",
+        description: "Node.js/Nest.js API crafted for appointment flows.",
+        url: "https://github.com/JoaoVictorVM/Scheduling-API",
+      },
+    ],
   },
-];
+};
+
+const columnCtas = {
+  pt: [
+    { label: "Todos os Certificados", href: "/certificados" },
+    { label: "Todos os Projetos", href: "/projetos" },
+  ],
+  en: [
+    { label: "All Certificates", href: "/certificados" },
+    { label: "All Projects", href: "/projetos" },
+  ],
+};
 
 function HighlightsColumn({
   title,
@@ -105,19 +145,23 @@ function HighlightsColumn({
 }
 
 export function HighlightsSection() {
+  const { language } = usePreference();
+  const highlights = highlightCopy[language];
+  const [certCta, projectCta] = columnCtas[language];
+
   return (
     <section className="pt-16">
       <div className="mx-auto max-w-2xl px-4 grid gap-12 md:grid-cols-2">
         <HighlightsColumn
-          title="Certificados"
-          items={highlightSets.certificates}
-          cta={columnCtas[0]}
+          title={language === "pt" ? "Certificados" : "Certificates"}
+          items={highlights.certificates}
+          cta={certCta}
         />
 
         <HighlightsColumn
-          title="Projetos"
-          items={highlightSets.projects}
-          cta={columnCtas[1]}
+          title={language === "pt" ? "Projetos" : "Projects"}
+          items={highlights.projects}
+          cta={projectCta}
           isProject
         />
       </div>
