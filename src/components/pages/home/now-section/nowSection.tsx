@@ -1,5 +1,6 @@
 'use client';
 import { usePreference } from "@/context/preferences/PreferenceProvider";
+import { useReveal } from "@/hooks/useReveal";
 
 const text = {
   pt: [
@@ -14,15 +15,30 @@ const text = {
 
 export function NowSection() {
   const { language } = usePreference();
+  const isVisible = useReveal(language);
 
   return (
-    <section className="py-20">
-      <div className="mx-auto max-w-2xl px-4 space-y-6 text-[var(--detail-color)]">
+    <section
+      key={`now-${language}`}
+      className={`py-20 section-fade diagonal-fade delay-200 ${
+        isVisible ? "visible" : ""
+      }`}
+    >
+      <div
+        className={`mx-auto max-w-2xl px-4 space-y-6 text-[var(--detail-color)] text-appear diagonal-fade delay-300 ${
+          isVisible ? "visible" : ""
+        }`}
+      >
         <h2 className="text-lg text-[var(--text-color)]">
           {language === "pt" ? "Atualmente" : "Now"}
         </h2>
         {text[language].map((paragraph) => (
-          <p key={paragraph} className="text-[var(--text-color)]">
+          <p
+            key={paragraph}
+            className={`text-[var(--text-color)] text-appear diagonal-fade delay-350 ${
+              isVisible ? "visible" : ""
+            }`}
+          >
             {paragraph}
           </p>
         ))}

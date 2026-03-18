@@ -1,5 +1,6 @@
 'use client';
 import { usePreference } from "@/context/preferences/PreferenceProvider";
+import { useReveal } from "@/hooks/useReveal";
 
 const copy = {
   pt: {
@@ -25,12 +26,26 @@ const links = [
 export function ConnectSection() {
   const { language } = usePreference();
   const texts = copy[language];
+  const isVisible = useReveal(language);
 
   return (
-    <section className="pb-32">
-      <div className="mx-auto max-w-2xl px-4 space-y-4 text-[var(--detail-color)]">
+    <section
+      key={`connect-${language}`}
+      className={`pb-32 section-fade diagonal-fade delay-250 ${
+        isVisible ? "visible" : ""
+      }`}
+    >
+      <div
+        className={`mx-auto max-w-2xl px-4 space-y-4 text-[var(--detail-color)] text-appear diagonal-fade delay-300 ${
+          isVisible ? "visible" : ""
+        }`}
+      >
         <h2 className="text-lg text-[var(--text-color)]">{texts.title}</h2>
-        <p className="text-[var(--text-color)]">
+        <p
+          className={`text-[var(--text-color)] text-appear diagonal-fade delay-350 ${
+            isVisible ? "visible" : ""
+          }`}
+        >
           {texts.prefix}&nbsp;
           {links.map((link, index) => {
             const isSecondLast = index === links.length - 2;

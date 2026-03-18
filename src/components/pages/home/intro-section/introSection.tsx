@@ -1,5 +1,6 @@
 "use client";
 import { usePreference } from "@/context/preferences/PreferenceProvider";
+import { useReveal } from "@/hooks/useReveal";
 
 const copy = {
   pt: {
@@ -25,10 +26,21 @@ const copy = {
 export function IntroSection() {
   const { language } = usePreference();
   const texts = copy[language];
+  const isVisible = useReveal(language);
 
   return (
-    <section id="inicio" className="pt-32">
-      <div className="mx-auto max-w-2xl px-4 space-y-8 text-[var(--text-color)]">
+    <section
+      id="inicio"
+      key={`intro-${language}`}
+      className={`pt-32 section-fade diagonal-fade delay-100 ${
+        isVisible ? "visible" : ""
+      }`}
+    >
+      <div
+        className={`mx-auto max-w-2xl px-4 space-y-8 text-[var(--text-color)] text-appear diagonal-fade delay-250 ${
+          isVisible ? "visible" : ""
+        }`}
+      >
         <div className="space-y-12">
           <div className="space-y-2">
             <h1 className="text-lg">{texts.name}</h1>
@@ -40,7 +52,11 @@ export function IntroSection() {
           </div>
         </div>
 
-        <div className="space-y-4 text-base font-normal text-[var(--detail-color)]">
+        <div
+          className={`space-y-4 text-base font-normal text-[var(--detail-color)] text-appear diagonal-fade delay-300 ${
+            isVisible ? "visible" : ""
+          }`}
+        >
           <p className="text-[var(--text-color)]">{texts.lead}</p>
           <p className="text-[var(--text-color)]">
             {texts.summary} {texts.suffix}{" "}

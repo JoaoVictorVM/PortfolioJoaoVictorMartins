@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { usePreference } from "@/context/preferences/PreferenceProvider";
+import { useReveal } from "@/hooks/useReveal";
 
 type HighlightItem = {
   title: string;
@@ -95,19 +96,30 @@ function HighlightsColumn({
   items,
   cta,
   isProject,
+  isVisible,
 }: {
   title: string;
   items: HighlightItem[];
   cta: { label: string; href: string };
   isProject?: boolean;
+  isVisible?: boolean;
 }) {
   return (
-    <div className="flex flex-col gap-6">
+    <div
+      className={`flex flex-col gap-6 text-appear diagonal-fade delay-250 ${
+        isVisible ? "visible" : ""
+      }`}
+    >
       <p className="text-sm text-[var(--detail-color)]">{title}</p>
 
       <div className="space-y-6">
         {items.map((item) => (
-          <article key={item.title} className="space-y-1.5">
+          <article
+            key={item.title}
+            className={`space-y-1.5 text-appear diagonal-fade delay-300 ${
+              isVisible ? "visible" : ""
+            }`}
+          >
             {isProject && item.url ? (
               <Link
                 href={item.url}
@@ -148,14 +160,21 @@ export function HighlightsSection() {
   const { language } = usePreference();
   const highlights = highlightCopy[language];
   const [certCta, projectCta] = columnCtas[language];
+  const isVisible = useReveal(language);
 
   return (
-    <section className="pt-16">
+    <section
+      key={`highlights-${language}`}
+      className={`pt-16 section-fade diagonal-fade delay-150 ${
+        isVisible ? "visible" : ""
+      }`}
+    >
       <div className="mx-auto max-w-2xl px-4 grid gap-12 md:grid-cols-2">
         <HighlightsColumn
           title={language === "pt" ? "Certificados" : "Certificates"}
           items={highlights.certificates}
           cta={certCta}
+          isVisible={isVisible}
         />
 
         <HighlightsColumn
@@ -163,6 +182,7 @@ export function HighlightsSection() {
           items={highlights.projects}
           cta={projectCta}
           isProject
+          isVisible={isVisible}
         />
       </div>
     </section>

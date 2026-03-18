@@ -1,0 +1,67 @@
+.section-fade {
+  opacity: 0;
+  transform: translateY(24px);
+  will-change: opacity, transform;
+}
+
+.section-fade.visible {
+  animation: sectionFade 0.8s ease forwards;
+  animation-delay: 0.15s;
+}
+
+.section-fade.visible.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.section-fade.visible.delay-150 {
+  animation-delay: 0.15s;
+}
+
+.section-fade.visible.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.section-fade.visible.delay-250 {
+  animation-delay: 0.25s;
+}
+
+.section-fade.visible.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.text-appear {
+  opacity: 0;
+  transform: translateY(12px);
+  will-change: opacity, transform;
+}
+
+.text-appear.visible {
+  animation: textSlideIn 0.85s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.text-appear.visible.delay-250 {
+  animation-delay: 0.25s;
+}
+
+.text-appear.visible.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.text-appear.visible.delay-350 {
+  animation-delay: 0.35s;
+}
+
+@keyframes sectionFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

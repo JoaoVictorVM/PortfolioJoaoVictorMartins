@@ -3,6 +3,8 @@
 @import "./projectAnimations.css";
 @import "./backgroundGradient.css";
 @import "./backgroundBreath.css";
+@import "./sectionAnimations.css";
+@import "./diagonalFade.css";
 
 body {
   background: var(--bg-color);
