@@ -7,12 +7,24 @@ import { cn } from "@/lib/utils";
 import { usePreference } from "@/context/preferences/PreferenceProvider";
 import { useReveal } from "@/hooks/useReveal";
 
+const CERTIFICATE_COPY = {
+  pt: {
+    title: "Certificados",
+    subtitle: "Qualidade e excelência comprovadas",
+  },
+  en: {
+    title: "Certificates",
+    subtitle: "Proven quality and excellence",
+  },
+} as const;
+
 export default function Certificados() {
   const { language } = usePreference();
   const [hoveredCertificate, setHoveredCertificate] = useState<string | null>(
     null,
   );
   const isVisible = useReveal(language);
+  const texts = CERTIFICATE_COPY[language];
 
   const groupedCertificates = useMemo(() => {
     const grouped = CERTIFICATE_DETAILS.reduce<
@@ -65,14 +77,14 @@ export default function Certificados() {
                     isVisible ? "visible" : ""
                   }`}
                 >
-                  Certificados
+                  {texts.title}
                 </h1>
                 <p
                   className={`text-sm text-[var(--detail-color)] fast-fade-up delay-250 ${
                     isVisible ? "visible" : ""
                   }`}
                 >
-                  Qualidade e excelência comprovadas
+                  {texts.subtitle}
                 </p>
               </div>
 
@@ -134,10 +146,10 @@ export default function Certificados() {
                                 )}
                                 style={{ animationDelay: `${titleDelay}s` }}
                               >
-                                {certificate.title}
+                                {certificate.title[language]}
                               </span>
                               <span className="text-sm text-[var(--detail-color)] text-right hidden sm:block">
-                                {certificate.date}
+                                {certificate.date[language]}
                               </span>
                             </div>
                             {!isLastOfGroup && (
