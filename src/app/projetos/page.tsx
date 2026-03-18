@@ -7,10 +7,22 @@ import { PROJECT_DETAILS } from "@/data/projectDetails";
 import { usePreference } from "@/context/preferences/PreferenceProvider";
 import { useReveal } from "@/hooks/useReveal";
 
+const PROJECTS_COPY = {
+  pt: {
+    title: "Projetos",
+    subtitle: "Abaixo alguns projetos selecionados",
+  },
+  en: {
+    title: "Projects",
+    subtitle: "Below are some selected projects",
+  },
+} as const;
+
 export default function Projetos() {
   const { language } = usePreference();
   const [openProject, setOpenProject] = useState<string | null>(null);
   const isVisible = useReveal(language);
+  const texts = PROJECTS_COPY[language];
 
   const toggleProject = (id: string) => {
     setOpenProject((current) => (current === id ? null : id));
@@ -41,14 +53,14 @@ export default function Projetos() {
                     isVisible ? "visible" : ""
                   }`}
                 >
-                  Projetos
+                  {texts.title}
                 </h1>
                 <p
                   className={`text-sm text-[var(--detail-color)] fast-fade-up delay-250 ${
                     isVisible ? "visible" : ""
                   }`}
                 >
-                  Abaixo alguns projetos selecionados
+                  {texts.subtitle}
                 </p>
               </div>
 
@@ -59,7 +71,7 @@ export default function Projetos() {
 
                   return (
                     <div key={project.id}>
-                      <button
+                        <button
                         type="button"
                         onClick={() => toggleProject(project.id)}
                         className="group flex w-full items-center gap-3 text-left text-[var(--text-color)] transition hover:text-[var(--text-color)]/80 hover:bg-[var(--line-color)]/30 cursor-pointer rounded-lg py-2"
@@ -68,7 +80,7 @@ export default function Projetos() {
                           className="project-title"
                           style={{ animationDelay: `${delay}s` }}
                         >
-                          {project.title}
+                          {project.title[language]}
                         </span>
                         <span
                           className="project-line flex-1 border-t border-[var(--line-color)]"
@@ -93,20 +105,20 @@ export default function Projetos() {
                           transition: "max-height 0.5s ease, opacity 0.4s ease",
                         }}
                       >
-                        <p
-                          className="project-details-text"
-                          style={{
-                            opacity: isOpen ? 1 : 0,
-                            transform: isOpen
-                              ? "translateY(0)"
-                              : "translateY(-6px)",
-                            transition:
-                              "opacity 0.35s ease, transform 0.35s ease",
-                            transitionDelay: isOpen ? "0.1s" : "0s",
-                          }}
-                        >
-                          {project.details}
-                        </p>
+                          <p
+                            className="project-details-text"
+                            style={{
+                              opacity: isOpen ? 1 : 0,
+                              transform: isOpen
+                                ? "translateY(0)"
+                                : "translateY(-6px)",
+                              transition:
+                                "opacity 0.35s ease, transform 0.35s ease",
+                              transitionDelay: isOpen ? "0.1s" : "0s",
+                            }}
+                          >
+                            {project.details[language]}
+                          </p>
                         {project.links && project.links.length > 0 && (
                           <div
                             className="project-details-links flex gap-2"
@@ -128,7 +140,7 @@ export default function Projetos() {
                                 target="_blank"
                                 rel="noreferrer"
                               >
-                                {link.label}
+                                {link.label[language]}
                                 <ArrowUpRight size={12} />
                               </a>
                             ))}

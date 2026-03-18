@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { usePreference } from "@/context/preferences/PreferenceProvider";
 import { useReveal } from "@/hooks/useReveal";
 
@@ -10,7 +10,7 @@ const copy = {
   },
   en: {
     title: "Connect",
-    prefix: "Find me on",
+    prefix: "Reach me at",
     orWord: "or",
   },
 };
