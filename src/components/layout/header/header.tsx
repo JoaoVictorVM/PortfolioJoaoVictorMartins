@@ -1,32 +1,72 @@
-import { HeaderContato } from "./headerContato";
+"use client";
+
+import { Moon, Sun } from "lucide-react";
+import { usePreference } from "@/context/preferences/PreferenceProvider";
+import { cn } from "@/lib/utils";
 import { HeaderLogo } from "./headerLogo";
-import { Nav } from "./nav";
-import { MobileMenu } from "./mobileMenu";
+import { useReveal } from "@/hooks/useReveal";
+
+const languageOptions = [
+  { label: "PT", value: "pt" },
+  { label: "EN", value: "en" },
+] as const;
+
+function LanguageSwitcher() {
+  const { language, setLanguage } = usePreference();
+
+  return (
+    <div className="flex items-center gap-1 text-[0.55rem]">
+      {languageOptions.map((option) => (
+        <button
+          key={option.value}
+          type="button"
+          aria-pressed={language === option.value}
+          onClick={() => setLanguage(option.value)}
+          className={cn(
+            "rounded-full px-3 py-1 transition-colors duration-200 cursor-pointer",
+            language === option.value
+              ? "bg-[var(--text-color)] text-[var(--bg-color)]"
+              : "text-[var(--text-color)]/70 hover:text-[var(--text-color)]",
+          )}
+        >
+          {option.label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function ThemeSwitcher() {
+  const { theme, toggleTheme } = usePreference();
+  const isDark = theme === "dark";
+
+  return (
+    <button
+      type="button"
+      aria-label={isDark ? "Ativar modo claro" : "Ativar modo escuro"}
+      onClick={toggleTheme}
+      className="flex items-center justify-center rounded-full border border-[var(--line-color)] p-2 text-[var(--text-color)] transition hover:border-[var(--text-color)] cursor-pointer"
+    >
+      {isDark ? <Sun size={16} /> : <Moon size={16} />}
+    </button>
+  );
+}
 
 export function Header() {
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-4">
-      <div className="max-w-7xl mx-auto bg-gradient-to-r from-[var(--cor-escuro-6)] via-[var(--cor-escuro-1)] to-[var(--cor-escuro-6)] rounded-b-3xl border-b border-[var(--cor-escuro-7)] p-4">
-        <div className="hidden md:grid grid-cols-3 items-center">
-          <div className="flex justify-start">
-            <Nav />
-          </div>
-          <div className="flex justify-center">
-            <HeaderLogo />
-          </div>
-          <div className="flex justify-end">
-            <HeaderContato />
-          </div>
-        </div>
+  const { language } = usePreference();
+  const isVisible = useReveal(language);
 
-        <div className="flex md:hidden items-center justify-between">
-          <div className="w-10"></div>
-          <div className="flex-1 flex justify-center">
-            <HeaderLogo />
-          </div>
-          <div className="w-10 flex justify-end">
-            <MobileMenu />
-          </div>
+  return (
+    <header className="border-b border-[var(--line-color)] bg-[var(--bg-color)]">
+      <div className={`mx-auto max-w-2xl px-4 section-fade diagonal-fade delay-100 ${isVisible ? "visible" : ""}`}>
+        <div
+          className={`flex items-center justify-between gap-4 py-3 text-xs text-[var(--text-color)] text-appear delay-200 ${
+            isVisible ? "visible" : ""
+          }`}
+        >
+          <LanguageSwitcher />
+          <HeaderLogo />
+          <ThemeSwitcher />
         </div>
       </div>
     </header>

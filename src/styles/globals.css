@@ -1,12 +1,18 @@
 @import "tailwindcss";
 @import "./variables.css";
+@import "./projectAnimations.css";
 @import "./backgroundGradient.css";
 @import "./backgroundBreath.css";
+@import "./sectionAnimations.css";
+@import "./diagonalFade.css";
+@import "./fastFadeUp.css";
 
 body {
-    background: var(--cor-escuro-4);
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
 h1 {
-    color: var(--cor-branca);
+  color: var(--text-color);
 }
