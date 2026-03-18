@@ -70,4 +70,63 @@ export const PROJECT_DETAILS: Project[] = [
       { label: "Site", url: "https://joaovictorvm.github.io/AimingGame/" },
     ],
   },
+  {
+    id: "devroast",
+    title: "DevRoast",
+    details:
+      "O Product Client Hub é umaAPI REST para gestão de clientes e produtos.",
+    links: [
+      {
+        label: "Repositorio",
+        url: "https://github.com/JoaoVictorVM/DevRoast",
+      },
+    ],
+  },
+  {
+    id: "pomodoro-idle-game",
+    title: "Pomodoro Idle Game",
+    details:
+      "O Product Client Hub é umaAPI REST para gestão de clientes e produtos.",
+    links: [
+      {
+        label: "Repositorio",
+        url: "https://github.com/JoaoVictorVM/Pomodoro-IdleGame",
+      },
+    ],
+  },
+  {
+    id: "caravan",
+    title: "Caravan",
+    details: "Jogo web com objetivo de acertar alvos, para treinar mira",
+    links: [
+      {
+        label: "Repositorio",
+        url: "https://github.com/JoaoVictorVM/Caravan",
+      },
+      { label: "Site", url: "https://joaovictorvm.github.io/Caravan/" },
+    ],
+  },
+  {
+    id: "swag",
+    title: "SWAG",
+    details: "Jogo web com objetivo de acertar alvos, para treinar mira",
+    links: [
+      {
+        label: "Repositorio",
+        url: "https://github.com/JoaoVictorVM/SWAG",
+      },
+      { label: "Site", url: "https://swag-smoky.vercel.app/" },
+    ],
+  },
+  {
+    id: "all-projects",
+    title: "Todos os projetos",
+    details: "Jogo web com objetivo de acertar alvos, para treinar mira",
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/JoaoVictorVM/SWAG",
+      },
+    ],
+  },
 ];

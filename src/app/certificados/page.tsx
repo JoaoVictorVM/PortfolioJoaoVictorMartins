@@ -4,13 +4,15 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { CERTIFICATE_DETAILS, Certificate } from "@/data/certificateDetails";
 import { cn } from "@/lib/utils";
+import { usePreference } from "@/context/preferences/PreferenceProvider";
 import { useReveal } from "@/hooks/useReveal";
 
 export default function Certificados() {
+  const { language } = usePreference();
   const [hoveredCertificate, setHoveredCertificate] = useState<string | null>(
     null,
   );
-  const isVisible = useReveal();
+  const isVisible = useReveal(language);
 
   const groupedCertificates = useMemo(() => {
     const grouped = CERTIFICATE_DETAILS.reduce<
@@ -43,6 +45,7 @@ export default function Certificados() {
       <section className="py-24">
         <div className="mx-auto max-w-2xl px-4">
           <div
+            key={`certificates-top-${language}`}
             className={`relative mb-8 fast-fade-up delay-100 ${
               isVisible ? "visible" : ""
             }`}
@@ -69,7 +72,7 @@ export default function Certificados() {
                     isVisible ? "visible" : ""
                   }`}
                 >
-                  Organizados por instituicao
+                  Qualidade e excelência comprovadas
                 </p>
               </div>
 
@@ -77,7 +80,10 @@ export default function Certificados() {
                 {(() => {
                   let animationIndex = 0;
                   return groupedCertificates.map((group) => (
-                    <div key={group.institution} className="space-y-0">
+                    <div
+                      key={group.institution}
+                      className="md:space-y-0 mt-4 md:mt-0"
+                    >
                       {group.certificates.map((certificate, certIndex) => {
                         const shouldDimTitle =
                           hoveredCertificate !== null &&
@@ -91,6 +97,11 @@ export default function Certificados() {
 
                         return (
                           <div key={certificate.id}>
+                            {isFirstOfGroup && (
+                              <p className="md:hidden text-sm text-[var(--detail-color)] pl-2 mb-3">
+                                {group.institution}
+                              </p>
+                            )}
                             <div
                               onMouseEnter={() =>
                                 handleMouseEnter(certificate.id)
@@ -100,11 +111,13 @@ export default function Certificados() {
                                 "grid w-full grid-cols-[140px_1fr_auto] items-center gap-3 text-[var(--detail-color)] py-4 transition hover:text-[var(--text-color)]/80",
                                 isFirstOfGroup &&
                                   "border-t border-[var(--line-color)]",
+                                "px-2 md:px-0",
                               )}
                             >
                               <span
                                 className={cn(
                                   "text-sm transition-opacity duration-150",
+                                  "hidden md:block",
                                   isFirstOfGroup
                                     ? "opacity-100 text-[var(--detail-color)]"
                                     : "opacity-0",
@@ -114,7 +127,7 @@ export default function Certificados() {
                               </span>
                               <span
                                 className={cn(
-                                  "text-sm font-normal transition-colors duration-150 project-title",
+                                  "text-sm font-normal transition-colors duration-150 project-title col-span-2 sm:col-span-1",
                                   shouldDimTitle
                                     ? "text-[var(--detail-color)]"
                                     : "text-[var(--text-color)]",
@@ -123,13 +136,13 @@ export default function Certificados() {
                               >
                                 {certificate.title}
                               </span>
-                              <span className="text-sm text-[var(--detail-color)] text-right">
+                              <span className="text-sm text-[var(--detail-color)] text-right hidden sm:block">
                                 {certificate.date}
                               </span>
                             </div>
                             {!isLastOfGroup && (
                               <div
-                                className="project-line ml-[140px]"
+                                className="project-line ml-6 md:ml-[140px]"
                                 style={{ animationDelay: `${lineDelay}s` }}
                               />
                             )}

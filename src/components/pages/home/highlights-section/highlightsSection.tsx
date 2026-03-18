@@ -83,11 +83,11 @@ const highlightCopy: Record<string, HighlightCopy> = {
 const columnCtas = {
   pt: [
     { label: "Todos os Certificados", href: "/certificados" },
-    { label: "Todos os Projetos", href: "/projetos" },
+    { label: "Demais Projetos", href: "/projetos" },
   ],
   en: [
     { label: "All Certificates", href: "/certificados" },
-    { label: "All Projects", href: "/projetos" },
+    { label: "Other Projects", href: "/projetos" },
   ],
 };
 

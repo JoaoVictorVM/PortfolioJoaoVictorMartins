@@ -4,11 +4,13 @@ import Link from "next/link";
 import { ArrowUpRight, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { PROJECT_DETAILS } from "@/data/projectDetails";
+import { usePreference } from "@/context/preferences/PreferenceProvider";
 import { useReveal } from "@/hooks/useReveal";
 
 export default function Projetos() {
+  const { language } = usePreference();
   const [openProject, setOpenProject] = useState<string | null>(null);
-  const isVisible = useReveal();
+  const isVisible = useReveal(language);
 
   const toggleProject = (id: string) => {
     setOpenProject((current) => (current === id ? null : id));
@@ -19,6 +21,7 @@ export default function Projetos() {
       <section className="py-24">
         <div className="mx-auto max-w-2xl px-4">
           <div
+            key={`projects-top-${language}`}
             className={`relative mb-8 fast-fade-up delay-100 ${
               isVisible ? "visible" : ""
             }`}
