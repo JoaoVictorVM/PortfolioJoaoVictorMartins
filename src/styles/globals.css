@@ -5,6 +5,7 @@
 @import "./backgroundBreath.css";
 @import "./sectionAnimations.css";
 @import "./diagonalFade.css";
+@import "./fastFadeUp.css";
 
 body {
   background: var(--bg-color);

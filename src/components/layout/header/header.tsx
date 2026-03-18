@@ -4,6 +4,7 @@ import { Moon, Sun } from "lucide-react";
 import { usePreference } from "@/context/preferences/PreferenceProvider";
 import { cn } from "@/lib/utils";
 import { HeaderLogo } from "./headerLogo";
+import { useReveal } from "@/hooks/useReveal";
 
 const languageOptions = [
   { label: "PT", value: "pt" },
@@ -52,12 +53,21 @@ function ThemeSwitcher() {
 }
 
 export function Header() {
+  const { language } = usePreference();
+  const isVisible = useReveal(language);
+
   return (
     <header className="border-b border-[var(--line-color)] bg-[var(--bg-color)]">
-      <div className="mx-auto flex max-w-2xl items-center justify-between gap-4 px-4 py-3 text-xs text-[var(--text-color)]">
-        <LanguageSwitcher />
-        <HeaderLogo />
-        <ThemeSwitcher />
+      <div className={`mx-auto max-w-2xl px-4 section-fade diagonal-fade delay-100 ${isVisible ? "visible" : ""}`}>
+        <div
+          className={`flex items-center justify-between gap-4 py-3 text-xs text-[var(--text-color)] text-appear delay-200 ${
+            isVisible ? "visible" : ""
+          }`}
+        >
+          <LanguageSwitcher />
+          <HeaderLogo />
+          <ThemeSwitcher />
+        </div>
       </div>
     </header>
   );

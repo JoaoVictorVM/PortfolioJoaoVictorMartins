@@ -1,0 +1,36 @@
+.fast-fade-up {
+  opacity: 0;
+  transform: translateY(12px);
+  will-change: opacity, transform;
+}
+
+.fast-fade-up.visible {
+  animation: fadeUpFast 0.45s ease forwards;
+}
+
+.fast-fade-up.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.fast-fade-up.delay-150 {
+  animation-delay: 0.15s;
+}
+
+.fast-fade-up.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.fast-fade-up.delay-250 {
+  animation-delay: 0.25s;
+}
+
+.fast-fade-up.delay-300 {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeUpFast {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

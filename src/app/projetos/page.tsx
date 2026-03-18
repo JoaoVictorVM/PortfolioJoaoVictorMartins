@@ -4,9 +4,11 @@ import Link from "next/link";
 import { ArrowUpRight, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { PROJECT_DETAILS } from "@/data/projectDetails";
+import { useReveal } from "@/hooks/useReveal";
 
 export default function Projetos() {
   const [openProject, setOpenProject] = useState<string | null>(null);
+  const isVisible = useReveal();
 
   const toggleProject = (id: string) => {
     setOpenProject((current) => (current === id ? null : id));
@@ -16,17 +18,33 @@ export default function Projetos() {
     <main className="min-h-screen bg-[var(--bg-color)] text-[var(--text-color)]">
       <section className="py-24">
         <div className="mx-auto max-w-2xl px-4">
-          <div className="relative mb-8">
+          <div
+            className={`relative mb-8 fast-fade-up delay-100 ${
+              isVisible ? "visible" : ""
+            }`}
+          >
             <Link
               href="/"
-              className="home-link block text-sm font-normal text-[var(--detail-color)] no-underline transition hover:text-[var(--text-color)] mb-4 md:mb-0 md:absolute md:left-0 md:-translate-x-[150px] italic"
+              className={`home-link block text-sm font-normal text-[var(--detail-color)] no-underline transition hover:text-[var(--text-color)] mb-4 md:mb-0 md:absolute md:left-0 md:-translate-x-[150px] italic fast-fade-up delay-150 ${
+                isVisible ? "visible" : ""
+              }`}
             >
               ← Index
             </Link>
             <div className="space-y-10">
               <div>
-                <h1 className="text-lg text-[var(--text-color)]">Projetos</h1>
-                <p className="text-sm text-[var(--detail-color)]">
+                <h1
+                  className={`text-lg text-[var(--text-color)] fast-fade-up delay-200 ${
+                    isVisible ? "visible" : ""
+                  }`}
+                >
+                  Projetos
+                </h1>
+                <p
+                  className={`text-sm text-[var(--detail-color)] fast-fade-up delay-250 ${
+                    isVisible ? "visible" : ""
+                  }`}
+                >
                   Abaixo alguns projetos selecionados
                 </p>
               </div>
