@@ -40,7 +40,7 @@ export default function Links() {
     <main className="min-h-screen bg-[var(--bg-color)] text-[var(--text-color)]">
       <section className="py-24">
         <div className="mx-auto flex max-w-2xl flex-col gap-10 px-4">
-          <div className={heroClass}>
+          <div key={`links-hero-${language}`} className={heroClass}>
             <p className="text-sm text-[var(--detail-color)]">{texts.label}</p>
             <h1 className="text-lg text-[var(--text-color)]">
               João Victor Ventura Martins
@@ -51,7 +51,7 @@ export default function Links() {
               ))}
             </ul>
           </div>
-          <div className={gridClass}>
+          <div key={`links-grid-${language}`} className={gridClass}>
             {linkTreeItems.map((item) => (
               <LinkTreeItem
                 key={item.title.pt}
@@ -62,7 +62,6 @@ export default function Links() {
                 icon={item.icon}
                 external={item.external}
                 download={item.download}
-                children={undefined}
               />
             ))}
           </div>
