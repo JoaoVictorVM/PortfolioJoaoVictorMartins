@@ -62,6 +62,7 @@ export default function Links() {
                 icon={item.icon}
                 external={item.external}
                 download={item.download}
+                children={undefined}
               />
             ))}
           </div>
