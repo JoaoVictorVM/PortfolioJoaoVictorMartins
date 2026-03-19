@@ -12,6 +12,7 @@ export function LinkCard({
     variant = "dark",
     download,
     external,
+    fullWidth,
 }: LinkCardProps) {
     const Wrapper = href ? 'a' : 'div'
 
@@ -23,7 +24,7 @@ export function LinkCard({
         rel={external ? "noopener noreferrer" : undefined}
         className={`
             w-full
-            max-w-md
+            ${fullWidth ? "" : "max-w-md"}
             min-h-[160px]
             rounded-xl
             p-6

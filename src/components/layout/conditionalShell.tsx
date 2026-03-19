@@ -11,7 +11,7 @@ export default function ConditionalShell({
   children: React.ReactNode;
 }>) {
   const pathname = usePathname() || "";
-  const hideShell = pathname.startsWith("/links");
+  const hideShell = pathname.startsWith("/teste");
 
   return (
     <>

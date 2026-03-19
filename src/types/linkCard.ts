@@ -11,4 +11,5 @@ export interface LinkCardProps {
   variant?: LinkCardVariant
   download?: boolean
   external?: boolean
+  fullWidth?: boolean
 }
