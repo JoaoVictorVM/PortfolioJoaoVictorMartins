@@ -35,15 +35,12 @@ export default tseslint.config(
     },
   },
   {
-    // Rotas do TanStack Router exportam `Route` + o componente por design;
-    // a regra de Fast Refresh não se aplica a elas.
     files: ["src/routes/**/*.tsx"],
     rules: {
       "react-refresh/only-export-components": "off",
     },
   },
   {
-    // Arquivos de config em JS não participam do type-checking do projeto.
     files: ["**/*.{js,mjs,cjs}"],
     extends: [tseslint.configs.disableTypeChecked],
   },

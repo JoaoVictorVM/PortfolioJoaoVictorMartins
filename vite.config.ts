@@ -13,12 +13,10 @@ export default defineConfig({
     tailwindcss(),
     tanstackStart({
       prerender: {
-        // HTML estático real por rota (SEO). Ver PRD §5.
         enabled: true,
         crawlLinks: true,
       },
     }),
-    // O plugin do React deve vir depois do plugin do TanStack Start.
     viteReact(),
   ],
 });

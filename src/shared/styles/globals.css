@@ -1,7 +1,19 @@
 @import "tailwindcss";
+@import "./tokens.css";
+@import "./animations.css";
 
-/*
- * Fase 1: baseline mínimo apenas para o build funcionar.
- * Os tokens de design (primitivos + semânticos), tema dark/light e
- * animações entram na Fase 2 (Design system em código).
- */
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  transition:
+    background var(--duration-theme) ease,
+    color var(--duration-theme) ease;
+}
+
+:focus-visible {
+  outline: 2px solid var(--text-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}

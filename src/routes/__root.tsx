@@ -7,6 +7,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
+import { PreferenceProvider } from "@/context/PreferenceProvider";
 import appCss from "@/shared/styles/globals.css?url";
 
 export const Route = createRootRoute({
@@ -41,7 +42,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <HeadContent />
       </head>
       <body>
-        {children}
+        <PreferenceProvider>{children}</PreferenceProvider>
         <TanStackRouterDevtools position="bottom-right" />
         <Scripts />
       </body>
