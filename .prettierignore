@@ -1,0 +1,12 @@
+pnpm-lock.yaml
+dist
+.output
+.nitro
+.tanstack
+src/routeTree.gen.ts
+public
+
+# Documentos autoritativos — não reformatar
+CLAUDE.md
+PRD.md
+README.md

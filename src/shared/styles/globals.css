@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/*
+ * Fase 1: baseline mínimo apenas para o build funcionar.
+ * Os tokens de design (primitivos + semânticos), tema dark/light e
+ * animações entram na Fase 2 (Design system em código).
+ */
