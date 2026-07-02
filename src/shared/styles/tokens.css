@@ -1,7 +1,8 @@
 @theme {
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: "Inter Variable", "Inter", system-ui, sans-serif;
 
-  --container-prose: 42rem;
+  --container-column: 42rem;
+  --text-2xs: 0.55rem;
 
   --duration-section: 800ms;
   --duration-text: 850ms;
@@ -10,12 +11,9 @@
   --duration-line: 300ms;
   --duration-chevron: 300ms;
   --duration-typing: 1200ms;
-  --duration-breath: 6000ms;
-  --duration-gradient: 30000ms;
   --duration-theme: 250ms;
 
   --ease-reveal: cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-gradient: cubic-bezier(0.8, 0.2, 0.2, 0.8);
 
   --delay-100: 100ms;
   --delay-150: 150ms;

@@ -9,75 +9,78 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as ProjetosRouteImport } from './routes/projetos'
 import { Route as LinksRouteImport } from './routes/links'
-import { Route as CertificadosRouteImport } from './routes/certificados'
-import { Route as IndexRouteImport } from './routes/index'
+import { Route as SiteRouteImport } from './routes/_site'
+import { Route as SiteIndexRouteImport } from './routes/_site/index'
+import { Route as SiteProjetosRouteImport } from './routes/_site/projetos'
+import { Route as SiteCertificadosRouteImport } from './routes/_site/certificados'
 
-const ProjetosRoute = ProjetosRouteImport.update({
-  id: '/projetos',
-  path: '/projetos',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const LinksRoute = LinksRouteImport.update({
   id: '/links',
   path: '/links',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CertificadosRoute = CertificadosRouteImport.update({
-  id: '/certificados',
-  path: '/certificados',
+const SiteRoute = SiteRouteImport.update({
+  id: '/_site',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
+const SiteIndexRoute = SiteIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteProjetosRoute = SiteProjetosRouteImport.update({
+  id: '/projetos',
+  path: '/projetos',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteCertificadosRoute = SiteCertificadosRouteImport.update({
+  id: '/certificados',
+  path: '/certificados',
+  getParentRoute: () => SiteRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/certificados': typeof CertificadosRoute
+  '/': typeof SiteIndexRoute
   '/links': typeof LinksRoute
-  '/projetos': typeof ProjetosRoute
+  '/certificados': typeof SiteCertificadosRoute
+  '/projetos': typeof SiteProjetosRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/certificados': typeof CertificadosRoute
   '/links': typeof LinksRoute
-  '/projetos': typeof ProjetosRoute
+  '/certificados': typeof SiteCertificadosRoute
+  '/projetos': typeof SiteProjetosRoute
+  '/': typeof SiteIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
-  '/certificados': typeof CertificadosRoute
+  '/_site': typeof SiteRouteWithChildren
   '/links': typeof LinksRoute
-  '/projetos': typeof ProjetosRoute
+  '/_site/certificados': typeof SiteCertificadosRoute
+  '/_site/projetos': typeof SiteProjetosRoute
+  '/_site/': typeof SiteIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/certificados' | '/links' | '/projetos'
+  fullPaths: '/' | '/links' | '/certificados' | '/projetos'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/certificados' | '/links' | '/projetos'
-  id: '__root__' | '/' | '/certificados' | '/links' | '/projetos'
+  to: '/links' | '/certificados' | '/projetos' | '/'
+  id:
+    | '__root__'
+    | '/_site'
+    | '/links'
+    | '/_site/certificados'
+    | '/_site/projetos'
+    | '/_site/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  CertificadosRoute: typeof CertificadosRoute
+  SiteRoute: typeof SiteRouteWithChildren
   LinksRoute: typeof LinksRoute
-  ProjetosRoute: typeof ProjetosRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/projetos': {
-      id: '/projetos'
-      path: '/projetos'
-      fullPath: '/projetos'
-      preLoaderRoute: typeof ProjetosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/links': {
       id: '/links'
       path: '/links'
@@ -85,28 +88,54 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LinksRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/certificados': {
-      id: '/certificados'
-      path: '/certificados'
-      fullPath: '/certificados'
-      preLoaderRoute: typeof CertificadosRouteImport
+    '/_site': {
+      id: '/_site'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof SiteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
+    '/_site/': {
+      id: '/_site/'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
+      preLoaderRoute: typeof SiteIndexRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/projetos': {
+      id: '/_site/projetos'
+      path: '/projetos'
+      fullPath: '/projetos'
+      preLoaderRoute: typeof SiteProjetosRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/certificados': {
+      id: '/_site/certificados'
+      path: '/certificados'
+      fullPath: '/certificados'
+      preLoaderRoute: typeof SiteCertificadosRouteImport
+      parentRoute: typeof SiteRoute
     }
   }
 }
 
+interface SiteRouteChildren {
+  SiteCertificadosRoute: typeof SiteCertificadosRoute
+  SiteProjetosRoute: typeof SiteProjetosRoute
+  SiteIndexRoute: typeof SiteIndexRoute
+}
+
+const SiteRouteChildren: SiteRouteChildren = {
+  SiteCertificadosRoute: SiteCertificadosRoute,
+  SiteProjetosRoute: SiteProjetosRoute,
+  SiteIndexRoute: SiteIndexRoute,
+}
+
+const SiteRouteWithChildren = SiteRoute._addFileChildren(SiteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  CertificadosRoute: CertificadosRoute,
+  SiteRoute: SiteRouteWithChildren,
   LinksRoute: LinksRoute,
-  ProjetosRoute: ProjetosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

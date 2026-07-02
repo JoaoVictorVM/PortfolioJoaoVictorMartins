@@ -16,6 +16,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@fontsource-variable/inter": "^5.2.8",
     "@tanstack/react-router": "^1.170.17",
     "@tanstack/react-start": "^1.168.27",
     "clsx": "^2.1.1",
