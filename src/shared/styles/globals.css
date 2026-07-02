@@ -17,3 +17,7 @@ body {
   outline-offset: 2px;
   border-radius: 2px;
 }
+
+@utility grid-certificate {
+  grid-template-columns: calc(var(--spacing) * 35) 1fr auto;
+}

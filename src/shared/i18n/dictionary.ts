@@ -16,6 +16,13 @@ const pt = {
   footer: {
     location: "Cabo Verde - MG 37880-000",
   },
+  common: {
+    backToIndex: "← Index",
+  },
+  certificates: {
+    title: "Certificados",
+    subtitle: "Qualidade e excelência comprovadas",
+  },
   home: {
     intro: {
       name: "João Victor Ventura Martins",
@@ -94,6 +101,13 @@ const en: Dictionary = {
   },
   footer: {
     location: "Cabo Verde - MG, Brazil",
+  },
+  common: {
+    backToIndex: "← Index",
+  },
+  certificates: {
+    title: "Certificates",
+    subtitle: "Proven quality and excellence",
   },
   home: {
     intro: {
