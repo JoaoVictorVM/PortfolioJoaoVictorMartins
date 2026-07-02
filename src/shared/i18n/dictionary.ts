@@ -38,6 +38,10 @@ const pt = {
     message: "Ocorreu um erro inesperado. Tente novamente.",
     retry: "Tentar novamente",
   },
+  links: {
+    label: "Linktree",
+    roles: ["Engenheiro de Software", "Desenvolvedor FullStack"],
+  },
   home: {
     intro: {
       name: "João Victor Ventura Martins",
@@ -138,6 +142,10 @@ const en: Dictionary = {
     title: "Something went wrong",
     message: "An unexpected error occurred. Please try again.",
     retry: "Try again",
+  },
+  links: {
+    label: "Linktree",
+    roles: ["Software Engineer", "FullStack Developer"],
   },
   home: {
     intro: {

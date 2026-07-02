@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { LinkTree } from "@/features/links/components/LinkTree";
 
 export const Route = createFileRoute("/links")({
   component: LinksPage,
@@ -6,8 +7,8 @@ export const Route = createFileRoute("/links")({
 
 function LinksPage() {
   return (
-    <main>
-      <h1>Links</h1>
+    <main className="min-h-screen">
+      <LinkTree />
     </main>
   );
 }
