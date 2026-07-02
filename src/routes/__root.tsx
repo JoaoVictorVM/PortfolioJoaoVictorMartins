@@ -8,6 +8,8 @@ import {
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import { PreferenceProvider } from "@/context/PreferenceProvider";
+import { NotFound } from "@/components/layout/NotFound";
+import { ErrorFallback } from "@/components/layout/ErrorFallback";
 import appCss from "@/shared/styles/globals.css?url";
 import "@fontsource-variable/inter";
 
@@ -22,10 +24,11 @@ export const Route = createRootRoute({
     ],
     links: [{ rel: "stylesheet", href: appCss }],
   }),
-  notFoundComponent: () => (
-    <main>
-      <h1>404</h1>
-    </main>
+  notFoundComponent: () => <NotFound />,
+  errorComponent: (props) => (
+    <RootDocument>
+      <ErrorFallback {...props} />
+    </RootDocument>
   ),
   component: RootComponent,
 });

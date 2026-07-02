@@ -27,6 +27,17 @@ const pt = {
     title: "Projetos",
     subtitle: "Abaixo alguns projetos selecionados",
   },
+  notFound: {
+    code: "404",
+    title: "Página não encontrada",
+    message: "A página que você procura não existe ou foi movida.",
+    backHome: "← Voltar ao início",
+  },
+  error: {
+    title: "Algo deu errado",
+    message: "Ocorreu um erro inesperado. Tente novamente.",
+    retry: "Tentar novamente",
+  },
   home: {
     intro: {
       name: "João Victor Ventura Martins",
@@ -116,6 +127,17 @@ const en: Dictionary = {
   projects: {
     title: "Projects",
     subtitle: "Below are some selected projects",
+  },
+  notFound: {
+    code: "404",
+    title: "Page not found",
+    message: "The page you are looking for does not exist or was moved.",
+    backHome: "← Back home",
+  },
+  error: {
+    title: "Something went wrong",
+    message: "An unexpected error occurred. Please try again.",
+    retry: "Try again",
   },
   home: {
     intro: {
