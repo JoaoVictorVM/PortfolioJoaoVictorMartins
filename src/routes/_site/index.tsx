@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Container } from "@/components/layout/Container";
+import { IntroSection } from "@/features/home/components/IntroSection";
+import { HighlightsSection } from "@/features/home/components/HighlightsSection";
+import { NowSection } from "@/features/home/components/NowSection";
+import { ConnectSection } from "@/features/home/components/ConnectSection";
 
 export const Route = createFileRoute("/_site/")({
   component: HomePage,
@@ -7,8 +10,11 @@ export const Route = createFileRoute("/_site/")({
 
 function HomePage() {
   return (
-    <Container>
-      <h1 className="text-text py-24">Home</h1>
-    </Container>
+    <>
+      <IntroSection />
+      <HighlightsSection />
+      <NowSection />
+      <ConnectSection />
+    </>
   );
 }

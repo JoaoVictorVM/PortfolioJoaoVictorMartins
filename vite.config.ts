@@ -15,6 +15,7 @@ export default defineConfig({
       prerender: {
         enabled: true,
         crawlLinks: true,
+        filter: ({ path }) => !path.startsWith("/pdf/"),
       },
     }),
     viteReact(),
