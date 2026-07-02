@@ -23,6 +23,10 @@ const pt = {
     title: "Certificados",
     subtitle: "Qualidade e excelência comprovadas",
   },
+  projects: {
+    title: "Projetos",
+    subtitle: "Abaixo alguns projetos selecionados",
+  },
   home: {
     intro: {
       name: "João Victor Ventura Martins",
@@ -108,6 +112,10 @@ const en: Dictionary = {
   certificates: {
     title: "Certificates",
     subtitle: "Proven quality and excellence",
+  },
+  projects: {
+    title: "Projects",
+    subtitle: "Below are some selected projects",
   },
   home: {
     intro: {
