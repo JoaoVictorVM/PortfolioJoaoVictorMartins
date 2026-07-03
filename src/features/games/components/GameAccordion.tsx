@@ -2,17 +2,17 @@ import {
   DisclosureList,
   type DisclosureItem,
 } from "@/components/ui/DisclosureList";
-import { projects } from "@/features/projects/data/projects";
+import { games } from "@/features/games/data/games";
 import { usePreference } from "@/shared/hooks/usePreference";
 
-export function ProjectAccordion() {
+export function GameAccordion() {
   const { language } = usePreference();
 
-  const items: DisclosureItem[] = projects.map((project) => ({
-    id: project.id,
-    title: project.title[language],
-    body: project.details[language],
-    links: project.links?.map((link) => ({
+  const items: DisclosureItem[] = games.map((game) => ({
+    id: game.id,
+    title: game.title[language],
+    body: game.description[language],
+    links: game.links?.map((link) => ({
       label: link.label[language],
       url: link.url,
     })),

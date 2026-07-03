@@ -13,6 +13,7 @@ import { Route as LinksRouteImport } from './routes/links'
 import { Route as SiteRouteImport } from './routes/_site'
 import { Route as SiteIndexRouteImport } from './routes/_site/index'
 import { Route as SiteProjetosRouteImport } from './routes/_site/projetos'
+import { Route as SiteGamedevRouteImport } from './routes/_site/gamedev'
 import { Route as SiteCertificadosRouteImport } from './routes/_site/certificados'
 
 const LinksRoute = LinksRouteImport.update({
@@ -34,6 +35,11 @@ const SiteProjetosRoute = SiteProjetosRouteImport.update({
   path: '/projetos',
   getParentRoute: () => SiteRoute,
 } as any)
+const SiteGamedevRoute = SiteGamedevRouteImport.update({
+  id: '/gamedev',
+  path: '/gamedev',
+  getParentRoute: () => SiteRoute,
+} as any)
 const SiteCertificadosRoute = SiteCertificadosRouteImport.update({
   id: '/certificados',
   path: '/certificados',
@@ -44,11 +50,13 @@ export interface FileRoutesByFullPath {
   '/': typeof SiteIndexRoute
   '/links': typeof LinksRoute
   '/certificados': typeof SiteCertificadosRoute
+  '/gamedev': typeof SiteGamedevRoute
   '/projetos': typeof SiteProjetosRoute
 }
 export interface FileRoutesByTo {
   '/links': typeof LinksRoute
   '/certificados': typeof SiteCertificadosRoute
+  '/gamedev': typeof SiteGamedevRoute
   '/projetos': typeof SiteProjetosRoute
   '/': typeof SiteIndexRoute
 }
@@ -57,19 +65,21 @@ export interface FileRoutesById {
   '/_site': typeof SiteRouteWithChildren
   '/links': typeof LinksRoute
   '/_site/certificados': typeof SiteCertificadosRoute
+  '/_site/gamedev': typeof SiteGamedevRoute
   '/_site/projetos': typeof SiteProjetosRoute
   '/_site/': typeof SiteIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/links' | '/certificados' | '/projetos'
+  fullPaths: '/' | '/links' | '/certificados' | '/gamedev' | '/projetos'
   fileRoutesByTo: FileRoutesByTo
-  to: '/links' | '/certificados' | '/projetos' | '/'
+  to: '/links' | '/certificados' | '/gamedev' | '/projetos' | '/'
   id:
     | '__root__'
     | '/_site'
     | '/links'
     | '/_site/certificados'
+    | '/_site/gamedev'
     | '/_site/projetos'
     | '/_site/'
   fileRoutesById: FileRoutesById
@@ -109,6 +119,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SiteProjetosRouteImport
       parentRoute: typeof SiteRoute
     }
+    '/_site/gamedev': {
+      id: '/_site/gamedev'
+      path: '/gamedev'
+      fullPath: '/gamedev'
+      preLoaderRoute: typeof SiteGamedevRouteImport
+      parentRoute: typeof SiteRoute
+    }
     '/_site/certificados': {
       id: '/_site/certificados'
       path: '/certificados'
@@ -121,12 +138,14 @@ declare module '@tanstack/react-router' {
 
 interface SiteRouteChildren {
   SiteCertificadosRoute: typeof SiteCertificadosRoute
+  SiteGamedevRoute: typeof SiteGamedevRoute
   SiteProjetosRoute: typeof SiteProjetosRoute
   SiteIndexRoute: typeof SiteIndexRoute
 }
 
 const SiteRouteChildren: SiteRouteChildren = {
   SiteCertificadosRoute: SiteCertificadosRoute,
+  SiteGamedevRoute: SiteGamedevRoute,
   SiteProjetosRoute: SiteProjetosRoute,
   SiteIndexRoute: SiteIndexRoute,
 }

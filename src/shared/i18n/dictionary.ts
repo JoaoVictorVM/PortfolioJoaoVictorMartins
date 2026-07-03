@@ -27,6 +27,15 @@ const pt = {
     title: "Projetos",
     subtitle: "Abaixo alguns projetos selecionados",
   },
+  games: {
+    title: "GameDev",
+    subtitle: "Jogos que venho criando por paixão",
+    intro: [
+      "Aqui fica um espaço para contar com mais calma a minha relação com o gamedev: como esse interesse começou, o que me fascina em criar jogos e como isso conversa com o meu trabalho como engenheiro de software. (Texto provisório.)",
+      "Também dá para falar das ferramentas e engines que uso, do meu processo ao prototipar ideias e dos aprendizados que trago de cada projeto. Abaixo, os jogos que venho criando. (Texto provisório.)",
+    ],
+    itchCta: "Ver meu perfil no itch.io",
+  },
   notFound: {
     code: "404",
     title: "Página não encontrada",
@@ -95,6 +104,14 @@ const pt = {
         "Trabalho principalmente com React e Node.js utilizando TypeScript, além de Next.js para aplicações mais complexas. Atuo na integração com bancos de dados como PostgreSQL e SQLite. Também venho aprofundando meus estudos em .NET e possuo domínio de ferramentas como Git, GitHub, Figma, OpenCode e MCPs no fluxo de desenvolvimento.",
       ],
     },
+    gamedev: {
+      title: "GameDev",
+      blurb:
+        "Fora do desenvolvimento web, gamedev é uma paixão antiga que venho colocando em prática: crio pequenos jogos para experimentar mecânicas, level design e novas ideias.",
+      teaser:
+        "Tem mais história por trás disso — como comecei, o que uso e onde quero chegar.",
+      ctaMore: "Saiba mais",
+    },
     connect: {
       title: "Contato",
       prefix: "Me encontre em",
@@ -131,6 +148,15 @@ const en: Dictionary = {
   projects: {
     title: "Projects",
     subtitle: "Below are some selected projects",
+  },
+  games: {
+    title: "GameDev",
+    subtitle: "Games I build for fun",
+    intro: [
+      "This is where I can tell the fuller story of my relationship with gamedev: how the interest started, what fascinates me about building games, and how it connects to my work as a software engineer. (Placeholder text.)",
+      "I can also talk about the tools and engines I use, my process when prototyping ideas, and the lessons each project leaves me. Below are the games I have been building. (Placeholder text.)",
+    ],
+    itchCta: "View my itch.io profile",
   },
   notFound: {
     code: "404",
@@ -198,6 +224,14 @@ const en: Dictionary = {
         "I have been focusing on the architectural side of my projects, putting extra care into System Design and application structure. I aim to build scalable, maintainable setups that reduce rework and ensure consistent growth over time.",
         "I mainly build with React and Node.js using TypeScript, often leveraging Next.js for more sophisticated experiences. I integrate PostgreSQL and SQLite, and continue developing .NET expertise along with tools like Git, GitHub, Figma, OpenCode, and MCP workflows.",
       ],
+    },
+    gamedev: {
+      title: "GameDev",
+      blurb:
+        "Beyond web development, gamedev is a long-time passion I have been acting on: I build small games to experiment with mechanics, level design, and new ideas.",
+      teaser:
+        "There is more behind this — how I started, what I use, and where I want to go.",
+      ctaMore: "Learn more",
     },
     connect: {
       title: "Connect",
