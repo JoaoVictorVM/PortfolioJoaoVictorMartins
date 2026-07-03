@@ -5,7 +5,7 @@ import { ThemeSwitcher } from "@/components/layout/ThemeSwitcher";
 
 export function Header() {
   return (
-    <header className="border-line bg-bg border-b">
+    <header className="header-enter border-line bg-bg border-b">
       <Container>
         <div className="text-text flex items-center justify-between gap-4 py-3 text-xs">
           <LanguageSwitcher />

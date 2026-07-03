@@ -5,6 +5,8 @@ import { ProjectAccordion } from "@/features/projects/components/ProjectAccordio
 import { siteConfig } from "@/shared/config/site";
 import { pageHead } from "@/shared/lib/seo";
 import { useI18n } from "@/shared/hooks/useI18n";
+import { useReveal } from "@/shared/hooks/useReveal";
+import { cn } from "@/shared/lib/cn";
 
 export const Route = createFileRoute("/_site/projetos")({
   head: () => pageHead({ ...siteConfig.pages.projects, path: "/projetos" }),
@@ -13,6 +15,7 @@ export const Route = createFileRoute("/_site/projetos")({
 
 function ProjetosPage() {
   const { projects, common } = useI18n();
+  const { ref, isVisible } = useReveal();
 
   return (
     <section className="py-24">
@@ -22,7 +25,12 @@ function ProjetosPage() {
           subtitle={projects.subtitle}
           backLabel={common.backToIndex}
         />
-        <ProjectAccordion />
+        <div
+          ref={ref}
+          className={cn("fast-fade-up delay-300", isVisible && "visible")}
+        >
+          <ProjectAccordion />
+        </div>
       </Container>
     </section>
   );

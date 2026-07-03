@@ -5,6 +5,8 @@ import { CertificateList } from "@/features/certificates/components/CertificateL
 import { siteConfig } from "@/shared/config/site";
 import { pageHead } from "@/shared/lib/seo";
 import { useI18n } from "@/shared/hooks/useI18n";
+import { useReveal } from "@/shared/hooks/useReveal";
+import { cn } from "@/shared/lib/cn";
 
 export const Route = createFileRoute("/_site/certificados")({
   head: () =>
@@ -14,6 +16,7 @@ export const Route = createFileRoute("/_site/certificados")({
 
 function CertificadosPage() {
   const { certificates, common } = useI18n();
+  const { ref, isVisible } = useReveal();
 
   return (
     <section className="py-24">
@@ -23,7 +26,12 @@ function CertificadosPage() {
           subtitle={certificates.subtitle}
           backLabel={common.backToIndex}
         />
-        <CertificateList />
+        <div
+          ref={ref}
+          className={cn("fast-fade-up delay-300", isVisible && "visible")}
+        >
+          <CertificateList />
+        </div>
       </Container>
     </section>
   );

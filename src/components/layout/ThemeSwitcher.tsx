@@ -14,7 +14,13 @@ export function ThemeSwitcher() {
       onClick={toggleTheme}
       className="border-line text-text hover:border-text flex cursor-pointer items-center justify-center rounded-full border p-2 transition-colors"
     >
-      {isDark ? <Sun size={16} aria-hidden /> : <Moon size={16} aria-hidden />}
+      <span key={theme} className="theme-icon-enter inline-flex">
+        {isDark ? (
+          <Sun size={16} aria-hidden />
+        ) : (
+          <Moon size={16} aria-hidden />
+        )}
+      </span>
     </button>
   );
 }

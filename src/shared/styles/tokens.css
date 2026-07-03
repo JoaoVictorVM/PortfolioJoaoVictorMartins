@@ -12,6 +12,7 @@
   --duration-chevron: 300ms;
   --duration-typing: 1200ms;
   --duration-theme: 250ms;
+  --duration-page: 300ms;
 
   --ease-reveal: cubic-bezier(0.4, 0, 0.2, 1);
 
