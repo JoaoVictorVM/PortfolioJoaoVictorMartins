@@ -2,9 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { CertificateList } from "@/features/certificates/components/CertificateList";
+import { siteConfig } from "@/shared/config/site";
+import { pageHead } from "@/shared/lib/seo";
 import { useI18n } from "@/shared/hooks/useI18n";
 
 export const Route = createFileRoute("/_site/certificados")({
+  head: () =>
+    pageHead({ ...siteConfig.pages.certificates, path: "/certificados" }),
   component: CertificadosPage,
 });
 

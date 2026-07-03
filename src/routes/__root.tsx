@@ -10,6 +10,8 @@ import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import { PreferenceProvider } from "@/context/PreferenceProvider";
 import { NotFound } from "@/components/layout/NotFound";
 import { ErrorFallback } from "@/components/layout/ErrorFallback";
+import { siteConfig } from "@/shared/config/site";
+import { baseMeta, personJsonLd } from "@/shared/lib/seo";
 import appCss from "@/shared/styles/globals.css?url";
 import "@fontsource-variable/inter";
 
@@ -20,9 +22,20 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "João Victor Ventura Martins" },
+      { name: "theme-color", content: siteConfig.themeColor },
+      ...baseMeta(),
     ],
-    links: [{ rel: "stylesheet", href: appCss }],
+    links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/svg+xml", href: "/logo/logo.svg" },
+      { rel: "manifest", href: "/site.webmanifest" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(personJsonLd),
+      },
+    ],
   }),
   notFoundComponent: () => <NotFound />,
   errorComponent: (props) => (

@@ -4,9 +4,12 @@ import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { GameAccordion } from "@/features/games/components/GameAccordion";
 import { itchProfileUrl } from "@/features/games/data/games";
+import { siteConfig } from "@/shared/config/site";
+import { pageHead } from "@/shared/lib/seo";
 import { useI18n } from "@/shared/hooks/useI18n";
 
 export const Route = createFileRoute("/_site/gamedev")({
+  head: () => pageHead({ ...siteConfig.pages.games, path: "/gamedev" }),
   component: GameDevPage,
 });
 
