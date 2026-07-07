@@ -28,7 +28,7 @@ function CertificadosPage() {
         />
         <div
           ref={ref}
-          className={cn("fast-fade-up delay-300", isVisible && "visible")}
+          className={cn("content-reveal delay-300", isVisible && "visible")}
         >
           <CertificateList />
         </div>

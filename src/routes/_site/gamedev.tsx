@@ -29,9 +29,14 @@ function GameDevPage() {
         />
         <div
           ref={ref}
-          className={cn("fast-fade-up delay-300", isVisible && "visible")}
+          className={cn("content-reveal delay-300", isVisible && "visible")}
         >
-          <div className="text-text mb-10 space-y-4">
+          <div
+            className={cn(
+              "text-text fast-fade-up mb-10 space-y-4 delay-300",
+              isVisible && "visible",
+            )}
+          >
             {games.intro.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}

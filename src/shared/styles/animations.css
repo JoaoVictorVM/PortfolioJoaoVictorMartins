@@ -85,6 +85,8 @@
   overflow: hidden;
   white-space: nowrap;
   max-width: 0;
+}
+.visible .project-title {
   animation: typing var(--duration-typing) steps(40, end) forwards;
 }
 .project-line {
@@ -97,10 +99,14 @@
   );
   transform-origin: left center;
   transform: scaleX(0);
+}
+.visible .project-line {
   animation: growLine var(--duration-line) linear forwards;
 }
 .project-chevron {
   opacity: 0;
+}
+.visible .project-chevron {
   animation: fadeIn var(--duration-chevron) forwards;
 }
 
@@ -225,8 +231,15 @@
   .fast-fade-up,
   .header-enter,
   .theme-icon-enter,
+  .content-reveal.visible,
   .accordion-content[data-state="open"] .accordion-reveal {
     transform: none !important;
+  }
+  .content-reveal {
+    opacity: 0;
+  }
+  .content-reveal.visible {
+    animation: fadeUpFast var(--duration-fast) var(--ease-reveal) forwards;
   }
   .project-title {
     max-width: 100% !important;

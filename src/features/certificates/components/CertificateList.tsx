@@ -47,7 +47,7 @@ export function CertificateList() {
                   </span>
                   <span
                     className={cn(
-                      "col-span-2 text-sm font-normal transition-colors duration-150 sm:col-span-1",
+                      "project-title col-span-2 text-sm font-normal transition-colors duration-150 sm:col-span-1",
                       isDimmed ? "text-detail" : "text-text",
                     )}
                   >
