@@ -1,13 +1,28 @@
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import { usePreference } from "@/shared/hooks/usePreference";
 import { groupCertificates } from "@/features/certificates/data/certificates";
 import { cn } from "@/shared/lib/cn";
 
 const certificateGroups = groupCertificates();
 
+const TYPE_CHAR = 55;
+const CASCADE_OVERLAP = 0.55;
+const CASCADE_GAP = 80;
+
 export function CertificateList() {
   const { language } = usePreference();
   const [hoveredId, setHoveredId] = useState<string | null>(null);
+
+  const seqDelayById = new Map<string, number>();
+  let cascadeDelay = 0;
+  for (const group of certificateGroups) {
+    for (const certificate of group.certificates) {
+      seqDelayById.set(certificate.id, cascadeDelay);
+      cascadeDelay +=
+        certificate.title[language].length * TYPE_CHAR * CASCADE_OVERLAP +
+        CASCADE_GAP;
+    }
+  }
 
   return (
     <div>
@@ -19,7 +34,16 @@ export function CertificateList() {
             const isDimmed = hoveredId !== null && hoveredId !== certificate.id;
 
             return (
-              <div key={certificate.id}>
+              <div
+                key={certificate.id}
+                style={
+                  {
+                    "--seq-delay": `${String(seqDelayById.get(certificate.id) ?? 0)}ms`,
+                    "--title-chars": certificate.title[language].length,
+                    "--date-chars": certificate.date[language].length,
+                  } as CSSProperties
+                }
+              >
                 {isFirst && (
                   <p className="text-detail mb-3 pl-2 text-sm md:hidden">
                     {group.institution}
@@ -53,7 +77,7 @@ export function CertificateList() {
                   >
                     {certificate.title[language]}
                   </span>
-                  <span className="text-detail hidden text-right text-sm sm:block">
+                  <span className="project-date text-detail hidden text-right text-sm sm:block">
                     {certificate.date[language]}
                   </span>
                 </div>

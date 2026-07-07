@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import * as Accordion from "@radix-ui/react-accordion";
 import { ArrowUpRight, ChevronDown } from "lucide-react";
 import { cn } from "@/shared/lib/cn";
@@ -30,11 +30,20 @@ export function DisclosureList({ items }: DisclosureListProps) {
       onValueChange={setOpenId}
       className="space-y-2"
     >
-      {items.map((item) => {
+      {items.map((item, index) => {
         const isOpen = openId === item.id;
 
         return (
-          <Accordion.Item key={item.id} value={item.id}>
+          <Accordion.Item
+            key={item.id}
+            value={item.id}
+            style={
+              {
+                "--seq-delay": `calc(var(--stagger) * ${String(index)})`,
+                "--title-chars": item.title.length,
+              } as CSSProperties
+            }
+          >
             <Accordion.Header>
               <Accordion.Trigger className="group text-text hover:bg-line/30 hover:text-text/80 flex w-full cursor-pointer items-center gap-3 rounded-lg py-2 text-left transition-colors">
                 <span className="project-title">{item.title}</span>

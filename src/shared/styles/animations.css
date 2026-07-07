@@ -82,12 +82,24 @@
 
 .project-title {
   display: inline-block;
-  overflow: hidden;
   white-space: nowrap;
-  max-width: 0;
+  clip-path: inset(0 100% 0 0);
+}
+.project-date {
+  white-space: nowrap;
+  clip-path: inset(0 100% 0 0);
 }
 .visible .project-title {
-  animation: typing var(--duration-typing) steps(40, end) forwards;
+  animation: writeIn calc(var(--title-chars, 20) * var(--type-char)) linear
+    forwards;
+  animation-delay: var(--seq-delay, 0ms);
+}
+.visible .project-date {
+  animation: writeIn calc(var(--date-chars, 10) * var(--type-char)) linear
+    forwards;
+  animation-delay: calc(
+    var(--seq-delay, 0ms) + var(--title-chars, 20) * var(--type-char)
+  );
 }
 .project-line {
   height: 1px;
@@ -102,20 +114,24 @@
 }
 .visible .project-line {
   animation: growLine var(--duration-line) linear forwards;
+  animation-delay: calc(
+    var(--seq-delay, 0ms) + var(--title-chars, 20) * var(--type-char)
+  );
 }
 .project-chevron {
   opacity: 0;
 }
 .visible .project-chevron {
   animation: fadeIn var(--duration-chevron) forwards;
+  animation-delay: calc(
+    var(--seq-delay, 0ms) + var(--title-chars, 20) * var(--type-char) +
+      var(--duration-line)
+  );
 }
 
-@keyframes typing {
-  from {
-    max-width: 0;
-  }
+@keyframes writeIn {
   to {
-    max-width: 100%;
+    clip-path: inset(0 0 0 0);
   }
 }
 @keyframes growLine {
@@ -241,12 +257,17 @@
   .content-reveal.visible {
     animation: fadeUpFast var(--duration-fast) var(--ease-reveal) forwards;
   }
-  .project-title {
-    max-width: 100% !important;
+  .project-title,
+  .project-date {
+    clip-path: none !important;
     animation: none !important;
   }
   .project-line {
     transform: scaleX(1) !important;
+    animation: none !important;
+  }
+  .project-chevron {
+    opacity: 1 !important;
     animation: none !important;
   }
   .accordion-content[data-state="open"],
