@@ -5,7 +5,7 @@ import { cn } from "@/shared/lib/cn";
 
 const certificateGroups = groupCertificates();
 
-const TYPE_CHAR = 55;
+const TYPE_CHAR = 35;
 const CASCADE_OVERLAP = 0.55;
 const CASCADE_GAP = 80;
 
@@ -41,11 +41,13 @@ export function CertificateList() {
                     "--seq-delay": `${String(seqDelayById.get(certificate.id) ?? 0)}ms`,
                     "--title-chars": certificate.title[language].length,
                     "--date-chars": certificate.date[language].length,
+                    "--inst-chars": group.institution.length,
                   } as CSSProperties
                 }
               >
+                {isFirst && <div className="group-line" />}
                 {isFirst && (
-                  <p className="text-detail mb-3 pl-2 text-sm md:hidden">
+                  <p className="project-institution text-detail mb-3 pl-2 text-sm md:hidden">
                     {group.institution}
                   </p>
                 )}
@@ -56,15 +58,14 @@ export function CertificateList() {
                   onMouseLeave={() => {
                     setHoveredId(null);
                   }}
-                  className={cn(
-                    "grid-certificate text-detail hover:text-text/80 grid items-center gap-3 px-2 py-4 transition-colors md:px-0",
-                    isFirst && "border-line border-t",
-                  )}
+                  className="grid-certificate text-detail hover:text-text/80 grid items-center gap-3 px-2 py-4 transition-colors md:px-0"
                 >
                   <span
                     className={cn(
                       "hidden text-sm md:block",
-                      isFirst ? "text-detail opacity-100" : "opacity-0",
+                      isFirst
+                        ? "project-institution text-detail opacity-100"
+                        : "opacity-0",
                     )}
                   >
                     {group.institution}

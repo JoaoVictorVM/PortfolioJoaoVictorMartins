@@ -12,8 +12,8 @@
   --duration-chevron: 300ms;
   --duration-theme: 250ms;
 
-  --type-char: 55ms;
-  --stagger: 150ms;
+  --type-char: 35ms;
+  --stagger: 120ms;
   --duration-page: 300ms;
 
   --ease-reveal: cubic-bezier(0.4, 0, 0.2, 1);
