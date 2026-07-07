@@ -12,6 +12,8 @@ export function ProjectAccordion() {
     id: project.id,
     title: project.title[language],
     body: project.details[language],
+    tags: project.stack,
+    tagsLabel: "Stack",
     links: project.links?.map((link) => ({
       label: link.label[language],
       url: link.url,

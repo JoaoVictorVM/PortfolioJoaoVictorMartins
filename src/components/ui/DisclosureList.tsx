@@ -12,6 +12,8 @@ export interface DisclosureItem {
   id: string;
   title: string;
   body: string;
+  tags?: string[];
+  tagsLabel?: string;
   links?: DisclosureLink[];
 }
 
@@ -61,6 +63,12 @@ export function DisclosureList({ items }: DisclosureListProps) {
             <Accordion.Content className="accordion-content">
               <div className="text-detail space-y-3 px-2 pt-2 pb-3 text-sm">
                 <p className="accordion-reveal">{item.body}</p>
+                {item.tags && item.tags.length > 0 && (
+                  <p className="accordion-reveal">
+                    {item.tagsLabel ? `${item.tagsLabel}: ` : ""}
+                    {item.tags.join(" · ")}
+                  </p>
+                )}
                 {item.links && item.links.length > 0 && (
                   <div className="accordion-reveal flex flex-wrap gap-2">
                     {item.links.map((link) => (

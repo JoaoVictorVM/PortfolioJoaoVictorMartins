@@ -40,6 +40,13 @@ export const certificates: Certificate[] = [
     date: { pt: "11/03/2026", en: "03/11/2026" },
   },
   {
+    id: "microservices",
+    institutionId: "rocketseat",
+    institution: "Rocketseat",
+    title: { pt: "Microsserviços Escaláveis", en: "Scalable Microservices" },
+    date: { pt: "01/04/2026", en: "04/01/2026" },
+  },
+  {
     id: "frontend-uxui-design",
     institutionId: "origamid",
     institution: "Origamid",
@@ -52,6 +59,13 @@ export const certificates: Certificate[] = [
     institution: "Origamid",
     title: { pt: "HTML & CSS", en: "HTML & CSS" },
     date: { pt: "06/02/2026", en: "02/06/2026" },
+  },
+  {
+    id: "jquery",
+    institutionId: "origamid",
+    institution: "Origamid",
+    title: { pt: "JavaScript & jQuery", en: "JavaScript & jQuery" },
+    date: { pt: "27/03/2026", en: "03/27/2026" },
   },
   {
     id: "css-flexbox",
@@ -80,6 +94,13 @@ export const certificates: Certificate[] = [
     institution: "Origamid",
     title: { pt: "Bootstrap", en: "Bootstrap" },
     date: { pt: "13/03/2026", en: "03/13/2026" },
+  },
+  {
+    id: "sass",
+    institutionId: "origamid",
+    institution: "Origamid",
+    title: { pt: "CSS com SASS", en: "CSS with SASS" },
+    date: { pt: "20/03/2026", en: "03/20/2026" },
   },
   {
     id: "tailwind-css",
