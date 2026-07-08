@@ -37,18 +37,33 @@ function GameDevPage() {
               isVisible && "visible",
             )}
           >
-            {games.intro.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-            <a
-              href={itchProfileUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="text-text decoration-text/30 hover:decoration-text inline-flex items-center gap-2 font-normal underline underline-offset-4 transition-colors"
-            >
-              <span>{games.itchCta}</span>
-              <ArrowUpRight size={14} aria-hidden className="text-detail" />
-            </a>
+            {games.intro.map((paragraph, index) => {
+              const isLast = index === games.intro.length - 1;
+              return (
+                <p key={paragraph}>
+                  {paragraph}
+                  {isLast && (
+                    <>
+                      {" "}
+                      <a
+                        href={itchProfileUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="decoration-text/30 hover:decoration-text inline-flex items-center gap-1 underline underline-offset-4 transition-colors"
+                      >
+                        <span>{games.introLink}</span>
+                        <ArrowUpRight
+                          size={14}
+                          aria-hidden
+                          className="text-detail"
+                        />
+                      </a>
+                      .
+                    </>
+                  )}
+                </p>
+              );
+            })}
           </div>
           <GameAccordion />
         </div>

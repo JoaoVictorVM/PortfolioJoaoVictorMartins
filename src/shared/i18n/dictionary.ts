@@ -31,10 +31,10 @@ const pt = {
     title: "GameDev",
     subtitle: "Jogos que venho criando por paixão",
     intro: [
-      "Aqui fica um espaço para contar com mais calma a minha relação com o gamedev: como esse interesse começou, o que me fascina em criar jogos e como isso conversa com o meu trabalho como engenheiro de software. (Texto provisório.)",
-      "Também dá para falar das ferramentas e engines que uso, do meu processo ao prototipar ideias e dos aprendizados que trago de cada projeto. Abaixo, os jogos que venho criando. (Texto provisório.)",
+      "Desde criança sempre quis criar jogos, e foi essa vontade que acabou me levando a escolher ser desenvolvedor. Mesmo não trabalhando diretamente com GameDev no dia a dia, de uns tempos pra cá decidi criar alguns protótipos e jogos pequenos, atualmente utilizando React ou Go para colocar em prática, com essa paixão, o conhecimento que tenho nas linguagens com as quais trabalho e estudo.",
+      "No início, eu costumava fazer jogos bem simples, mas de um tempo pra cá tenho me cobrado mais e buscado criar projetos um pouco mais complexos, com animações e mais atenção aos detalhes, principalmente na parte de arte, onde venho aprendendo a usar o Aseprite para criar sprites e animações. Tudo isso é feito puramente por hobby e por paixão, e caso queira conhecer mais, você pode",
     ],
-    itchCta: "Ver meu perfil no itch.io",
+    introLink: "visitar meu perfil no itch.io",
   },
   notFound: {
     code: "404",
@@ -156,10 +156,10 @@ const en: Dictionary = {
     title: "GameDev",
     subtitle: "Games I build for fun",
     intro: [
-      "This is where I can tell the fuller story of my relationship with gamedev: how the interest started, what fascinates me about building games, and how it connects to my work as a software engineer. (Placeholder text.)",
-      "I can also talk about the tools and engines I use, my process when prototyping ideas, and the lessons each project leaves me. Below are the games I have been building. (Placeholder text.)",
+      "Ever since I was a kid, I always wanted to create games, and that desire ended up leading me to choose to become a developer. Even though I don't work directly with GameDev on a daily basis, for some time now I have been creating small prototypes and games, currently using React or Go to put into practice, through this passion, the knowledge I have in the languages I work and study with.",
+      "At first, I used to make pretty simple games, but for some time now I have been pushing myself more and trying to create slightly more complex projects, with animations and more attention to detail, especially on the art side, where I have been learning to use Aseprite to create sprites and animations. All of this is done purely out of hobby and passion, and if you'd like to see more, feel free to",
     ],
-    itchCta: "View my itch.io profile",
+    introLink: "visit my itch.io profile",
   },
   notFound: {
     code: "404",
