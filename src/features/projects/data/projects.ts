@@ -20,42 +20,135 @@ export interface Project {
   links?: ProjectLink[];
 }
 
+/*
+{
+  id: "",
+  title: { pt: "", en: "" },
+  details: {
+    pt: "",
+    en: "",
+  },
+  stack: ["", ""],
+  links: [
+    {
+      label: { pt: "Repositório", en: "Repository" },
+      url: "",
+    },
+  ],
+},
+*/
+
 export const projects: Project[] = [
   {
-    id: "bikcraft",
-    title: { pt: "BikCraft", en: "BikCraft" },
+    id: "focuzen",
+    title: { pt: "Focuzen", en: "Focuzen" },
     details: {
-      pt: "Website institucional fictício desenvolvido com o objetivo de consolidar conhecimentos em HTML, CSS e responsividade. Utilizei HTML5 semântico, CSS3, JavaScript e CSS Grid, aplicando uma metodologia de CSS utilitário e boas práticas de acessibilidade. O projeto contribuiu para minha evolução na criação de interfaces responsivas e na organização de código front-end.",
-      en: "Fictional institutional site built to reinforce HTML, CSS, and responsive foundations. Developed with semantic HTML5, CSS3, JavaScript, and CSS Grid, I applied utility-first styling and accessibility best practices, steering the project toward cleaner front-end structure.",
+      pt: "Aplicação de foco minimalista construída como monorepo (Go + React), com duas frentes que compõem o mesmo produto: uma tela de foco na web (relógio em destaque, busca no YouTube e player de áudio embutido com o vídeo oculto) e uma TUI de terminal com rádios de foco via streams MP3. MVP deliberadamente enxuto, sem contas de usuário e sem banco de dados, com estado local, priorizando qualidade de engenharia acima de features: testes automatizados em todos os módulos, backend em Go servindo a SPA via embed.FS com chi e log/slog, imagem Docker distroless non-root, deploy via Blueprint na Render, CI/CD com GitHub Actions e versionamento automatizado com Conventional Commits e release-please. Arquitetura documentada com diagramas C4 e ADRs, cobrindo desde o contexto de negócio até decisões técnicas específicas.",
+      en: "Minimalist focus application built as a Go and React monorepo, with two fronts making up the same product: a web focus screen (a prominent clock, YouTube search and an embedded audio player with the video hidden) and a terminal TUI with focus radios streamed as MP3. Deliberately lean MVP, with no user accounts and no database, relying on local state instead, prioritizing engineering quality over feature count: automated tests across all modules, a Go backend serving the SPA via embed.FS with chi and log/slog, a non-root distroless Docker image, deployment through a Render Blueprint, CI/CD with GitHub Actions and automated versioning with Conventional Commits and release-please. Architecture documented through C4 diagrams and ADRs, covering everything from business context to specific technical decisions.",
     },
-    stack: ["HTML5", "CSS3", "JavaScript", "CSS Grid"],
+    stack: [
+      "Go",
+      "chi",
+      "Bubble Tea",
+      "Lip Gloss",
+      "Beep",
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "Vite",
+      "Docker (distroless)",
+      "GitHub Actions",
+      "release-please",
+      "YouTube Data API v3",
+    ],
     links: [
       {
         label: { pt: "Repositório", en: "Repository" },
-        url: "https://github.com/JoaoVictorVM/BikCraft",
+        url: "https://github.com/JoaoVictorVM/focuzen",
       },
       {
         label: { pt: "Site", en: "Site" },
-        url: "https://bikcraft-one.vercel.app/",
+        url: "https://focuzen.onrender.com/",
       },
     ],
   },
   {
-    id: "forest-imoveis",
-    title: { pt: "Forest Imóveis", en: "Forest Imóveis" },
+    id: "leaks-n-promo",
+    title: { pt: "Leaks & Promo", en: "Leaks & Promo" },
     details: {
-      pt: "Website institucional fictício criado com foco no aprofundamento em Tailwind CSS e construção de interfaces responsivas. Desenvolvido com HTML e Tailwind CSS v4, aplicando a abordagem utility-first e explorando configurações personalizadas para melhor organização dos estilos. O projeto fortaleceu minha experiência no ecossistema do Tailwind e na criação de layouts modernos e consistentes.",
-      en: "Corporate landing page crafted to deepen Tailwind CSS expertise and responsive thinking. Built with HTML and Tailwind v4, it leaned on utility-first practices and custom setups for consistent styling, reinforcing modern layout techniques.",
+      pt: "Bot de Discord open-source escrito em Go, voltado ao universo gamer, que unifica consulta de preços de jogos de PC (integração com a API CheapShark) e agregação de vazamentos e rumores do mercado de games via feeds RSS e Reddit. Construído sobre uma arquitetura pull-only e stateless, com fontes de dados desacopladas por trás de interfaces (PriceProvider, LeakSource), permitindo trocar provedores sem reescrever o núcleo. O projeto prioriza excelência de engenharia, cache em memória com TTL, resiliência via context, timeouts e retry com backoff, pipeline de CI/CD com GitHub Actions e GoReleaser publicando no GHCR, além de imagem Docker multi-stage non-root, tudo com custo zero de operação e foco em privacidade (não persiste dados de usuário).",
+      en: "Open-source Discord bot written in Go for the gaming community, combining PC game price lookups (via the CheapShark API) with real-time aggregation of game leaks and rumors from RSS feeds and Reddit. Built on a pull-only, stateless architecture with data sources decoupled behind interfaces (PriceProvider, LeakSource), allowing providers to be swapped without rewriting the core. The project emphasizes engineering excellence, in-memory caching with TTL, resilience through context, timeouts and retry with backoff, a full CI/CD pipeline using GitHub Actions and GoReleaser publishing to GHCR, and a multi-stage non-root Docker image, all with zero operating cost and a privacy-first design that persists no user data.",
     },
-    stack: ["HTML", "Tailwind CSS v4"],
+    stack: [
+      "Go",
+      "discordgo",
+      "log/slog",
+      "Docker (multi-stage)",
+      "GitHub Actions",
+      "GoReleaser",
+      "GHCR",
+      "CheapShark",
+      "API",
+      "RSS/Reddit",
+    ],
     links: [
       {
         label: { pt: "Repositório", en: "Repository" },
-        url: "https://github.com/JoaoVictorVM/ForestImoveis",
+        url: "https://github.com/JoaoVictorVM/leaks-n-promo",
+      },
+    ],
+  },
+  {
+    id: "gofetch",
+    title: { pt: "Gofetch", en: "Gofetch" },
+    details: {
+      pt: "Ferramenta de terminal inspirada em neofetch e fastfetch, escrita em Go, focada em exibir informações do sistema (SO, CPU, memória, disco, placa-mãe) com logo ASCII e cores, priorizando velocidade e simplicidade. Arquitetura organizada como pipeline (coletar, agregar concorrentemente, renderizar, imprimir), com componentes desacoplados por interfaces: coletores por subsistema implementam uma interface `Collector` comum, com o código específico de cada sistema operacional isolado via build tags, permitindo suporte futuro a Linux e macOS sem reescrever o núcleo. Coleta paralela com `errgroup` sob `context.WithTimeout`, com degradação graciosa (um coletor que falha exibe `N/A` sem derrubar a execução). Binário único e estático, sem dependências de runtime e sem CGO, com pipeline de CI, linting via golangci-lint e releases automatizados com GoReleaser.",
+      en: "Terminal tool inspired by neofetch and fastfetch, written in Go, focused on displaying system information (OS, CPU, memory, disk, motherboard) alongside an ASCII logo and colors, prioritizing speed and simplicity. Architecture organized as a pipeline (collect, aggregate concurrently, render, print), with components decoupled through interfaces: subsystem collectors implement a shared `Collector` interface, with OS-specific code isolated via build tags, allowing future Linux and macOS support without rewriting the core. Parallel collection with `errgroup` under `context.WithTimeout`, with graceful degradation (a failing collector prints `N/A` instead of breaking the run). Single static binary, no runtime dependencies and no CGO, with a CI pipeline, linting through golangci-lint and automated releases with GoReleaser.",
+    },
+    stack: [
+      "Go",
+      "gopsutil",
+      "lipgloss",
+      "errgroup",
+      "GitHub Actions",
+      "GoReleaser",
+      "golangci-lint",
+      "WMI",
+    ],
+    links: [
+      {
+        label: { pt: "Repositório", en: "Repository" },
+        url: "https://github.com/JoaoVictorVM/gofetch",
+      },
+    ],
+  },
+  {
+    id: "lp-expedition33",
+    title: {
+      pt: "Clair Obscur: Expedition 33 (Landing Page)",
+      en: "Clair Obscur: Expedition 33 (Landing Page)",
+    },
+    details: {
+      pt: "Landing page de estudo e homenagem inspirada em Clair Obscur: Expedition 33, construída em HTML, CSS e JavaScript puros, sem frameworks ou etapa de build. Foco em direção visual e composição de interface: hero com CTA externo, animações de entrada, scroll suave e efeitos de movimento com GSAP (ScrollTrigger, ScrollSmoother, SplitText), cards de novidades, bloco de depoimentos e footer institucional. Estrutura organizada com separação clara entre marcação (`index.html`), estilos (`src/styles/style.css`) e comportamento (`src/scripts/script.js`), com assets segmentados em subpastas. Escopo deliberadamente enxuto, priorizando acabamento visual, clareza de organização e fundamentos sólidos de front-end acima de complexidade técnica.",
+      en: "Study and tribute landing page inspired by Clair Obscur: Expedition 33, built with plain HTML, CSS and JavaScript, with no frameworks or build step. Focused on visual direction and interface composition: a hero section with an external CTA, entrance animations, smooth scrolling and motion effects with GSAP (ScrollTrigger, ScrollSmoother, SplitText), news cards, a testimonials block and an institutional footer. Structure organized with a clear separation between markup (`index.html`), styles (`src/styles/style.css`) and behavior (`src/scripts/script.js`), with assets split into subfolders. Deliberately lean scope, prioritizing visual polish, clear organization and solid front-end fundamentals over technical complexity.",
+    },
+    stack: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "GSAP",
+      "ScrollTrigger",
+      "ScrollSmoother",
+      "SplitText",
+    ],
+    links: [
+      {
+        label: { pt: "Repositório", en: "Repository" },
+        url: "https://github.com/JoaoVictorVM/LP-Expedition33",
       },
       {
         label: { pt: "Site", en: "Site" },
-        url: "https://joaovictorvm.github.io/ForestImoveis/",
+        url: "https://joaovictorvm.github.io/LP-Expedition33/",
       },
     ],
   },
@@ -75,104 +168,28 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "product-client-hub",
-    title: { pt: "Product Client Hub", en: "Product Client Hub" },
+    id: "autobattle",
+    title: { pt: "Auto Battle", en: "Auto Battle" },
     details: {
-      pt: "API REST para gestão de clientes e produtos, com foco em fundamentos de backend. Construída com .NET, Entity Framework e SQLite, aplicando Programação Orientada a Objetos, separação de camadas e validações com FluentValidation, além de tratamento de exceções com filtros personalizados. O projeto consolidou minha base em desenvolvimento backend e boas práticas na construção de APIs.",
-      en: "REST solution for managing clients and products with a backend-first mindset. Built on .NET, Entity Framework, and SQLite, it demonstrates layered architecture, OOP principles, FluentValidation checks, and custom exception filters to reinforce API craftsmanship.",
+      pt: "Protótipo de auto-battler roguelike com mecânicas de card game, construído em HTML, CSS e JavaScript puros, sem frameworks, bundler ou etapa de build. Heróis lutam automaticamente contra waves crescentes de inimigos, enquanto o jogador gerencia posicionamento via drag-and-drop, upgrades, habilidades especiais e merge infinito de cartas, além de coletar XP orbs com atração magnética em torno do cursor. Arquitetura modular em ES6 com separação estrita de responsabilidades (estado centralizado em `state.js` como única fonte de verdade, lógica de combate em `combat.js` sem nenhum acesso ao DOM, renderização isolada em `ui.js`), loop principal com `requestAnimationFrame` e delta time independente de FPS, e todo o balanceamento do jogo centralizado em `constants.js`, sem magic numbers espalhados pelo código. Efeitos sonoros sintetizados em runtime via Web Audio API, sem nenhum asset de áudio.",
+      en: "Roguelike auto-battler prototype with card game mechanics, built with plain HTML, CSS and JavaScript, with no frameworks, bundler or build step. Heroes fight automatically against increasingly difficult waves of enemies, while the player manages positioning through drag-and-drop, upgrades, special abilities and infinite card merging, along with collecting XP orbs that get magnetically pulled toward the cursor. Modular ES6 architecture with strict separation of concerns (centralized state in `state.js` as the single source of truth, combat logic in `combat.js` with no DOM access whatsoever, rendering isolated in `ui.js`), a main loop driven by `requestAnimationFrame` with frame-rate independent delta time, and all game balancing centralized in `constants.js`, with no magic numbers scattered across the codebase. Sound effects synthesized at runtime through the Web Audio API, with no audio assets at all.",
     },
-    stack: [".NET", "Entity Framework", "SQLite", "FluentValidation"],
-    links: [
-      {
-        label: { pt: "Repositório", en: "Repository" },
-        url: "https://github.com/JoaoVictorVM/ProductClientHub",
-      },
+    stack: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "ES6 Modules",
+      "Web Audio API",
+      "requestAnimationFrame",
     ],
-  },
-  {
-    id: "aiming-game",
-    title: { pt: "Aiming Game", en: "Aiming Game" },
-    details: {
-      pt: "Jogo web interativo desenvolvido com foco em evolução contínua e escalabilidade de produto, partindo de uma ideia simples e expandindo com novas funcionalidades ao longo do tempo. Construído com HTML, CSS e JavaScript, o projeto envolve manipulação de eventos, sistema de pontuação, controle de tempo, efeitos sonoros e responsividade. Essa experiência tem fortalecido minha capacidade de manter e evoluir um projeto, com foco em organização de código e controle de qualidade ao longo do desenvolvimento.",
-      en: "Interactive web game designed to iterate continuously and scale as a product. Built with HTML, CSS, and JavaScript, it covers event handling, scoring systems, timers, sound effects, and responsive layout, helping me sharpen long-term maintenance and quality control skills.",
-    },
-    stack: ["HTML", "CSS", "JavaScript"],
     links: [
       {
         label: { pt: "Repositório", en: "Repository" },
-        url: "https://github.com/JoaoVictorVM/AimingGame",
+        url: "https://github.com/JoaoVictorVM/Prototipo-AutoBattle",
       },
       {
-        label: { pt: "Site", en: "Site" },
-        url: "https://joaovictorvm.github.io/AimingGame/",
-      },
-    ],
-  },
-  {
-    id: "devroast",
-    title: { pt: "DevRoast", en: "DevRoast" },
-    details: {
-      pt: "Aplicação web interativa, com foco em explorar integração com IA e análise de código. A ferramenta permite enviar trechos de código para receber avaliações com pontuação, feedback detalhado e sugestões de melhoria, incluindo um modo opcional de análise com tom humorado (“roast mode”). O projeto contribuiu para minha evolução na construção de aplicações dinâmicas, tratamento de dados e criação de experiências mais interativas para o usuário.",
-      en: "Interactive web tool that experiments with AI and code review. You can submit snippets for scored feedback and improvement suggestions, including an optional humorous “roast mode.” It helped me advance in building dynamic apps, handling data, and delivering engaging experiences.",
-    },
-    stack: ["JavaScript", "API de IA"],
-    links: [
-      {
-        label: { pt: "Repositório", en: "Repository" },
-        url: "https://github.com/JoaoVictorVM/DevRoast",
-      },
-    ],
-  },
-  {
-    id: "pomodoro-idle-game",
-    title: { pt: "Pomodoro Idle Game", en: "Pomodoro Idle Game" },
-    details: {
-      pt: "Aplicação web de produtividade com gamificação desenvolvida para explorar a construção de um projeto fullstack mais complexo, combinando a técnica Pomodoro com mecânicas de jogo idle. Construída com Next.js, Node.js, PostgreSQL, TypeScript e Tailwind CSS, a aplicação inclui sistema de autenticação, persistência de progresso e evolução de personagem. O projeto tem contribuído significativamente para minha evolução em arquitetura fullstack, organização de código e planejamento de funcionalidades em um produto em crescimento.",
-      en: "Productivity web app blending gamification and the Pomodoro technique as part of a more advanced fullstack project. Built with Next.js, Node.js, PostgreSQL, TypeScript, and Tailwind CSS, it features authentication, progress persistence, and character evolution—pushing my architecture, planning, and organization skills.",
-    },
-    stack: ["Next.js", "Node.js", "PostgreSQL", "TypeScript", "Tailwind CSS"],
-    links: [
-      {
-        label: { pt: "Repositório", en: "Repository" },
-        url: "https://github.com/JoaoVictorVM/Pomodoro-IdleGame",
-      },
-    ],
-  },
-  {
-    id: "caravan",
-    title: { pt: "Caravan", en: "Caravan" },
-    details: {
-      pt: "Site institucional de viagens desenvolvido com foco na construção de layouts utilizando Bootstrap e SCSS. Construído com HTML, CSS, JavaScript e Bootstrap, o projeto inclui componentes como modais, sliders, formulários e elementos interativos, explorando configurações e recursos do framework. Essa experiência contribuiu para minha evolução na criação de interfaces mais completas e no uso de frameworks para acelerar o desenvolvimento front-end.",
-      en: "Travel institutional site focused on mastering layout creation with Bootstrap and SCSS. Implemented in HTML, CSS, JavaScript, and Bootstrap, it includes modals, sliders, forms, and interactive elements, showcasing how frameworks can accelerate production.",
-    },
-    stack: ["HTML", "CSS", "JavaScript", "Bootstrap", "SCSS"],
-    links: [
-      {
-        label: { pt: "Repositório", en: "Repository" },
-        url: "https://github.com/JoaoVictorVM/Caravan",
-      },
-      {
-        label: { pt: "Site", en: "Site" },
-        url: "https://joaovictorvm.github.io/Caravan/",
-      },
-    ],
-  },
-  {
-    id: "swag",
-    title: { pt: "SWAG", en: "SWAG" },
-    details: {
-      pt: "Página interativa de exibição de álbum desenvolvida com foco em aprimorar a estruturação com Next.js e estilização com Tailwind CSS. Construída com Next.js e TypeScript, a aplicação conta com responsividade, navegação entre conteúdos e integração com player do YouTube. O projeto contribuiu para minha evolução na criação de interfaces dinâmicas e na organização de componentes em aplicações front-end.",
-      en: "Interactive album showcase focused on improving structure with Next.js and styling with Tailwind CSS. Built with Next.js and TypeScript, it supports responsive layouts, content navigation, and a YouTube player integration—helping me refine dynamic interface design.",
-    },
-    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    links: [
-      {
-        label: { pt: "Repositório", en: "Repository" },
-        url: "https://github.com/JoaoVictorVM/SWAG",
-      },
-      {
-        label: { pt: "Site", en: "Site" },
-        url: "https://swag-smoky.vercel.app/",
+        label: { pt: "Jogo", en: "Game" },
+        url: "https://joaovictorvm.itch.io/autobattle",
       },
     ],
   },

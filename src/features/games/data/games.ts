@@ -24,7 +24,7 @@ export const itchProfileUrl = "https://itch.io";
 export const games: Game[] = [
   {
     id: "game-1",
-    title: { pt: "Jogo de Exemplo 1", en: "Sample Game 1" },
+    title: { pt: "Protótipo Auto-Battle", en: "Auto-Battler Prototype" },
     description: {
       pt: "Platformer 2D criado para experimentar movimentação e level design. Descrição provisória a ser substituída pelo conteúdo real.",
       en: "2D platformer built to experiment with movement and level design. Placeholder description to be replaced with real content.",
@@ -33,7 +33,7 @@ export const games: Game[] = [
   },
   {
     id: "game-2",
-    title: { pt: "Jogo de Exemplo 2", en: "Sample Game 2" },
+    title: { pt: "Protótipo Shooter 2D", en: "2D Shooter Prototype" },
     description: {
       pt: "Puzzle focado em mecânicas simples e progressão gradual. Descrição provisória a ser substituída pelo conteúdo real.",
       en: "Puzzle focused on simple mechanics and gradual progression. Placeholder description to be replaced with real content.",

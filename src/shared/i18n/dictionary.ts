@@ -54,8 +54,12 @@ const pt = {
   home: {
     intro: {
       name: "João Victor Ventura Martins",
-      roles: ["Software Engineer", "FullStack Developer"],
-      lead: "Software Engineer com foco em Frontend Engineering, desenvolvendo aplicações com ênfase em arquitetura, performance, escalabilidade, manutenibilidade e organização de código.",
+      roles: [
+        "Engenheiro de Software",
+        "Estudante de Cibersegurança",
+        "Entusiasta de Gamedev",
+      ],
+      lead: "Software Engineer com foco em Go e React, desenvolvendo aplicações com ênfase em arquitetura, performance, escalabilidade, manutenibilidade e organização de código.",
       summary:
         "Sinta-se a vontade para conhecer mais sobre minha trajetória, o que venho estudando e os projetos em que estou trabalhando.",
       suffix: "Caso queira, você também pode acessar meu",
@@ -99,17 +103,17 @@ const pt = {
     },
     now: {
       title: "Atualmente",
+      stackLabel: "Stack",
       paragraphs: [
-        "Tenho direcionado meu foco para a parte mais arquitetural dos projetos, com maior atenção a System Design e à estruturação das aplicações. Busco construir soluções escaláveis e de fácil manutenção, reduzindo retrabalho e garantindo uma evolução consistente do código ao longo do tempo.",
-        "Trabalho principalmente com React e Node.js utilizando TypeScript, além de Next.js para aplicações mais complexas. Atuo na integração com bancos de dados como PostgreSQL e SQLite. Também venho aprofundando meus estudos em .NET e possuo domínio de ferramentas como Git, GitHub, Figma, OpenCode e MCPs no fluxo de desenvolvimento.",
+        "Tenho interesse especial em arquitetura de software, tanto na idealização de System Designs quanto na construção de Design Systems, e venho me aproximando da área de segurança da informação, ampliando meus conhecimentos através de uma graduação em Cybersegurança.",
       ],
     },
     gamedev: {
       title: "GameDev",
       blurb:
-        "Fora do desenvolvimento web, gamedev é uma paixão antiga que venho colocando em prática: crio pequenos jogos para experimentar mecânicas, level design e novas ideias.",
+        "No meu tempo livre, gosto de colocar meu conhecimento em prática com uma paixão pelo GameDev, criando protótipos e pequenos jogos para experimentar mecânicas, level design, game design e ideias no geral.",
       teaser:
-        "Tem mais história por trás disso — como comecei, o que uso e onde quero chegar.",
+        "Esses são alguns dos protótipos nos quais estou trabalhando atualmente, mas possuo outros jogos feitos e em desenvolvimento, fique à vontade para saber mais.",
       ctaMore: "Saiba mais",
     },
     connect: {
@@ -176,8 +180,12 @@ const en: Dictionary = {
   home: {
     intro: {
       name: "João Victor Ventura Martins",
-      roles: ["Software Engineer", "FullStack Developer"],
-      lead: "Software Engineer focused on Frontend Engineering, developing applications with emphasis on architecture, performance, scalability, maintainability, and clean code organization.",
+      roles: [
+        "Software Engineer",
+        "Cybersecurity Student",
+        "Gamedev Enthusiast",
+      ],
+      lead: "Software Engineer focused on Go for backend and React for frontend, building applications with an emphasis on architecture, performance, scalability, maintainability and clean code organization.",
       summary:
         "Feel free to explore my journey, what I am currently studying, and the projects I am working on.",
       suffix: "If you wish, you can also download my",
@@ -220,17 +228,17 @@ const en: Dictionary = {
     },
     now: {
       title: "Now",
+      stackLabel: "Stack",
       paragraphs: [
-        "I have been focusing on the architectural side of my projects, putting extra care into System Design and application structure. I aim to build scalable, maintainable setups that reduce rework and ensure consistent growth over time.",
-        "I mainly build with React and Node.js using TypeScript, often leveraging Next.js for more sophisticated experiences. I integrate PostgreSQL and SQLite, and continue developing .NET expertise along with tools like Git, GitHub, Figma, OpenCode, and MCP workflows.",
+        "I have a particular interest in software architecture, both in designing systems (System Design) and in building Design Systems, and I have been getting closer to the field of information security, expanding my knowledge through a Cybersecurity degree.",
       ],
     },
     gamedev: {
       title: "GameDev",
       blurb:
-        "Beyond web development, gamedev is a long-time passion I have been acting on: I build small games to experiment with mechanics, level design, and new ideas.",
+        "In my free time, I like to put my knowledge into practice through a passion for GameDev, creating prototypes and small games to experiment with mechanics, level design, game design and ideas in general.",
       teaser:
-        "There is more behind this — how I started, what I use, and where I want to go.",
+        "These are some of the prototypes I'm currently working on, but I also have other games finished and in development, feel free to learn more.",
       ctaMore: "Learn more",
     },
     connect: {
