@@ -84,20 +84,19 @@ const pt = {
       ],
       projects: [
         {
-          title: "BikCraft",
-          description: "E-commerce de bicicletas elétricas com foco em UI.",
-          url: "https://bikcraft-one.vercel.app/",
+          title: "Focuzen",
+          description: "App de foco minimalista (Go + React), com web e TUI.",
+          url: "https://github.com/JoaoVictorVM/focuzen",
         },
         {
-          title: "Forest Imóveis",
-          description:
-            "Site institucional de imobiliária com foco em Tailwind.",
-          url: "https://joaovictorvm.github.io/ForestImoveis/",
+          title: "Leaks & Promo",
+          description: "Bot de Discord em Go: preços de jogos e vazamentos.",
+          url: "https://github.com/JoaoVictorVM/leaks-n-promo",
         },
         {
-          title: "Scheduling API",
-          description: "API Node.js/Nest.js organizada para agendamentos.",
-          url: "https://github.com/JoaoVictorVM/Scheduling-API",
+          title: "Gofetch",
+          description: "CLI em Go para exibir informações do sistema.",
+          url: "https://github.com/JoaoVictorVM/gofetch",
         },
       ],
     },
@@ -113,8 +112,8 @@ const pt = {
       blurb:
         "No meu tempo livre, gosto de colocar meu conhecimento em prática com uma paixão pelo GameDev, criando protótipos e pequenos jogos para experimentar mecânicas, level design, game design e ideias no geral.",
       teaser:
-        "Esses são alguns dos protótipos nos quais estou trabalhando atualmente, mas possuo outros jogos feitos e em desenvolvimento, fique à vontade para saber mais.",
-      ctaMore: "Saiba mais",
+        "Esses são alguns dos protótipos nos quais estou trabalhando atualmente, mas possuo outros jogos feitos e em desenvolvimento, fique à vontade para",
+      teaserLink: "saber mais",
     },
     connect: {
       title: "Contato",
@@ -210,19 +209,19 @@ const en: Dictionary = {
       ],
       projects: [
         {
-          title: "BikCraft",
-          description: "Electric bike e-commerce with a UI-first approach.",
-          url: "https://bikcraft-one.vercel.app/",
+          title: "Focuzen",
+          description: "Minimalist focus app (Go + React), web and TUI.",
+          url: "https://github.com/JoaoVictorVM/focuzen",
         },
         {
-          title: "Forest",
-          description: "Real-estate corporate site built with Tailwind.",
-          url: "https://joaovictorvm.github.io/ForestImoveis/",
+          title: "Leaks & Promo",
+          description: "Go Discord bot for game prices and leaks.",
+          url: "https://github.com/JoaoVictorVM/leaks-n-promo",
         },
         {
-          title: "Scheduling API",
-          description: "Node.js/Nest.js API crafted for appointment flows.",
-          url: "https://github.com/JoaoVictorVM/Scheduling-API",
+          title: "Gofetch",
+          description: "Go CLI to display system information.",
+          url: "https://github.com/JoaoVictorVM/gofetch",
         },
       ],
     },
@@ -238,8 +237,8 @@ const en: Dictionary = {
       blurb:
         "In my free time, I like to put my knowledge into practice through a passion for GameDev, creating prototypes and small games to experiment with mechanics, level design, game design and ideas in general.",
       teaser:
-        "These are some of the prototypes I'm currently working on, but I also have other games finished and in development, feel free to learn more.",
-      ctaMore: "Learn more",
+        "These are some of the prototypes I'm currently working on, but I also have other games finished and in development, feel free to",
+      teaserLink: "learn more",
     },
     connect: {
       title: "Connect",

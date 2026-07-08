@@ -7,9 +7,6 @@ import { usePreference } from "@/shared/hooks/usePreference";
 import { useReveal } from "@/shared/hooks/useReveal";
 import { cn } from "@/shared/lib/cn";
 
-const linkClass =
-  "inline-flex items-center gap-2 font-normal text-text underline decoration-text/30 underline-offset-4 transition-colors hover:decoration-text";
-
 export function GameDevSection() {
   const { home } = useI18n();
   const { gamedev } = home;
@@ -44,18 +41,17 @@ export function GameDevSection() {
           ))}
         </div>
 
-        <div
-          className={cn(
-            "text-appear space-y-3 delay-350",
-            isVisible && "visible",
-          )}
-        >
-          <p>{gamedev.teaser}</p>
-          <Link to="/gamedev" className={linkClass}>
-            <span>{gamedev.ctaMore}</span>
+        <p className={cn("text-appear delay-350", isVisible && "visible")}>
+          {gamedev.teaser}{" "}
+          <Link
+            to="/gamedev"
+            className="decoration-text/30 hover:decoration-text inline-flex items-center gap-1 underline underline-offset-4 transition-colors"
+          >
+            <span>{gamedev.teaserLink}</span>
             <ArrowUpRight size={14} aria-hidden className="text-detail" />
           </Link>
-        </div>
+          .
+        </p>
       </Container>
     </section>
   );
