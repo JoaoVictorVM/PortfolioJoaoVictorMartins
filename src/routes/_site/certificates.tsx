@@ -1,35 +1,36 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
-import { ProjectAccordion } from "@/features/projects/components/ProjectAccordion";
+import { CertificateList } from "@/features/certificates/components/CertificateList";
 import { siteConfig } from "@/shared/config/site";
 import { pageHead } from "@/shared/lib/seo";
 import { useI18n } from "@/shared/hooks/useI18n";
 import { useReveal } from "@/shared/hooks/useReveal";
 import { cn } from "@/shared/lib/cn";
 
-export const Route = createFileRoute("/_site/projetos")({
-  head: () => pageHead({ ...siteConfig.pages.projects, path: "/projetos" }),
-  component: ProjetosPage,
+export const Route = createFileRoute("/_site/certificates")({
+  head: () =>
+    pageHead({ ...siteConfig.pages.certificates, path: "/certificates" }),
+  component: CertificatesPage,
 });
 
-function ProjetosPage() {
-  const { projects, common } = useI18n();
+function CertificatesPage() {
+  const { certificates, common } = useI18n();
   const { ref, isVisible } = useReveal();
 
   return (
     <section className="py-24">
       <Container>
         <PageHeader
-          title={projects.title}
-          subtitle={projects.subtitle}
+          title={certificates.title}
+          subtitle={certificates.subtitle}
           backLabel={common.backToIndex}
         />
         <div
           ref={ref}
           className={cn("content-reveal delay-300", isVisible && "visible")}
         >
-          <ProjectAccordion />
+          <CertificateList />
         </div>
       </Container>
     </section>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://joaovictorvm.github.io/portfolio/</loc>
+    <loc>https://joaovictorvm.github.io/resume/</loc>
   </url>
   <url>
-    <loc>https://joaovictorvm.github.io/portfolio/certificados</loc>
+    <loc>https://joaovictorvm.github.io/resume/certificates</loc>
   </url>
   <url>
-    <loc>https://joaovictorvm.github.io/portfolio/projetos</loc>
+    <loc>https://joaovictorvm.github.io/resume/projects</loc>
   </url>
   <url>
-    <loc>https://joaovictorvm.github.io/portfolio/gamedev</loc>
+    <loc>https://joaovictorvm.github.io/resume/gamedev</loc>
   </url>
   <url>
-    <loc>https://joaovictorvm.github.io/portfolio/links</loc>
+    <loc>https://joaovictorvm.github.io/resume/links</loc>
   </url>
 </urlset>

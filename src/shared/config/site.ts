@@ -1,5 +1,5 @@
 export const siteConfig = {
-  url: "https://joaovictorvm.github.io/portfolio",
+  url: "https://joaovictorvm.github.io/resume",
   name: "João Victor Ventura Martins",
   shortName: "João Victor",
   jobTitle: "Software Engineer",

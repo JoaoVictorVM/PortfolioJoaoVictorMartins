@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://joaovictorvm.github.io/portfolio/sitemap.xml
+Sitemap: https://joaovictorvm.github.io/resume/sitemap.xml

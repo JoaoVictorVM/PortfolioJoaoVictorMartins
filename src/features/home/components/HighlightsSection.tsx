@@ -15,7 +15,7 @@ interface HighlightsColumnProps {
   title: string;
   items: HighlightItem[];
   ctaLabel: string;
-  ctaTo: "/certificados" | "/projetos";
+  ctaTo: "/certificates" | "/projects";
   isProject?: boolean;
   isVisible: boolean;
 }
@@ -84,14 +84,14 @@ export function HighlightsSection() {
           title={highlights.certificatesTitle}
           items={highlights.certificates}
           ctaLabel={highlights.certificatesCta}
-          ctaTo="/certificados"
+          ctaTo="/certificates"
           isVisible={isVisible}
         />
         <HighlightsColumn
           title={highlights.projectsTitle}
           items={highlights.projects}
           ctaLabel={highlights.projectsCta}
-          ctaTo="/projetos"
+          ctaTo="/projects"
           isProject
           isVisible={isVisible}
         />

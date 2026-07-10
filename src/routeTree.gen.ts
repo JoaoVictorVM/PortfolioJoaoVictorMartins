@@ -12,9 +12,9 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as LinksRouteImport } from './routes/links'
 import { Route as SiteRouteImport } from './routes/_site'
 import { Route as SiteIndexRouteImport } from './routes/_site/index'
-import { Route as SiteProjetosRouteImport } from './routes/_site/projetos'
+import { Route as SiteProjectsRouteImport } from './routes/_site/projects'
 import { Route as SiteGamedevRouteImport } from './routes/_site/gamedev'
-import { Route as SiteCertificadosRouteImport } from './routes/_site/certificados'
+import { Route as SiteCertificatesRouteImport } from './routes/_site/certificates'
 
 const LinksRoute = LinksRouteImport.update({
   id: '/links',
@@ -30,9 +30,9 @@ const SiteIndexRoute = SiteIndexRouteImport.update({
   path: '/',
   getParentRoute: () => SiteRoute,
 } as any)
-const SiteProjetosRoute = SiteProjetosRouteImport.update({
-  id: '/projetos',
-  path: '/projetos',
+const SiteProjectsRoute = SiteProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
   getParentRoute: () => SiteRoute,
 } as any)
 const SiteGamedevRoute = SiteGamedevRouteImport.update({
@@ -40,47 +40,47 @@ const SiteGamedevRoute = SiteGamedevRouteImport.update({
   path: '/gamedev',
   getParentRoute: () => SiteRoute,
 } as any)
-const SiteCertificadosRoute = SiteCertificadosRouteImport.update({
-  id: '/certificados',
-  path: '/certificados',
+const SiteCertificatesRoute = SiteCertificatesRouteImport.update({
+  id: '/certificates',
+  path: '/certificates',
   getParentRoute: () => SiteRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof SiteIndexRoute
   '/links': typeof LinksRoute
-  '/certificados': typeof SiteCertificadosRoute
+  '/certificates': typeof SiteCertificatesRoute
   '/gamedev': typeof SiteGamedevRoute
-  '/projetos': typeof SiteProjetosRoute
+  '/projects': typeof SiteProjectsRoute
 }
 export interface FileRoutesByTo {
   '/links': typeof LinksRoute
-  '/certificados': typeof SiteCertificadosRoute
+  '/certificates': typeof SiteCertificatesRoute
   '/gamedev': typeof SiteGamedevRoute
-  '/projetos': typeof SiteProjetosRoute
+  '/projects': typeof SiteProjectsRoute
   '/': typeof SiteIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_site': typeof SiteRouteWithChildren
   '/links': typeof LinksRoute
-  '/_site/certificados': typeof SiteCertificadosRoute
+  '/_site/certificates': typeof SiteCertificatesRoute
   '/_site/gamedev': typeof SiteGamedevRoute
-  '/_site/projetos': typeof SiteProjetosRoute
+  '/_site/projects': typeof SiteProjectsRoute
   '/_site/': typeof SiteIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/links' | '/certificados' | '/gamedev' | '/projetos'
+  fullPaths: '/' | '/links' | '/certificates' | '/gamedev' | '/projects'
   fileRoutesByTo: FileRoutesByTo
-  to: '/links' | '/certificados' | '/gamedev' | '/projetos' | '/'
+  to: '/links' | '/certificates' | '/gamedev' | '/projects' | '/'
   id:
     | '__root__'
     | '/_site'
     | '/links'
-    | '/_site/certificados'
+    | '/_site/certificates'
     | '/_site/gamedev'
-    | '/_site/projetos'
+    | '/_site/projects'
     | '/_site/'
   fileRoutesById: FileRoutesById
 }
@@ -112,11 +112,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SiteIndexRouteImport
       parentRoute: typeof SiteRoute
     }
-    '/_site/projetos': {
-      id: '/_site/projetos'
-      path: '/projetos'
-      fullPath: '/projetos'
-      preLoaderRoute: typeof SiteProjetosRouteImport
+    '/_site/projects': {
+      id: '/_site/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof SiteProjectsRouteImport
       parentRoute: typeof SiteRoute
     }
     '/_site/gamedev': {
@@ -126,27 +126,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SiteGamedevRouteImport
       parentRoute: typeof SiteRoute
     }
-    '/_site/certificados': {
-      id: '/_site/certificados'
-      path: '/certificados'
-      fullPath: '/certificados'
-      preLoaderRoute: typeof SiteCertificadosRouteImport
+    '/_site/certificates': {
+      id: '/_site/certificates'
+      path: '/certificates'
+      fullPath: '/certificates'
+      preLoaderRoute: typeof SiteCertificatesRouteImport
       parentRoute: typeof SiteRoute
     }
   }
 }
 
 interface SiteRouteChildren {
-  SiteCertificadosRoute: typeof SiteCertificadosRoute
+  SiteCertificatesRoute: typeof SiteCertificatesRoute
   SiteGamedevRoute: typeof SiteGamedevRoute
-  SiteProjetosRoute: typeof SiteProjetosRoute
+  SiteProjectsRoute: typeof SiteProjectsRoute
   SiteIndexRoute: typeof SiteIndexRoute
 }
 
 const SiteRouteChildren: SiteRouteChildren = {
-  SiteCertificadosRoute: SiteCertificadosRoute,
+  SiteCertificatesRoute: SiteCertificatesRoute,
   SiteGamedevRoute: SiteGamedevRoute,
-  SiteProjetosRoute: SiteProjetosRoute,
+  SiteProjectsRoute: SiteProjectsRoute,
   SiteIndexRoute: SiteIndexRoute,
 }
 

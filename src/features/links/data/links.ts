@@ -32,7 +32,7 @@ export const links: LinkItem[] = [
       pt: "Explore meus projetos e minha atuação profissional completa.",
       en: "Discover my portfolio and professional work.",
     },
-    href: "/",
+    href: asset("/"),
     icon: Laptop,
     variant: "featured",
   },
