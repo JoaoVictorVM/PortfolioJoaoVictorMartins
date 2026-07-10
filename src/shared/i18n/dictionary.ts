@@ -3,7 +3,6 @@ import type { Language } from "@/types/preferences";
 const pt = {
   skipToContent: "Pular para o conteúdo",
   header: {
-    home: "Início",
     theme: {
       toLight: "Ativar modo claro",
       toDark: "Ativar modo escuro",
@@ -128,7 +127,6 @@ export type Dictionary = typeof pt;
 const en: Dictionary = {
   skipToContent: "Skip to content",
   header: {
-    home: "Home",
     theme: {
       toLight: "Switch to light mode",
       toDark: "Switch to dark mode",

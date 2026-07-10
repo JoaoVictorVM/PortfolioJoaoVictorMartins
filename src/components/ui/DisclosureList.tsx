@@ -46,19 +46,21 @@ export function DisclosureList({ items }: DisclosureListProps) {
               } as CSSProperties
             }
           >
-            <Accordion.Header>
-              <Accordion.Trigger className="group text-text hover:bg-line/30 hover:text-text/80 flex w-full cursor-pointer items-center gap-3 rounded-lg py-2 text-left transition-colors">
-                <span className="project-title">{item.title}</span>
-                <span className="project-line flex-1" />
-                <ChevronDown
-                  size={18}
-                  aria-hidden
-                  className={cn(
-                    "project-chevron text-text shrink-0 transition-transform duration-200",
-                    isOpen && "rotate-180",
-                  )}
-                />
-              </Accordion.Trigger>
+            <Accordion.Header asChild>
+              <h2>
+                <Accordion.Trigger className="group text-text hover:bg-line/30 hover:text-text/80 flex w-full cursor-pointer items-center gap-3 rounded-lg py-2 text-left transition-colors">
+                  <span className="project-title">{item.title}</span>
+                  <span className="project-line flex-1" />
+                  <ChevronDown
+                    size={18}
+                    aria-hidden
+                    className={cn(
+                      "project-chevron text-text shrink-0 transition-transform duration-200",
+                      isOpen && "rotate-180",
+                    )}
+                  />
+                </Accordion.Trigger>
+              </h2>
             </Accordion.Header>
             <Accordion.Content className="accordion-content">
               <div className="text-detail space-y-3 px-2 pt-2 pb-3 text-sm">

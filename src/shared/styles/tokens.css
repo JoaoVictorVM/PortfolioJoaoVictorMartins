@@ -6,7 +6,6 @@
 
   --duration-section: 800ms;
   --duration-text: 850ms;
-  --duration-diagonal: 900ms;
   --duration-fast: 450ms;
   --duration-line: 300ms;
   --duration-chevron: 300ms;
@@ -18,7 +17,6 @@
 
   --ease-reveal: cubic-bezier(0.4, 0, 0.2, 1);
 
-  --delay-100: 100ms;
   --delay-150: 150ms;
   --delay-200: 200ms;
   --delay-250: 250ms;

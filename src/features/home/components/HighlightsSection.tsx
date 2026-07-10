@@ -38,7 +38,7 @@ function HighlightsColumn({
         isVisible && "visible",
       )}
     >
-      <p className="text-detail text-sm">{title}</p>
+      <h2 className="text-detail text-sm font-normal">{title}</h2>
 
       <div className="space-y-6">
         {items.map((item) => (
