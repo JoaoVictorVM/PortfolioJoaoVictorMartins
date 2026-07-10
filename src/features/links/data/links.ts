@@ -5,6 +5,7 @@ import {
   InstagramIcon,
   LinkedinIcon,
 } from "@/components/ui/BrandIcons";
+import { asset } from "@/shared/lib/asset";
 
 export type LinkVariant = "default" | "featured";
 
@@ -74,7 +75,7 @@ export const links: LinkItem[] = [
       pt: "Baixe meu currículo e conheça minha trajetória profissional.",
       en: "Download my resume and learn about my professional journey.",
     },
-    href: "/pdf/CV-JoaoVictorVenturaMartins.pdf",
+    href: asset("pdf/CV-JoaoVictorVenturaMartins.pdf"),
     icon: FileUser,
     variant: "default",
     download: true,

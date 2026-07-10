@@ -1,5 +1,5 @@
 export const siteConfig = {
-  url: "https://example.com",
+  url: "https://joaovictorvm.github.io/portfolio",
   name: "João Victor Ventura Martins",
   shortName: "João Victor",
   jobTitle: "Software Engineer",

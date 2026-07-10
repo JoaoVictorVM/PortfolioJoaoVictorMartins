@@ -1,5 +1,6 @@
 import { Container } from "@/components/layout/Container";
 import { useI18n } from "@/shared/hooks/useI18n";
+import { asset } from "@/shared/lib/asset";
 import { useReveal } from "@/shared/hooks/useReveal";
 import { cn } from "@/shared/lib/cn";
 
@@ -34,7 +35,7 @@ export function IntroSection() {
           <p>
             {intro.summary} {intro.suffix}{" "}
             <a
-              href="/pdf/CV-JoaoVictorVenturaMartins.pdf"
+              href={asset("pdf/CV-JoaoVictorVenturaMartins.pdf")}
               download
               className="decoration-text/30 hover:decoration-text underline underline-offset-4 transition-colors"
             >

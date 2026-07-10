@@ -11,6 +11,7 @@ import { PreferenceProvider } from "@/context/PreferenceProvider";
 import { NotFound } from "@/components/layout/NotFound";
 import { ErrorFallback } from "@/components/layout/ErrorFallback";
 import { siteConfig } from "@/shared/config/site";
+import { asset } from "@/shared/lib/asset";
 import { baseMeta, personJsonLd } from "@/shared/lib/seo";
 import appCss from "@/shared/styles/globals.css?url";
 import "@fontsource-variable/inter";
@@ -27,8 +28,8 @@ export const Route = createRootRoute({
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", type: "image/svg+xml", href: "/logo/logo.svg" },
-      { rel: "manifest", href: "/site.webmanifest" },
+      { rel: "icon", type: "image/svg+xml", href: asset("logo/logo.svg") },
+      { rel: "manifest", href: asset("site.webmanifest") },
     ],
     scripts: [
       {

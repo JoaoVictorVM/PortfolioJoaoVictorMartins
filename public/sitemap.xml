@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://joaovictorvm.github.io/portfolio/</loc>
   </url>
   <url>
-    <loc>https://example.com/certificados</loc>
+    <loc>https://joaovictorvm.github.io/portfolio/certificados</loc>
   </url>
   <url>
-    <loc>https://example.com/projetos</loc>
+    <loc>https://joaovictorvm.github.io/portfolio/projetos</loc>
   </url>
   <url>
-    <loc>https://example.com/gamedev</loc>
+    <loc>https://joaovictorvm.github.io/portfolio/gamedev</loc>
   </url>
   <url>
-    <loc>https://example.com/links</loc>
+    <loc>https://joaovictorvm.github.io/portfolio/links</loc>
   </url>
 </urlset>

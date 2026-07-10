@@ -1,13 +1,13 @@
 {
   "name": "João Victor Ventura Martins",
   "short_name": "João Victor",
-  "start_url": "/",
+  "start_url": "/portfolio/",
   "display": "standalone",
   "background_color": "#1a1a1a",
   "theme_color": "#1a1a1a",
   "icons": [
     {
-      "src": "/logo/logo.svg",
+      "src": "/portfolio/logo/logo.svg",
       "type": "image/svg+xml",
       "sizes": "any"
     }
