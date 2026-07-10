@@ -5,7 +5,7 @@ export const siteConfig = {
   jobTitle: "Software Engineer",
   locale: "pt_BR",
   themeColor: "#1a1a1a",
-  ogImage: "/logo/logo.svg",
+  ogImage: "/og-image.png",
   sameAs: [
     "https://www.linkedin.com/in/jvvmartins/",
     "https://github.com/JoaoVictorVM",

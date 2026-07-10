@@ -64,7 +64,6 @@
 
 .project-title {
   display: inline-block;
-  white-space: nowrap;
   clip-path: inset(0 100% 0 0);
 }
 .project-date {
