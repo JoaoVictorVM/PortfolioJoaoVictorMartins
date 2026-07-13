@@ -34,9 +34,7 @@ export function GameDevSection() {
           {highlighted.map((game) => (
             <article key={game.id} className="space-y-1">
               <h3 className="text-text font-normal">{game.title[language]}</h3>
-              <p className="text-detail text-sm">
-                {game.description[language]}
-              </p>
+              <p className="text-detail text-sm">{game.summary[language]}</p>
             </article>
           ))}
         </div>
@@ -50,7 +48,6 @@ export function GameDevSection() {
             <span>{gamedev.teaserLink}</span>
             <ArrowUpRight size={14} aria-hidden className="text-detail" />
           </Link>
-          .
         </p>
       </Container>
     </section>

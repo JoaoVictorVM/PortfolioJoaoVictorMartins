@@ -20,24 +20,6 @@ export interface Project {
   links?: ProjectLink[];
 }
 
-/*
-{
-  id: "",
-  title: { pt: "", en: "" },
-  details: {
-    pt: "",
-    en: "",
-  },
-  stack: ["", ""],
-  links: [
-    {
-      label: { pt: "Repositório", en: "Repository" },
-      url: "",
-    },
-  ],
-},
-*/
-
 export const projects: Project[] = [
   {
     id: "focuzen",

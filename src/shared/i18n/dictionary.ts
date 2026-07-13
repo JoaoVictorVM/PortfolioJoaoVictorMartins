@@ -112,7 +112,7 @@ const pt = {
         "No meu tempo livre, gosto de colocar meu conhecimento em prática com uma paixão pelo GameDev, criando protótipos e pequenos jogos para experimentar mecânicas, level design, game design e ideias no geral.",
       teaser:
         "Esses são alguns dos protótipos nos quais estou trabalhando atualmente, mas possuo outros jogos feitos e em desenvolvimento, fique à vontade para",
-      teaserLink: "saber mais",
+      teaserLink: "saber mais.",
     },
     connect: {
       title: "Contato",
@@ -236,7 +236,7 @@ const en: Dictionary = {
         "In my free time, I like to put my knowledge into practice through a passion for GameDev, creating prototypes and small games to experiment with mechanics, level design, game design and ideas in general.",
       teaser:
         "These are some of the prototypes I'm currently working on, but I also have other games finished and in development, feel free to",
-      teaserLink: "learn more",
+      teaserLink: "learn more.",
     },
     connect: {
       title: "Connect",
