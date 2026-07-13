@@ -1,0 +1,15 @@
+{
+  "name": "João Victor Ventura Martins",
+  "short_name": "João Victor",
+  "start_url": "/resume/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#1a1a1a",
+  "icons": [
+    {
+      "src": "/resume/logo/logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
+}

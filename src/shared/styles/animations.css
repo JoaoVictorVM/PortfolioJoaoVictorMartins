@@ -1,0 +1,284 @@
+.section-fade {
+  opacity: 0;
+  transform: translateY(24px);
+  will-change: opacity, transform;
+}
+.section-fade.visible {
+  animation: sectionFade var(--duration-section) var(--ease-reveal) forwards;
+  animation-delay: var(--delay-150);
+}
+
+.text-appear {
+  opacity: 0;
+  transform: translateY(12px);
+  will-change: opacity, transform;
+}
+.text-appear.visible {
+  animation: textSlideIn var(--duration-text) var(--ease-reveal) forwards;
+  animation-delay: var(--delay-200);
+}
+
+.fast-fade-up {
+  opacity: 0;
+  transform: translateY(12px);
+  will-change: opacity, transform;
+}
+.fast-fade-up.visible {
+  animation: fadeUpFast var(--duration-fast) var(--ease-reveal) forwards;
+}
+
+.visible.delay-150 {
+  animation-delay: var(--delay-150);
+}
+.visible.delay-200 {
+  animation-delay: var(--delay-200);
+}
+.visible.delay-250 {
+  animation-delay: var(--delay-250);
+}
+.visible.delay-300 {
+  animation-delay: var(--delay-300);
+}
+.visible.delay-350 {
+  animation-delay: var(--delay-350);
+}
+
+@keyframes sectionFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes textSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeUpFast {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-title {
+  display: inline-block;
+  clip-path: inset(0 100% 0 0);
+}
+.project-date {
+  white-space: nowrap;
+  clip-path: inset(0 100% 0 0);
+}
+.visible .project-title {
+  animation: writeIn calc(var(--title-chars, 20) * var(--type-char)) linear
+    forwards;
+  animation-delay: var(--seq-delay, 0ms);
+}
+.visible .project-date {
+  animation: writeIn calc(var(--date-chars, 10) * var(--type-char)) linear
+    forwards;
+  animation-delay: calc(
+    var(--seq-delay, 0ms) + var(--title-chars, 20) * var(--type-char)
+  );
+}
+.project-line {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    var(--line-color) 50%,
+    var(--line-color) 100%
+  );
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+.visible .project-line {
+  animation: growLine var(--duration-line) linear forwards;
+  animation-delay: calc(
+    var(--seq-delay, 0ms) + var(--title-chars, 20) * var(--type-char)
+  );
+}
+.project-chevron {
+  opacity: 0;
+}
+.visible .project-chevron {
+  animation: fadeIn var(--duration-chevron) forwards;
+  animation-delay: calc(
+    var(--seq-delay, 0ms) + var(--title-chars, 20) * var(--type-char) +
+      var(--duration-line)
+  );
+}
+.project-institution {
+  white-space: nowrap;
+  clip-path: inset(0 100% 0 0);
+}
+.visible .project-institution {
+  animation: writeIn calc(var(--inst-chars, 10) * var(--type-char)) linear
+    forwards;
+  animation-delay: var(--seq-delay, 0ms);
+}
+.group-line {
+  height: 1px;
+  background: var(--line-color);
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+.visible .group-line {
+  animation: growLine var(--duration-line) linear forwards;
+  animation-delay: var(--seq-delay, 0ms);
+}
+
+@keyframes writeIn {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes growLine {
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.accordion-content {
+  overflow: hidden;
+}
+.accordion-content[data-state="open"] {
+  animation: accordionDown var(--duration-fast) var(--ease-reveal);
+}
+.accordion-content[data-state="closed"] {
+  animation: accordionUp var(--duration-fast) var(--ease-reveal);
+}
+.accordion-content[data-state="open"] .accordion-reveal {
+  animation: fadeUpFast var(--duration-fast) var(--ease-reveal) both;
+}
+.accordion-content[data-state="open"] .accordion-reveal:nth-child(2) {
+  animation-delay: var(--delay-150);
+}
+.accordion-content[data-state="open"] .accordion-reveal:nth-child(3) {
+  animation-delay: var(--delay-300);
+}
+
+@keyframes accordionDown {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+@keyframes accordionUp {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.header-enter {
+  animation: headerEnter var(--duration-section) var(--ease-reveal) both;
+}
+@keyframes headerEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.theme-icon-enter {
+  animation: themeIconIn var(--duration-fast) var(--ease-reveal);
+}
+@keyframes themeIconIn {
+  from {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
+::view-transition-old(root) {
+  animation: pageOut var(--duration-page) var(--ease-reveal) both;
+}
+::view-transition-new(root) {
+  animation: pageIn var(--duration-page) var(--ease-reveal) both;
+}
+@keyframes pageOut {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pageInFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-fade,
+  .text-appear,
+  .fast-fade-up,
+  .header-enter,
+  .theme-icon-enter,
+  .content-reveal.visible,
+  .accordion-content[data-state="open"] .accordion-reveal {
+    transform: none !important;
+  }
+  .content-reveal {
+    opacity: 0;
+  }
+  .content-reveal.visible {
+    animation: fadeUpFast var(--duration-fast) var(--ease-reveal) forwards;
+  }
+  .project-title,
+  .project-date,
+  .project-institution {
+    clip-path: none !important;
+    animation: none !important;
+  }
+  .project-line,
+  .group-line {
+    transform: scaleX(1) !important;
+    animation: none !important;
+  }
+  .project-chevron {
+    opacity: 1 !important;
+    animation: none !important;
+  }
+  .accordion-content[data-state="open"],
+  .accordion-content[data-state="closed"] {
+    animation: none !important;
+  }
+  ::view-transition-new(root) {
+    animation: pageInFade var(--duration-page) var(--ease-reveal) both;
+  }
+}

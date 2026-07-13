@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import "./tokens.css";
+@import "./animations.css";
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  transition:
+    background var(--duration-theme) ease,
+    color var(--duration-theme) ease;
+}
+
+:focus-visible {
+  outline: 2px solid var(--text-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@utility grid-certificate {
+  grid-template-columns: calc(var(--spacing) * 35) 1fr auto;
+}

@@ -1,0 +1,46 @@
+@theme {
+  --font-sans: "Inter Variable", "Inter", system-ui, sans-serif;
+
+  --container-column: 42rem;
+  --text-2xs: 0.55rem;
+
+  --duration-section: 800ms;
+  --duration-text: 850ms;
+  --duration-fast: 450ms;
+  --duration-line: 300ms;
+  --duration-chevron: 300ms;
+  --duration-theme: 250ms;
+
+  --type-char: 35ms;
+  --stagger: 120ms;
+  --duration-page: 300ms;
+
+  --ease-reveal: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --delay-150: 150ms;
+  --delay-200: 200ms;
+  --delay-250: 250ms;
+  --delay-300: 300ms;
+  --delay-350: 350ms;
+}
+
+:root {
+  --bg-color: #1a1a1a;
+  --text-color: #e5e5e5;
+  --detail-color: #8d8d8d;
+  --line-color: #2e2e2e;
+}
+
+:root[data-theme="light"] {
+  --bg-color: #eceff4;
+  --text-color: #3b4252;
+  --detail-color: #5a6472;
+  --line-color: #cccccc;
+}
+
+@theme inline {
+  --color-bg: var(--bg-color);
+  --color-text: var(--text-color);
+  --color-detail: var(--detail-color);
+  --color-line: var(--line-color);
+}
