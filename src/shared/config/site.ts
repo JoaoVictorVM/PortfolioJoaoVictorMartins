@@ -36,5 +36,9 @@ export const siteConfig = {
       description:
         "Todos os links de João Victor Ventura Martins em um só lugar.",
     },
+    notFound: {
+      title: "Página não encontrada — João Victor Ventura Martins",
+      description: "A página que você procura não existe ou foi movida.",
+    },
   },
 } as const;
