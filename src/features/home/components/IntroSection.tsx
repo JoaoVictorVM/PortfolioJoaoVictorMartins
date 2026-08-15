@@ -13,17 +13,10 @@ export function IntroSection() {
     <section
       ref={ref}
       id="inicio"
-      className={cn("section-fade pt-32", isVisible && "visible")}
+      className={cn("section-fade pt-16", isVisible && "visible")}
     >
       <Container className="text-text space-y-8">
-        <div className="space-y-2">
-          <h1 className="text-lg">{intro.name}</h1>
-          <ul className="text-detail list-disc pl-5 text-sm font-normal italic">
-            {intro.roles.map((role) => (
-              <li key={role}>{role}</li>
-            ))}
-          </ul>
-        </div>
+        <h1 className="sr-only">{intro.name}</h1>
 
         <div
           className={cn(
