@@ -13,6 +13,16 @@ export default defineConfig({
     tsConfigPaths(),
     tailwindcss(),
     tanstackStart({
+      // Pré-renderiza a rota catch-all como 404.html, servido pelo GitHub Pages
+      // em qualquer URL inexistente. O estado desidratado gerado aqui casa com
+      // o que o cliente calcula nessas URLs, evitando erro de hidratação.
+      pages: [
+        {
+          path: "/__not-found",
+          prerender: { enabled: true, outputPath: "404.html" },
+          sitemap: { exclude: true },
+        },
+      ],
       prerender: {
         enabled: true,
         crawlLinks: true,
