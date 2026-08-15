@@ -10,7 +10,6 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "postbuild": "node scripts/postbuild.mjs",
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write .",
