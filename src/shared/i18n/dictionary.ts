@@ -3,13 +3,23 @@ import type { Language } from "@/types/preferences";
 const pt = {
   skipToContent: "Pular para o conteúdo",
   header: {
+    identity: {
+      name: "João Victor Ventura Martins",
+      roles: ["Engenheiro de Software", "Estudante de Cibersegurança"],
+      homeLabel: "João Victor Ventura Martins — início",
+    },
     theme: {
       toLight: "Ativar modo claro",
       toDark: "Ativar modo escuro",
     },
     language: {
+      label: "Idioma",
       pt: "Mudar para português",
       en: "Mudar para inglês",
+      names: {
+        pt: "Português",
+        en: "English",
+      },
     },
   },
   footer: {
@@ -53,11 +63,6 @@ const pt = {
   home: {
     intro: {
       name: "João Victor Ventura Martins",
-      roles: [
-        "Engenheiro de Software",
-        "Estudante de Cibersegurança",
-        "Entusiasta de Gamedev",
-      ],
       lead: "Software Engineer com foco em Go e React, desenvolvendo aplicações com ênfase em arquitetura, performance, escalabilidade, manutenibilidade e organização de código.",
       summary:
         "Sinta-se a vontade para conhecer mais sobre minha trajetória, o que venho estudando e os projetos em que estou trabalhando.",
@@ -142,13 +147,23 @@ export type Dictionary = typeof pt;
 const en: Dictionary = {
   skipToContent: "Skip to content",
   header: {
+    identity: {
+      name: "João Victor Ventura Martins",
+      roles: ["Software Engineer", "Cybersecurity Student"],
+      homeLabel: "João Victor Ventura Martins — home",
+    },
     theme: {
       toLight: "Switch to light mode",
       toDark: "Switch to dark mode",
     },
     language: {
+      label: "Language",
       pt: "Switch to Portuguese",
       en: "Switch to English",
+      names: {
+        pt: "Português",
+        en: "English",
+      },
     },
   },
   footer: {
@@ -192,11 +207,6 @@ const en: Dictionary = {
   home: {
     intro: {
       name: "João Victor Ventura Martins",
-      roles: [
-        "Software Engineer",
-        "Cybersecurity Student",
-        "Gamedev Enthusiast",
-      ],
       lead: "Software Engineer focused on Go for backend and React for frontend, building applications with an emphasis on architecture, performance, scalability, maintainability and clean code organization.",
       summary:
         "Feel free to explore my journey, what I am currently studying, and the projects I am working on.",
