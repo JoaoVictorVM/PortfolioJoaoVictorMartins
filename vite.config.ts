@@ -5,7 +5,7 @@ import tsConfigPaths from "vite-tsconfig-paths";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  base: "/resume/",
+  base: "/",
   server: {
     port: Number(process.env.PORT) || 3000,
   },
