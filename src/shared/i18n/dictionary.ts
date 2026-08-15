@@ -64,6 +64,21 @@ const pt = {
       suffix: "Caso queira, você também pode acessar meu",
       resumeLabel: "currículo",
     },
+    education: {
+      title: "Formação",
+      items: [
+        {
+          course: "Ciência da Computação",
+          institution: "PUC Minas",
+          period: "2022 — 2026",
+        },
+        {
+          course: "Cibersegurança",
+          institution: "Cruzeiro do Sul",
+          period: "2026 — Atual",
+        },
+      ],
+    },
     highlights: {
       certificatesTitle: "Certificados",
       projectsTitle: "Projetos",
@@ -187,6 +202,21 @@ const en: Dictionary = {
         "Feel free to explore my journey, what I am currently studying, and the projects I am working on.",
       suffix: "If you wish, you can also download my",
       resumeLabel: "resume",
+    },
+    education: {
+      title: "Education",
+      items: [
+        {
+          course: "Computer Science",
+          institution: "PUC Minas",
+          period: "2022 — 2026",
+        },
+        {
+          course: "Cybersecurity",
+          institution: "Cruzeiro do Sul",
+          period: "2026 — Present",
+        },
+      ],
     },
     highlights: {
       certificatesTitle: "Certificates",
