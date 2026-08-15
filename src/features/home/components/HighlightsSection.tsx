@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/layout/Container";
+import { EducationBlock } from "@/features/home/components/EducationBlock";
 import { useI18n } from "@/shared/hooks/useI18n";
 import { useReveal } from "@/shared/hooks/useReveal";
 import { cn } from "@/shared/lib/cn";
@@ -79,22 +80,26 @@ export function HighlightsSection() {
       ref={ref}
       className={cn("section-fade pt-16", isVisible && "visible")}
     >
-      <Container className="grid gap-12 md:grid-cols-2">
-        <HighlightsColumn
-          title={highlights.certificatesTitle}
-          items={highlights.certificates}
-          ctaLabel={highlights.certificatesCta}
-          ctaTo="/certificates"
-          isVisible={isVisible}
-        />
-        <HighlightsColumn
-          title={highlights.projectsTitle}
-          items={highlights.projects}
-          ctaLabel={highlights.projectsCta}
-          ctaTo="/projects"
-          isProject
-          isVisible={isVisible}
-        />
+      <Container className="flex flex-col gap-12">
+        <EducationBlock isVisible={isVisible} />
+
+        <div className="grid gap-12 md:grid-cols-2">
+          <HighlightsColumn
+            title={highlights.certificatesTitle}
+            items={highlights.certificates}
+            ctaLabel={highlights.certificatesCta}
+            ctaTo="/certificates"
+            isVisible={isVisible}
+          />
+          <HighlightsColumn
+            title={highlights.projectsTitle}
+            items={highlights.projects}
+            ctaLabel={highlights.projectsCta}
+            ctaTo="/projects"
+            isProject
+            isVisible={isVisible}
+          />
+        </div>
       </Container>
     </section>
   );
