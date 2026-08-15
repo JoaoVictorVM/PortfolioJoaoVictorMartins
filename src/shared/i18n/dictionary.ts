@@ -68,14 +68,14 @@ const pt = {
       title: "Formação",
       items: [
         {
-          course: "Ciência da Computação",
-          institution: "PUC Minas",
-          period: "2022 — 2026",
-        },
-        {
           course: "Cibersegurança",
           institution: "Cruzeiro do Sul",
           period: "2026 — Atual",
+        },
+        {
+          course: "Ciência da Computação",
+          institution: "PUC Minas",
+          period: "2022 — 2026",
         },
       ],
     },
@@ -207,14 +207,14 @@ const en: Dictionary = {
       title: "Education",
       items: [
         {
-          course: "Computer Science",
-          institution: "PUC Minas",
-          period: "2022 — 2026",
-        },
-        {
           course: "Cybersecurity",
           institution: "Cruzeiro do Sul",
           period: "2026 — Present",
+        },
+        {
+          course: "Computer Science",
+          institution: "PUC Minas",
+          period: "2022 — 2026",
         },
       ],
     },

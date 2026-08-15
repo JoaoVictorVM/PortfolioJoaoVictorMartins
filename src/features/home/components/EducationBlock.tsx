@@ -18,13 +18,15 @@ export function EducationBlock({ isVisible }: EducationBlockProps) {
     >
       <h2 className="text-detail text-sm font-normal">{education.title}</h2>
 
-      <div className="grid gap-6 md:grid-cols-2 md:gap-12">
+      <div className="space-y-3">
         {education.items.map((item) => (
-          <article key={item.course} className="space-y-1.5">
-            <h3 className="text-text font-normal">{item.course}</h3>
-            <p className="text-detail text-sm">
-              {item.institution} · {item.period}
-            </p>
+          <article key={item.course}>
+            <h3 className="text-text font-normal">
+              {item.course}{" "}
+              <span className="text-detail text-sm">
+                · {item.institution} · {item.period}
+              </span>
+            </h3>
           </article>
         ))}
       </div>
