@@ -24,6 +24,15 @@ const pt = {
   },
   footer: {
     location: "Cabo Verde - MG 37880-000",
+    logoLabel: "João Victor Ventura Martins — início",
+    nav: {
+      title: "Navegação",
+      home: "Início",
+      about: "Sobre",
+      projects: "Projetos",
+      certificates: "Certificados",
+      gamedev: "GameDev",
+    },
   },
   common: {
     backToIndex: "← Index",
@@ -206,6 +215,15 @@ const en: Dictionary = {
   },
   footer: {
     location: "Cabo Verde - MG, Brazil",
+    logoLabel: "João Victor Ventura Martins — home",
+    nav: {
+      title: "Navigation",
+      home: "Home",
+      about: "About",
+      projects: "Projects",
+      certificates: "Certificates",
+      gamedev: "GameDev",
+    },
   },
   common: {
     backToIndex: "← Index",

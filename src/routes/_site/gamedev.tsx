@@ -20,7 +20,7 @@ function GameDevPage() {
   const { ref, isVisible } = useReveal();
 
   return (
-    <section className="py-24">
+    <section className="py-16">
       <Container>
         <PageHeader
           title={games.title}
