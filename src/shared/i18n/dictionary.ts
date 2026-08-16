@@ -36,6 +36,50 @@ const pt = {
     title: "Projetos",
     subtitle: "Abaixo alguns projetos selecionados",
   },
+  about: {
+    title: "Sobre mim",
+    subtitle: "Um pouco além do currículo",
+    photoAlt: "Retrato de João Victor Ventura Martins",
+    intro: [
+      "Sou João Victor Ventura Martins, um cara apaixonado por videogame desde pequeno, que entrou no mundo da programação por um sonho de um dia criar um jogo.",
+      "Durante a faculdade de Ciência da Computação, fiquei apaixonado por programação e o sonho de lançar um jogo virou o sonho de ser um desenvolvedor.",
+    ],
+    timelineTitle: "Linha do tempo",
+    timeline: [
+      {
+        period: "2018",
+        title: "Primeiro contato com programação",
+        description:
+          "Conheci a programação através do curso de desenvolvimento de games da Danki Code, onde tive meu primeiro contato com Java e C# através da Unity.",
+      },
+      {
+        period: "2020",
+        title: "Técnico em Eletrônica — Pelicano",
+        description:
+          "Aqui comecei a ter contato com a programação fora do universo de desenvolvimento de games, através de algoritmos e projetos simples realizados no curso, junto com conhecimentos elétricos.",
+      },
+      {
+        period: "2022",
+        title: "Ciência da Computação — PUC Minas",
+        description:
+          "Aqui foi quando percebi que minha vida seria no mundo da programação, onde aprendi os conceitos e práticas sobre algoritmos, estrutura de dados e engenharia de software.",
+      },
+      {
+        period: "2026",
+        title: "Cibersegurança — Cruzeiro do Sul",
+        description:
+          "Atualmente comecei a graduação em Cibersegurança para melhorar meus conceitos de segurança de software, com o intuito de aprimorar meus conhecimentos em arquitetura de softwares seguros e complexos.",
+      },
+    ],
+    beyondTitle: "Fora do trabalho",
+    gamedev: {
+      blurb:
+        "No meu tempo livre, gosto de colocar meu conhecimento em prática com uma paixão pelo GameDev, criando protótipos e pequenos jogos para experimentar mecânicas, level design, game design e ideias no geral.",
+      teaser:
+        "Esses são alguns dos protótipos nos quais estou trabalhando atualmente, mas possuo outros jogos feitos e em desenvolvimento, fique à vontade para",
+      teaserLink: "saber mais.",
+    },
+  },
   games: {
     title: "GameDev",
     subtitle: "Jogos que venho criando por paixão",
@@ -68,6 +112,8 @@ const pt = {
         "Sinta-se a vontade para conhecer mais sobre minha trajetória, o que venho estudando e os projetos em que estou trabalhando.",
       suffix: "Caso queira, você também pode acessar meu",
       resumeLabel: "currículo",
+      aboutPrefix: "ou",
+      aboutLabel: "saber mais sobre mim",
     },
     education: {
       title: "Formação",
@@ -126,14 +172,6 @@ const pt = {
         "Tenho interesse especial em arquitetura de software, tanto na idealização de System Designs quanto na construção de Design Systems, e venho me aproximando da área de segurança da informação, ampliando meus conhecimentos através de uma graduação em Cybersegurança.",
       ],
     },
-    gamedev: {
-      title: "GameDev",
-      blurb:
-        "No meu tempo livre, gosto de colocar meu conhecimento em prática com uma paixão pelo GameDev, criando protótipos e pequenos jogos para experimentar mecânicas, level design, game design e ideias no geral.",
-      teaser:
-        "Esses são alguns dos protótipos nos quais estou trabalhando atualmente, mas possuo outros jogos feitos e em desenvolvimento, fique à vontade para",
-      teaserLink: "saber mais.",
-    },
     connect: {
       title: "Contato",
       prefix: "Me encontre em",
@@ -180,6 +218,50 @@ const en: Dictionary = {
     title: "Projects",
     subtitle: "Below are some selected projects",
   },
+  about: {
+    title: "About me",
+    subtitle: "A bit beyond the resume",
+    photoAlt: "Portrait of João Victor Ventura Martins",
+    intro: [
+      "I'm João Victor Ventura Martins, a guy who has loved video games since he was a kid and got into programming chasing the dream of one day creating a game.",
+      "During my Computer Science degree, I fell in love with programming, and the dream of releasing a game turned into the dream of becoming a developer.",
+    ],
+    timelineTitle: "Timeline",
+    timeline: [
+      {
+        period: "2018",
+        title: "First contact with programming",
+        description:
+          "I discovered programming through Danki Code's game development course, where I had my first contact with Java and C# through Unity.",
+      },
+      {
+        period: "2020",
+        title: "Electronics Technician — Pelicano",
+        description:
+          "This is where I started to touch programming outside the game development world, through algorithms and simple projects built during the course, alongside electrical knowledge.",
+      },
+      {
+        period: "2022",
+        title: "Computer Science — PUC Minas",
+        description:
+          "This is when I realized my life would be in the programming world, learning the concepts and practices of algorithms, data structures and software engineering.",
+      },
+      {
+        period: "2026",
+        title: "Cybersecurity — Cruzeiro do Sul",
+        description:
+          "I recently started a Cybersecurity degree to sharpen my software security fundamentals, aiming to improve how I architect secure and complex software.",
+      },
+    ],
+    beyondTitle: "Outside work",
+    gamedev: {
+      blurb:
+        "In my free time, I like to put my knowledge into practice through a passion for GameDev, creating prototypes and small games to experiment with mechanics, level design, game design and ideas in general.",
+      teaser:
+        "These are some of the prototypes I'm currently working on, but I also have other games finished and in development, feel free to",
+      teaserLink: "learn more.",
+    },
+  },
   games: {
     title: "GameDev",
     subtitle: "Games I build for fun",
@@ -212,6 +294,8 @@ const en: Dictionary = {
         "Feel free to explore my journey, what I am currently studying, and the projects I am working on.",
       suffix: "If you wish, you can also download my",
       resumeLabel: "resume",
+      aboutPrefix: "or",
+      aboutLabel: "learn more about me",
     },
     education: {
       title: "Education",
@@ -269,14 +353,6 @@ const en: Dictionary = {
       paragraphs: [
         "I have a particular interest in software architecture, both in designing systems (System Design) and in building Design Systems, and I have been getting closer to the field of information security, expanding my knowledge through a Cybersecurity degree.",
       ],
-    },
-    gamedev: {
-      title: "GameDev",
-      blurb:
-        "In my free time, I like to put my knowledge into practice through a passion for GameDev, creating prototypes and small games to experiment with mechanics, level design, game design and ideas in general.",
-      teaser:
-        "These are some of the prototypes I'm currently working on, but I also have other games finished and in development, feel free to",
-      teaserLink: "learn more.",
     },
     connect: {
       title: "Connect",

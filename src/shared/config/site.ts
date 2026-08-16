@@ -21,6 +21,11 @@ export const siteConfig = {
       title: "Certificados — João Victor Ventura Martins",
       description: "Certificados e formações de João Victor Ventura Martins.",
     },
+    about: {
+      title: "Sobre mim — João Victor Ventura Martins",
+      description:
+        "Trajetória, forma de trabalhar e interesses de João Victor Ventura Martins além do currículo.",
+    },
     projects: {
       title: "Projetos — João Victor Ventura Martins",
       description:
