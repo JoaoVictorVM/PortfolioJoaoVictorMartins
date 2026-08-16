@@ -1,0 +1,16 @@
+# Normaliza as quebras de linha: LF no repositório e no working copy.
+* text=auto eol=lf
+
+# Arquivos binários não devem sofrer conversão de EOL.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+
+# Reduz ruído em diffs de arquivos gerados.
+pnpm-lock.yaml -diff linguist-generated
+src/routeTree.gen.ts -diff linguist-generated
