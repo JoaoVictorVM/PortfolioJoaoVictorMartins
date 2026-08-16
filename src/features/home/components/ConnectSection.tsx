@@ -13,7 +13,7 @@ export function ConnectSection() {
   return (
     <section
       ref={ref}
-      className={cn("section-fade pb-32", isVisible && "visible")}
+      className={cn("section-fade pb-16", isVisible && "visible")}
     >
       <Container className="text-text space-y-4">
         <h2 className="text-lg">{connect.title}</h2>

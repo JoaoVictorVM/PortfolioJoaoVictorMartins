@@ -18,7 +18,7 @@ function ProjectsPage() {
   const { ref, isVisible } = useReveal();
 
   return (
-    <section className="py-24">
+    <section className="py-16">
       <Container>
         <PageHeader
           title={projects.title}
