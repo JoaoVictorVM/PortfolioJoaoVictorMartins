@@ -1,6 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/layout/Container";
+import { inlineLinkClass } from "@/components/ui/inlineLink";
+import { WritingHighlights } from "@/features/blog/components/WritingHighlights";
 import { EducationBlock } from "@/features/home/components/EducationBlock";
 import { useI18n } from "@/shared/hooks/useI18n";
 import { useReveal } from "@/shared/hooks/useReveal";
@@ -20,9 +22,6 @@ interface HighlightsColumnProps {
   isProject?: boolean;
   isVisible: boolean;
 }
-
-const linkClass =
-  "inline-flex items-center gap-2 font-normal text-text underline decoration-text/30 underline-offset-4 transition-colors hover:decoration-text";
 
 function HighlightsColumn({
   title,
@@ -49,7 +48,7 @@ function HighlightsColumn({
                 href={item.url}
                 target="_blank"
                 rel="noreferrer"
-                className={linkClass}
+                className={inlineLinkClass}
               >
                 <span>{item.title}</span>
                 <ArrowUpRight size={14} aria-hidden className="text-detail" />
@@ -62,7 +61,7 @@ function HighlightsColumn({
         ))}
       </div>
 
-      <Link to={ctaTo} className={linkClass}>
+      <Link to={ctaTo} className={inlineLinkClass}>
         <span>{ctaLabel}</span>
         <ArrowUpRight size={14} aria-hidden className="text-detail" />
       </Link>
@@ -100,6 +99,8 @@ export function HighlightsSection() {
             isVisible={isVisible}
           />
         </div>
+
+        <WritingHighlights isVisible={isVisible} />
       </Container>
     </section>
   );
