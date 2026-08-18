@@ -6,7 +6,7 @@ import type { Dictionary } from "@/shared/i18n/dictionary";
 type FooterNavLabel = keyof Omit<Dictionary["footer"]["nav"], "title">;
 
 interface FooterNavItem {
-  to: "/" | "/about" | "/projects" | "/certificates" | "/gamedev";
+  to: "/" | "/about" | "/projects" | "/certificates" | "/blog" | "/gamedev";
   label: FooterNavLabel;
 }
 
@@ -17,6 +17,7 @@ const rows: readonly (readonly FooterNavItem[])[] = [
     { to: "/", label: "home" },
   ],
   [
+    { to: "/blog", label: "blog" },
     { to: "/certificates", label: "certificates" },
     { to: "/projects", label: "projects" },
   ],
