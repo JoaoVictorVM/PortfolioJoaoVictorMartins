@@ -1,7 +1,9 @@
 import type { ReactNode } from "react";
+import { getReadingMinutes } from "@/features/blog/lib/readingTime";
 import { postDeExemplo } from "@/features/blog/posts/post-de-exemplo";
 
-export interface BlogPost {
+/** O que cada arquivo de post declara. */
+export interface BlogPostSource {
   /** Identificador do post na URL: /blog/{slug} */
   slug: string;
   title: string;
@@ -9,16 +11,24 @@ export interface BlogPost {
   summary: string;
   /** Data de publicação em ISO (YYYY-MM-DD), formatada por locale na exibição. */
   date: string;
-  /** Marca manualmente os posts que aparecem no bloco Writing da home. */
+  /** Marca manualmente os posts que aparecem no bloco de blog da home. */
   featured: boolean;
   Content: () => ReactNode;
 }
 
-const posts: readonly BlogPost[] = [postDeExemplo];
+/** O post já com os metadados derivados do conteúdo. */
+export interface BlogPost extends BlogPostSource {
+  readingMinutes: number;
+}
 
-export const blogPosts: readonly BlogPost[] = [...posts].sort((a, b) =>
-  b.date.localeCompare(a.date),
-);
+const sources: readonly BlogPostSource[] = [postDeExemplo];
+
+export const blogPosts: readonly BlogPost[] = sources
+  .map((source) => ({
+    ...source,
+    readingMinutes: getReadingMinutes(source.Content()),
+  }))
+  .sort((a, b) => b.date.localeCompare(a.date));
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((post) => post.slug === slug);

@@ -1,6 +1,6 @@
-import type { BlogPost } from "@/features/blog/data/posts";
+import type { BlogPostSource } from "@/features/blog/data/posts";
 
-export const postDeExemplo: BlogPost = {
+export const postDeExemplo: BlogPostSource = {
   slug: "post-de-exemplo",
   title: "Post de exemplo",
   summary:
