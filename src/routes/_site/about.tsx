@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Container } from "@/components/layout/Container";
+import { PageColumn } from "@/components/layout/PageColumn";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { AboutContent } from "@/features/about/components/AboutContent";
 import { siteConfig } from "@/shared/config/site";
@@ -20,17 +21,15 @@ function AboutPage() {
   return (
     <section className="py-16">
       <Container>
-        <PageHeader
-          title={about.title}
-          subtitle={about.subtitle}
-          backLabel={common.backToIndex}
-        />
-        <div
-          ref={ref}
-          className={cn("content-reveal delay-300", isVisible && "visible")}
-        >
-          <AboutContent isVisible={isVisible} />
-        </div>
+        <PageColumn backLabel={common.backToIndex}>
+          <PageHeader title={about.title} subtitle={about.subtitle} />
+          <div
+            ref={ref}
+            className={cn("content-reveal delay-300", isVisible && "visible")}
+          >
+            <AboutContent isVisible={isVisible} />
+          </div>
+        </PageColumn>
       </Container>
     </section>
   );

@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Container } from "@/components/layout/Container";
+import { PageColumn } from "@/components/layout/PageColumn";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { CertificateList } from "@/features/certificates/components/CertificateList";
 import { siteConfig } from "@/shared/config/site";
@@ -21,17 +22,18 @@ function CertificatesPage() {
   return (
     <section className="py-16">
       <Container>
-        <PageHeader
-          title={certificates.title}
-          subtitle={certificates.subtitle}
-          backLabel={common.backToIndex}
-        />
-        <div
-          ref={ref}
-          className={cn("content-reveal delay-300", isVisible && "visible")}
-        >
-          <CertificateList />
-        </div>
+        <PageColumn backLabel={common.backToIndex}>
+          <PageHeader
+            title={certificates.title}
+            subtitle={certificates.subtitle}
+          />
+          <div
+            ref={ref}
+            className={cn("content-reveal delay-300", isVisible && "visible")}
+          >
+            <CertificateList />
+          </div>
+        </PageColumn>
       </Container>
     </section>
   );

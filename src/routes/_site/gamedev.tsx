@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/layout/Container";
+import { PageColumn } from "@/components/layout/PageColumn";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { GameAccordion } from "@/features/games/components/GameAccordion";
 import { itchProfileUrl } from "@/features/games/data/games";
@@ -22,51 +23,49 @@ function GameDevPage() {
   return (
     <section className="py-16">
       <Container>
-        <PageHeader
-          title={games.title}
-          subtitle={games.subtitle}
-          backLabel={common.backToIndex}
-        />
-        <div
-          ref={ref}
-          className={cn("content-reveal delay-300", isVisible && "visible")}
-        >
+        <PageColumn backLabel={common.backToIndex}>
+          <PageHeader title={games.title} subtitle={games.subtitle} />
           <div
-            className={cn(
-              "text-text fast-fade-up mb-10 space-y-4 delay-300",
-              isVisible && "visible",
-            )}
+            ref={ref}
+            className={cn("content-reveal delay-300", isVisible && "visible")}
           >
-            {games.intro.map((paragraph, index) => {
-              const isLast = index === games.intro.length - 1;
-              return (
-                <p key={paragraph}>
-                  {paragraph}
-                  {isLast && (
-                    <>
-                      {" "}
-                      <a
-                        href={itchProfileUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="decoration-text/30 hover:decoration-text inline-flex items-center gap-1 underline underline-offset-4 transition-colors"
-                      >
-                        <span>{games.introLink}</span>
-                        <ArrowUpRight
-                          size={14}
-                          aria-hidden
-                          className="text-detail"
-                        />
-                      </a>
-                      .
-                    </>
-                  )}
-                </p>
-              );
-            })}
+            <div
+              className={cn(
+                "text-text fast-fade-up mb-10 space-y-4 delay-300",
+                isVisible && "visible",
+              )}
+            >
+              {games.intro.map((paragraph, index) => {
+                const isLast = index === games.intro.length - 1;
+                return (
+                  <p key={paragraph}>
+                    {paragraph}
+                    {isLast && (
+                      <>
+                        {" "}
+                        <a
+                          href={itchProfileUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="decoration-text/30 hover:decoration-text inline-flex items-center gap-1 underline underline-offset-4 transition-colors"
+                        >
+                          <span>{games.introLink}</span>
+                          <ArrowUpRight
+                            size={14}
+                            aria-hidden
+                            className="text-detail"
+                          />
+                        </a>
+                        .
+                      </>
+                    )}
+                  </p>
+                );
+              })}
+            </div>
+            <GameAccordion />
           </div>
-          <GameAccordion />
-        </div>
+        </PageColumn>
       </Container>
     </section>
   );
