@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Container } from "@/components/layout/Container";
 import { NotFound } from "@/components/layout/NotFound";
+import { PageColumn } from "@/components/layout/PageColumn";
 import { PostBody } from "@/features/blog/components/PostBody";
+import { PostConnect } from "@/features/blog/components/PostConnect";
 import { PostHeader } from "@/features/blog/components/PostHeader";
 import { getPostBySlug } from "@/features/blog/data/posts";
 import { siteConfig } from "@/shared/config/site";
@@ -43,19 +45,18 @@ function BlogPostPage() {
   return (
     <article className="py-16">
       <Container>
-        <PostHeader
-          title={post.title}
-          date={post.date}
-          backLabel={blog.backToBlog}
-        />
-        <div
-          ref={ref}
-          className={cn("content-reveal delay-300", isVisible && "visible")}
-        >
-          <PostBody>
-            <post.Content />
-          </PostBody>
-        </div>
+        <PageColumn backLabel={blog.backToBlog} backTo="/blog">
+          <PostHeader title={post.title} date={post.date} />
+          <div
+            ref={ref}
+            className={cn("content-reveal delay-300", isVisible && "visible")}
+          >
+            <PostBody>
+              <post.Content />
+            </PostBody>
+          </div>
+          <PostConnect />
+        </PageColumn>
       </Container>
     </article>
   );
