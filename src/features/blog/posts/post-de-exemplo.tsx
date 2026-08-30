@@ -6,7 +6,7 @@ export const postDeExemplo: BlogPostSource = {
   summary:
     "Um exemplo de post para validar o layout da leitura antes de escrever de verdade.",
   date: "2026-08-18",
-  featured: true,
+  featured: false,
   Content: () => (
     <>
       <p>
