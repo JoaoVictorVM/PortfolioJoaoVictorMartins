@@ -70,7 +70,13 @@ body {
   @apply rounded-none bg-transparent p-0;
 }
 .post-body img {
-  @apply max-w-full rounded-md;
+  @apply h-auto max-w-full rounded-md;
+}
+.post-body figure {
+  @apply my-8;
+}
+.post-body figcaption {
+  @apply text-detail mt-2 text-sm;
 }
 .post-body hr {
   @apply border-line;
