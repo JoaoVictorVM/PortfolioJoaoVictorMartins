@@ -35,7 +35,8 @@ export function WritingHighlights({ isVisible }: WritingHighlightsProps) {
                 params={{ slug: post.slug }}
                 className={inlineLinkClass}
               >
-                {post.title}
+                <span>{post.title}</span>
+                <ArrowUpRight size={14} aria-hidden className="text-detail" />
               </Link>
               <PostDate date={post.date} />
             </div>
