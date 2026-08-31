@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { getReadingMinutes } from "@/features/blog/lib/readingTime";
 import { npmTerrenoPerigoso } from "@/features/blog/posts/npm-terreno-perigoso";
 import { postDeExemplo } from "@/features/blog/posts/post-de-exemplo";
+import { typescriptEmGo } from "@/features/blog/posts/typescript-em-go";
 
 /** O que cada arquivo de post declara. */
 export interface BlogPostSource {
@@ -22,7 +23,11 @@ export interface BlogPost extends BlogPostSource {
   readingMinutes: number;
 }
 
-const sources: readonly BlogPostSource[] = [npmTerrenoPerigoso, postDeExemplo];
+const sources: readonly BlogPostSource[] = [
+  typescriptEmGo,
+  npmTerrenoPerigoso,
+  postDeExemplo,
+];
 
 export const blogPosts: readonly BlogPost[] = sources
   .map((source) => ({
