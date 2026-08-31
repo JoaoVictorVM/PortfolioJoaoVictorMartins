@@ -3,7 +3,7 @@ import { asset } from "@/shared/lib/asset";
 
 export const npmTerrenoPerigoso: BlogPostSource = {
   slug: "npm-terreno-perigoso",
-  title: "O npm virou terreno perigoso e acho que isso precisa ser mais falado",
+  title: "Problemas de segurança no npm",
   summary:
     "Conta de mantenedor sequestrada, malware que se espalha sozinho e um monte de projeto sendo gerado por IA sem ninguém olhar as dependências.",
   date: "2026-06-27",
