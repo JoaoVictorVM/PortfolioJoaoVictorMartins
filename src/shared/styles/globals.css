@@ -36,10 +36,10 @@ body {
 .post-body h3 {
   @apply text-text mt-8 font-normal;
 }
-.post-body a {
+.post-body a:not(.post-link) {
   @apply text-text decoration-text/30 underline underline-offset-4 transition-colors;
 }
-.post-body a:hover {
+.post-body a:not(.post-link):hover {
   @apply decoration-text;
 }
 .post-body strong {
