@@ -29,6 +29,15 @@
   --text-color: #e5e5e5;
   --detail-color: #8d8d8d;
   --line-color: #2e2e2e;
+
+  /* Realce de sintaxe — paleta Vesper (dark é a original do tema). */
+  --syntax-plain: var(--text-color);
+  --syntax-comment: #8b8b8b;
+  --syntax-keyword: #a0a0a0;
+  --syntax-punctuation: #a0a0a0;
+  --syntax-number: #a0a0a0;
+  --syntax-string: #99ffe4;
+  --syntax-function: #ffc799;
 }
 
 :root[data-theme="light"] {
@@ -36,6 +45,15 @@
   --text-color: #3b4252;
   --detail-color: #5a6472;
   --line-color: #cccccc;
+
+  /* Vesper não tem variante light: são os mesmos papéis reescurecidos até
+     passar em AA (≥ 4.5:1) sobre o fundo claro. */
+  --syntax-comment: #5a6472;
+  --syntax-keyword: #414b5a;
+  --syntax-punctuation: #414b5a;
+  --syntax-number: #414b5a;
+  --syntax-string: #0f6f60;
+  --syntax-function: #9a4f14;
 }
 
 @theme inline {
@@ -43,4 +61,12 @@
   --color-text: var(--text-color);
   --color-detail: var(--detail-color);
   --color-line: var(--line-color);
+
+  --color-syntax-plain: var(--syntax-plain);
+  --color-syntax-comment: var(--syntax-comment);
+  --color-syntax-keyword: var(--syntax-keyword);
+  --color-syntax-punctuation: var(--syntax-punctuation);
+  --color-syntax-number: var(--syntax-number);
+  --color-syntax-string: var(--syntax-string);
+  --color-syntax-function: var(--syntax-function);
 }
