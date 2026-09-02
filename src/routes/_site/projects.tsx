@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Container } from "@/components/layout/Container";
+import { PageColumn } from "@/components/layout/PageColumn";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { ProjectAccordion } from "@/features/projects/components/ProjectAccordion";
 import { siteConfig } from "@/shared/config/site";
@@ -20,17 +21,15 @@ function ProjectsPage() {
   return (
     <section className="py-16">
       <Container>
-        <PageHeader
-          title={projects.title}
-          subtitle={projects.subtitle}
-          backLabel={common.backToIndex}
-        />
-        <div
-          ref={ref}
-          className={cn("content-reveal delay-300", isVisible && "visible")}
-        >
-          <ProjectAccordion />
-        </div>
+        <PageColumn backLabel={common.backToIndex}>
+          <PageHeader title={projects.title} subtitle={projects.subtitle} />
+          <div
+            ref={ref}
+            className={cn("content-reveal delay-300", isVisible && "visible")}
+          >
+            <ProjectAccordion />
+          </div>
+        </PageColumn>
       </Container>
     </section>
   );

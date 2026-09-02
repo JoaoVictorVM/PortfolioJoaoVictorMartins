@@ -21,3 +21,63 @@ body {
 @utility grid-certificate {
   grid-template-columns: calc(var(--spacing) * 35) 1fr auto;
 }
+
+/* Tipografia do corpo dos posts: as mesmas classes usadas no restante do site,
+   declaradas uma vez para que o conteúdo seja escrito em HTML semântico puro. */
+.post-body {
+  @apply text-text;
+}
+.post-body > * + * {
+  @apply mt-4;
+}
+.post-body h2 {
+  @apply text-text mt-10 text-lg font-normal;
+}
+.post-body h3 {
+  @apply text-text mt-8 font-normal;
+}
+.post-body a:not(.post-link) {
+  @apply text-text decoration-text/30 underline underline-offset-4 transition-colors;
+}
+.post-body a:not(.post-link):hover {
+  @apply decoration-text;
+}
+.post-body strong {
+  @apply text-text font-medium;
+}
+.post-body em {
+  @apply italic;
+}
+.post-body ul {
+  @apply list-disc space-y-2 pl-5;
+}
+.post-body ol {
+  @apply list-decimal space-y-2 pl-5;
+}
+.post-body li::marker {
+  @apply text-detail;
+}
+.post-body blockquote {
+  @apply border-line text-detail border-l pl-4 italic;
+}
+.post-body code {
+  @apply bg-line/40 rounded-sm px-1.5 py-0.5 font-mono text-sm;
+}
+.post-body pre {
+  @apply border-line overflow-x-auto rounded-md border p-4;
+}
+.post-body pre code {
+  @apply rounded-none bg-transparent p-0;
+}
+.post-body img {
+  @apply h-auto max-w-full rounded-md;
+}
+.post-body figure {
+  @apply my-8;
+}
+.post-body figcaption {
+  @apply text-detail mt-2 text-sm;
+}
+.post-body hr {
+  @apply border-line;
+}

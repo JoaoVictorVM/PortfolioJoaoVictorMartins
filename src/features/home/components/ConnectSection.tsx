@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Container } from "@/components/layout/Container";
-import { socialLinks } from "@/features/home/data/socialLinks";
+import { socialLinks } from "@/shared/data/socialLinks";
 import { useI18n } from "@/shared/hooks/useI18n";
 import { useReveal } from "@/shared/hooks/useReveal";
 import { cn } from "@/shared/lib/cn";

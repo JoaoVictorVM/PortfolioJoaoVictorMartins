@@ -17,6 +17,8 @@ import { Route as SiteProjectsRouteImport } from './routes/_site/projects'
 import { Route as SiteGamedevRouteImport } from './routes/_site/gamedev'
 import { Route as SiteCertificatesRouteImport } from './routes/_site/certificates'
 import { Route as SiteAboutRouteImport } from './routes/_site/about'
+import { Route as SiteBlogIndexRouteImport } from './routes/_site/blog/index'
+import { Route as SiteBlogSlugRouteImport } from './routes/_site/blog/$slug'
 
 const LinksRoute = LinksRouteImport.update({
   id: '/links',
@@ -57,6 +59,16 @@ const SiteAboutRoute = SiteAboutRouteImport.update({
   path: '/about',
   getParentRoute: () => SiteRoute,
 } as any)
+const SiteBlogIndexRoute = SiteBlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteBlogSlugRoute = SiteBlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => SiteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/$': typeof SplatRoute
@@ -66,6 +78,8 @@ export interface FileRoutesByFullPath {
   '/certificates': typeof SiteCertificatesRoute
   '/gamedev': typeof SiteGamedevRoute
   '/projects': typeof SiteProjectsRoute
+  '/blog/$slug': typeof SiteBlogSlugRoute
+  '/blog/': typeof SiteBlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/$': typeof SplatRoute
@@ -75,6 +89,8 @@ export interface FileRoutesByTo {
   '/gamedev': typeof SiteGamedevRoute
   '/projects': typeof SiteProjectsRoute
   '/': typeof SiteIndexRoute
+  '/blog/$slug': typeof SiteBlogSlugRoute
+  '/blog': typeof SiteBlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -86,6 +102,8 @@ export interface FileRoutesById {
   '/_site/gamedev': typeof SiteGamedevRoute
   '/_site/projects': typeof SiteProjectsRoute
   '/_site/': typeof SiteIndexRoute
+  '/_site/blog/$slug': typeof SiteBlogSlugRoute
+  '/_site/blog/': typeof SiteBlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -97,6 +115,8 @@ export interface FileRouteTypes {
     | '/certificates'
     | '/gamedev'
     | '/projects'
+    | '/blog/$slug'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/$'
@@ -106,6 +126,8 @@ export interface FileRouteTypes {
     | '/gamedev'
     | '/projects'
     | '/'
+    | '/blog/$slug'
+    | '/blog'
   id:
     | '__root__'
     | '/$'
@@ -116,6 +138,8 @@ export interface FileRouteTypes {
     | '/_site/gamedev'
     | '/_site/projects'
     | '/_site/'
+    | '/_site/blog/$slug'
+    | '/_site/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -182,6 +206,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SiteAboutRouteImport
       parentRoute: typeof SiteRoute
     }
+    '/_site/blog/': {
+      id: '/_site/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof SiteBlogIndexRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/blog/$slug': {
+      id: '/_site/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof SiteBlogSlugRouteImport
+      parentRoute: typeof SiteRoute
+    }
   }
 }
 
@@ -191,6 +229,8 @@ interface SiteRouteChildren {
   SiteGamedevRoute: typeof SiteGamedevRoute
   SiteProjectsRoute: typeof SiteProjectsRoute
   SiteIndexRoute: typeof SiteIndexRoute
+  SiteBlogSlugRoute: typeof SiteBlogSlugRoute
+  SiteBlogIndexRoute: typeof SiteBlogIndexRoute
 }
 
 const SiteRouteChildren: SiteRouteChildren = {
@@ -199,6 +239,8 @@ const SiteRouteChildren: SiteRouteChildren = {
   SiteGamedevRoute: SiteGamedevRoute,
   SiteProjectsRoute: SiteProjectsRoute,
   SiteIndexRoute: SiteIndexRoute,
+  SiteBlogSlugRoute: SiteBlogSlugRoute,
+  SiteBlogIndexRoute: SiteBlogIndexRoute,
 }
 
 const SiteRouteWithChildren = SiteRoute._addFileChildren(SiteRouteChildren)

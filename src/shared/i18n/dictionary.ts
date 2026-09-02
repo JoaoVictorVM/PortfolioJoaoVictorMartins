@@ -31,6 +31,7 @@ const pt = {
       about: "Sobre",
       projects: "Projetos",
       certificates: "Certificados",
+      blog: "Blog",
       gamedev: "GameDev",
     },
   },
@@ -44,6 +45,15 @@ const pt = {
   projects: {
     title: "Projetos",
     subtitle: "Abaixo alguns projetos selecionados",
+  },
+  blog: {
+    title: "Blog",
+    subtitle: "Textos sobre o que ando estudando e gostando",
+    backToBlog: "← Blog",
+    readingTime: "min de leitura",
+    connect: "Achou interessante? Se quiser trocar uma ideia, me chama!",
+    highlightsTitle: "Blog",
+    highlightsCta: "Todos os posts",
   },
   about: {
     title: "Sobre mim",
@@ -222,6 +232,7 @@ const en: Dictionary = {
       about: "About",
       projects: "Projects",
       certificates: "Certificates",
+      blog: "Writing",
       gamedev: "GameDev",
     },
   },
@@ -235,6 +246,15 @@ const en: Dictionary = {
   projects: {
     title: "Projects",
     subtitle: "Below are some selected projects",
+  },
+  blog: {
+    title: "Writing",
+    subtitle: "Notes on what I've been studying and enjoying",
+    backToBlog: "← Writing",
+    readingTime: "min read",
+    connect: "Enjoyed this? If you want to talk it over, reach out!",
+    highlightsTitle: "Writing",
+    highlightsCta: "All posts",
   },
   about: {
     title: "About me",

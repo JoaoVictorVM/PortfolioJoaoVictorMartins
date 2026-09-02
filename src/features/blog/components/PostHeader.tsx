@@ -1,12 +1,13 @@
+import { PostDate } from "@/features/blog/components/PostDate";
 import { useReveal } from "@/shared/hooks/useReveal";
 import { cn } from "@/shared/lib/cn";
 
-interface PageHeaderProps {
+interface PostHeaderProps {
   title: string;
-  subtitle: string;
+  date: string;
 }
 
-export function PageHeader({ title, subtitle }: PageHeaderProps) {
+export function PostHeader({ title, date }: PostHeaderProps) {
   const { ref, isVisible } = useReveal();
 
   return (
@@ -19,14 +20,10 @@ export function PageHeader({ title, subtitle }: PageHeaderProps) {
       >
         {title}
       </h1>
-      <p
-        className={cn(
-          "fast-fade-up text-detail text-sm delay-250",
-          isVisible && "visible",
-        )}
-      >
-        {subtitle}
-      </p>
+      <PostDate
+        date={date}
+        className={cn("fast-fade-up block delay-250", isVisible && "visible")}
+      />
     </div>
   );
 }

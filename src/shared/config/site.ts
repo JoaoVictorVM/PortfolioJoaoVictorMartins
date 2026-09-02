@@ -31,6 +31,11 @@ export const siteConfig = {
       description:
         "Projetos de front-end e back-end desenvolvidos por João Victor Ventura Martins.",
     },
+    blog: {
+      title: "Blog — João Victor Ventura Martins",
+      description:
+        "Textos de João Victor Ventura Martins sobre desenvolvimento, estudos e o que anda gostando.",
+    },
     games: {
       title: "GameDev — João Victor Ventura Martins",
       description:
