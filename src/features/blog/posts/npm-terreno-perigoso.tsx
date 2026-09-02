@@ -1,3 +1,4 @@
+import { CodeBlock } from "@/features/blog/components/CodeBlock";
 import type { BlogPostSource } from "@/features/blog/data/posts";
 import { asset } from "@/shared/lib/asset";
 
@@ -100,12 +101,13 @@ export const npmTerrenoPerigoso: BlogPostSource = {
         que precisa se proteger.
       </p>
 
-      <pre>
-        <code>{`# um exemplo bobo de comando que qualquer vibe coder deveria
+      <CodeBlock
+        language="shell"
+        code={`# um exemplo bobo de comando que qualquer vibe coder deveria
 # pelo menos rodar de vez em quando, mesmo sem entender tudo
 npm audit
-npm ls --all`}</code>
-      </pre>
+npm ls --all`}
+      />
 
       <h2>O que fica de lição</h2>
       <p>

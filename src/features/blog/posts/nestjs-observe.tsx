@@ -1,3 +1,4 @@
+import { CodeBlock } from "@/features/blog/components/CodeBlock";
 import type { BlogPostSource } from "@/features/blog/data/posts";
 import { asset } from "@/shared/lib/asset";
 
@@ -70,12 +71,10 @@ export const nestjsObserve: BlogPostSource = {
         em poucos minutos já estava vendo requisições chegando no painel.
       </p>
 
-      <pre>
-        <code>npm i @nestjs/observe</code>
-      </pre>
+      <CodeBlock language="shell" code="npm i @nestjs/observe" />
 
-      <pre>
-        <code>{`// app.module.ts
+      <CodeBlock
+        code={`// app.module.ts
 import { Module } from '@nestjs/common';
 import { createObserveModule } from '@nestjs/observe';
 import { AppController } from './app.controller';
@@ -94,11 +93,11 @@ export const { ObserveModule, ObserveInstrument } = createObserveModule();
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}`}</code>
-      </pre>
+export class AppModule {}`}
+      />
 
-      <pre>
-        <code>{`// main.ts
+      <CodeBlock
+        code={`// main.ts
 import { NestFactory } from '@nestjs/core';
 import { AppModule, ObserveInstrument } from './app.module';
 
@@ -108,8 +107,8 @@ async function bootstrap() {
   });
   await app.listen(3000);
 }
-bootstrap();`}</code>
-      </pre>
+bootstrap();`}
+      />
 
       <p>
         Não precisei ficar montando exporter, configurando collector, nem
