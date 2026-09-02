@@ -7,7 +7,7 @@ export const npmTerrenoPerigoso: BlogPostSource = {
   summary:
     "Conta de mantenedor sequestrada, malware que se espalha sozinho e um monte de projeto sendo gerado por IA sem ninguém olhar as dependências.",
   date: "2026-06-27",
-  featured: true,
+  featured: false,
   Content: () => (
     <>
       <p>

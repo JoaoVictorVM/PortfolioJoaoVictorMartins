@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { getReadingMinutes } from "@/features/blog/lib/readingTime";
+import { nestjsObserve } from "@/features/blog/posts/nestjs-observe";
 import { npmTerrenoPerigoso } from "@/features/blog/posts/npm-terreno-perigoso";
-import { postDeExemplo } from "@/features/blog/posts/post-de-exemplo";
 import { programarPorDiversao } from "@/features/blog/posts/programar-por-diversao";
 import { typescriptEmGo } from "@/features/blog/posts/typescript-em-go";
 
@@ -25,10 +25,10 @@ export interface BlogPost extends BlogPostSource {
 }
 
 const sources: readonly BlogPostSource[] = [
+  nestjsObserve,
   typescriptEmGo,
   npmTerrenoPerigoso,
   programarPorDiversao,
-  postDeExemplo,
 ];
 
 export const blogPosts: readonly BlogPost[] = sources
